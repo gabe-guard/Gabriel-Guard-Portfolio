@@ -24,21 +24,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "frc-team-6800",
-    title: "FRC Team 6800.",
+    slug: "downpour-2026",
+    title: "Downpour.",
     tagline: "Design lead for a world-championship competitive robot.",
     category: "Robotics",
-    year: "2023 — Present",
+    year: "2026",
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
       "I lead subsystem design for FRC Team 6800, a 35-student competitive robotics team. I drive top-down parametric CAD in Onshape, manage Jira workflows for 120+ purchased and fabricated parts, and oversee a 5-person manufacturing pod. I was also selected to drive the robot — undefeated at the Texas District Championship.",
     highlights: [
-      "FIRST World Championship Division Finalist",
-      "FIRST In Texas District Championship Winner",
-      "4× Industrial Design Award Winner",
-      "Excellence in Engineering Award",
-      "Drove undefeated at Texas Districts",
+      "FIRST World Championship Curie Division Winner",
+      "FIRST In Texas District Championship Finalist",
+      "2× District Event Winner",
+      "2× Excellence in Engineering Award",
+      "1× Engineering Inspiration Award",
+      "1× Industrial Design Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [

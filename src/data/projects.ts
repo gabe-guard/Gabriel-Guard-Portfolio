@@ -50,8 +50,8 @@ export const projects: Project[] = [
       { src: cadIsolated, caption: "Shooter — isolated frame view" },
     ],
     cad: [
-      { label: "Isolated", src: downpourcad },
-      { label: "Powertrain", src: downpourwireframe },
+      { label: "Isolated", src: dpcad },
+      { label: "Powertrain", src: dpwireframe },
     ],
   },
   {

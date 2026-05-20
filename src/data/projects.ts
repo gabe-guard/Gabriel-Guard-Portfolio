@@ -1,4 +1,4 @@
-import frcImg from "@/assets/project-frc.jpg";
+import frcImg from "@/assets/downpourmain.jpg";
 import valorImg from "@/assets/project-valor.jpg";
 import umbraImg from "@/assets/project-umbra.jpg";
 import nexusImg from "@/assets/project-nexus.jpg";

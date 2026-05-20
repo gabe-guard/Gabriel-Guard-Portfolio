@@ -4,11 +4,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap");
 
 @theme inline {
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -56,9 +57,9 @@
   --primary: oklch(0.38 0.09 155);
   --primary-foreground: oklch(0.985 0.005 130);
 
-  /* Light, fresh green – accent */
-  --accent: oklch(0.78 0.17 145);
-  --accent-foreground: oklch(0.18 0.05 160);
+  /* Bright lime green – accent */
+  --accent: oklch(0.88 0.22 130);
+  --accent-foreground: oklch(0.22 0.05 150);
 
   --secondary: oklch(0.95 0.012 140);
   --secondary-foreground: oklch(0.25 0.04 160);
@@ -68,7 +69,7 @@
 
   --border: oklch(0.9 0.01 140);
   --input: oklch(0.92 0.01 140);
-  --ring: oklch(0.78 0.17 145);
+  --ring: oklch(0.88 0.22 130);
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.985 0.005 130);

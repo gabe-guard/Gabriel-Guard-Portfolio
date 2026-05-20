@@ -5,8 +5,8 @@ import nexusImg from "@/assets/project-nexus.jpg";
 import piezoImg from "@/assets/project-piezo.jpg";
 import cadIsolated from "@/assets/cad-isolated.jpg";
 import cadPowertrain from "@/assets/cad-powertrain.jpg";
-import downpourcad from "@/assets/downpourcad.jpg";
-import downpourwireframe from "@/assets/downpourwireframe.jpg";
+import dpcad from "@/assets/downpourcad.jpg";
+import dpwireframe from "@/assets/downpourwireframe.jpg";
 
 export type Project = {
   slug: string;

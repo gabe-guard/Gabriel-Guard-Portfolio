@@ -87,11 +87,11 @@
     color: var(--color-foreground);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
-    font-feature-settings: "ss01", "cv11";
+    letter-spacing: -0.005em;
   }
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.035em;
     color: var(--color-foreground);
   }
 }

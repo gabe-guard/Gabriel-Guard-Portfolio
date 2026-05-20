@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { useRef, type ReactNode } from "react";
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
   offset?: number;
   className?: string;
 };

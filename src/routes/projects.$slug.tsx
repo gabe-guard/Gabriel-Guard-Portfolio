@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { FadeUp, Parallax } from "@/components/Parallax";
 import { CadToggle } from "@/components/CadToggle";
-import { getProject, projects } from "@/data/projects";
+import { getProject, projects, type Project } from "@/data/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -24,7 +24,7 @@ export const Route = createFileRoute("/projects/$slug")({
 });
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  const { project } = Route.useLoaderData() as { project: Project };
   const others = projects.filter((p) => p.slug !== project.slug).slice(0, 2);
 
   return (

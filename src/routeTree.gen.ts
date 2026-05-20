@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ConnectRouteImport } from './routes/connect'
 import { Route as CertificationsRouteImport } from './routes/certifications'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects.index'
 import { Route as ProjectsSlugRouteImport } from './routes/projects.$slug'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ConnectRoute = ConnectRouteImport.update({
   id: '/connect',
   path: '/connect',
@@ -45,6 +51,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/certifications': typeof CertificationsRoute
   '/connect': typeof ConnectRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -52,6 +59,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/certifications': typeof CertificationsRoute
   '/connect': typeof ConnectRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/certifications': typeof CertificationsRoute
   '/connect': typeof ConnectRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/projects/$slug': typeof ProjectsSlugRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -69,15 +78,23 @@ export interface FileRouteTypes {
     | '/'
     | '/certifications'
     | '/connect'
+    | '/sitemap.xml'
     | '/projects/$slug'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/certifications' | '/connect' | '/projects/$slug' | '/projects'
+  to:
+    | '/'
+    | '/certifications'
+    | '/connect'
+    | '/sitemap.xml'
+    | '/projects/$slug'
+    | '/projects'
   id:
     | '__root__'
     | '/'
     | '/certifications'
     | '/connect'
+    | '/sitemap.xml'
     | '/projects/$slug'
     | '/projects/'
   fileRoutesById: FileRoutesById
@@ -86,12 +103,20 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CertificationsRoute: typeof CertificationsRoute
   ConnectRoute: typeof ConnectRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ProjectsSlugRoute: typeof ProjectsSlugRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/connect': {
       id: '/connect'
       path: '/connect'
@@ -134,9 +159,20 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CertificationsRoute: CertificationsRoute,
   ConnectRoute: ConnectRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -71,7 +71,7 @@ function ProjectDetail() {
       </div>
 
       {/* Summary + highlights */}
-      <section className="container-wide grid gap-14 md:grid-cols-12 py-24">
+      <section className="container-wide grid gap-14 md:grid-cols-12 py-16">
         <FadeUp className="md:col-span-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p className="eyebrow">Summary</p>
           <p className="text-foreground text-2xl font-display font-semibold leading-snug tracking-tight">

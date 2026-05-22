@@ -8,8 +8,8 @@ export function CadToggle({ views }: { views: View[] }) {
   const current = views[active];
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative w-full aspect-[7/5] rounded-3xl overflow-hidden bg-surface border border-border">
+    <div className="flex flex-col items-center mx-auto max-w-3xl">
+      <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden bg-surface border border-border">
         <AnimatePresence mode="wait">
           <motion.img
             key={current.src}

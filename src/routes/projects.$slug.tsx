@@ -71,7 +71,7 @@ function ProjectDetail() {
       </div>
 
       {/* Summary + highlights */}
-      <section className="container-wide grid gap-14 md:grid-cols-12 py-24">
+      <section className="container-wide grid gap-14 md:grid-cols-12 py-16">
         <FadeUp className="md:col-span-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p className="eyebrow">Summary</p>
           <p className="text-foreground text-2xl font-display font-semibold leading-snug tracking-tight">
@@ -119,7 +119,7 @@ function ProjectDetail() {
 
       {/* CAD interactive */}
       {project.cad && project.cad.length > 0 && (
-        <section className="container-wide py-20 border-t border-border">
+        <section className="container-wide py-14 border-t border-border">
           <FadeUp>
             <p className="eyebrow">Interactive · CAD</p>
             <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">
@@ -136,7 +136,7 @@ function ProjectDetail() {
       )}
 
       {/* Gallery */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <FadeUp>
           <p className="eyebrow">Gallery</p>
           <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">Inside the build.</h2>
@@ -157,7 +157,7 @@ function ProjectDetail() {
       </section>
 
       {/* Skills */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <FadeUp>
           <p className="eyebrow">Skills Gained</p>
           <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">What I sharpened.</h2>
@@ -171,8 +171,35 @@ function ProjectDetail() {
         </div>
       </section>
 
+      {/* Useful Links */}
+      {project.links && project.links.length > 0 && (
+        <section className="container-wide py-14 border-t border-border">
+          <FadeUp>
+            <p className="eyebrow">Useful Links</p>
+            <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">Dig <span className="italic text-primary">deeper.</span></h2>
+          </FadeUp>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {project.links.map((l) => (
+              <li key={l.href + l.label}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 hover-lift"
+                >
+                  <span className="font-display font-semibold text-base">{l.label}</span>
+                  <ArrowUpRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+
+
       {/* Next */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <p className="eyebrow mb-8">Keep going</p>
         <div className="grid gap-6 md:grid-cols-2">
           {others.map((p) => (

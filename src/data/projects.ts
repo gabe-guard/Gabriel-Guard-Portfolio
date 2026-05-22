@@ -69,6 +69,11 @@ export const projects: Project[] = [
       { label: "Isolated", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
+    ],
   },
   {
     slug: "drizzle-2026",
@@ -99,6 +104,11 @@ export const projects: Project[] = [
     cad: [
       { label: "Isolated", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
+    ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
     ],
   },
   {
@@ -131,6 +141,11 @@ export const projects: Project[] = [
       { label: "Isolated", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
+    ],
   },
   {
     slug: "flatline-2024",
@@ -162,6 +177,11 @@ export const projects: Project[] = [
       { label: "Isolated", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
+    ],
   },
   {
     slug: "valor-cad-challenge",
@@ -182,6 +202,11 @@ export const projects: Project[] = [
     skills: ["Onshape", "Event Production", "Technical Writing", "Livestream Direction", "Sponsor Relations"],
     gallery: [
       { src: valorImg, caption: "Mock FTC field render" },
+    ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
     ],
   },
   {
@@ -204,6 +229,11 @@ export const projects: Project[] = [
     gallery: [
       { src: umbraImg, caption: "Translucent visor prototype" },
     ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
+    ],
   },
   {
     slug: "nexus-ai",
@@ -223,6 +253,11 @@ export const projects: Project[] = [
     skills: ["Figma", "UI Design", "Machine Learning", "Education Design"],
     gallery: [
       { src: nexusImg, caption: "Block-based interface concept" },
+    ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
     ],
   },
   {
@@ -244,6 +279,11 @@ export const projects: Project[] = [
     skills: ["G-code", "Raspberry Pi", "DAQ Design", "Material Science", "Research"],
     gallery: [
       { src: piezoImg, caption: "Print process — close detail" },
+    ],
+    links: [
+      { label: "Onshape CAD", href: "https://onshape.com" },
+      { label: "Technical Write-up", href: "https://onshape.com" },
+      { label: "Build Video", href: "https://onshape.com" },
     ],
   },
 ];

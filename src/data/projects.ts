@@ -56,10 +56,101 @@ export const projects: Project[] = [
     highlights: [
       "FIRST World Championship Curie Division Winner",
       "FIRST In Texas District Championship Finalist",
+      "1× Excellence in Engineering Award",
+      "1× Industrial Design Award",
+    ],
+    skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
+    gallery: [
+      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
+      { src: cadIsolated, caption: "Shooter — isolated frame view" },
+    ],
+    cad: [
+      { label: "Isolated", src: dpcad },
+      { label: "Powertrain", src: dpwireframe },
+    ],
+  },
+  {
+    slug: "drizzle-2026",
+    title: "Drizzle.",
+    tagline: "Design lead for 400 degree turreted ball launcher.",
+    category: "Robotics",
+    year: "2026",
+    role: "Subsystem Design Lead · Driver",
+    cover: frcImg,
+    summary:
+      "tbd",
+    details: [
+      "tbd",
+      { text: "link", href: "https://onshape.com" },
+      "tbd",
+    ],
+    highlights: [
       "2× District Event Winner",
       "2× Excellence in Engineering Award",
       "1× Engineering Inspiration Award",
-      "1× Industrial Design Award",
+    ],
+    skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
+    gallery: [
+      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
+      { src: cadIsolated, caption: "Shooter — isolated frame view" },
+    ],
+    cad: [
+      { label: "Isolated", src: dpcad },
+      { label: "Powertrain", src: dpwireframe },
+    ],
+  },
+  {
+    slug: "deadlock-2025",
+    title: "Deadlock.",
+    tagline: "Design lead for climb latching mechanism.",
+    category: "Robotics",
+    year: "2025",
+    role: "Subsystem Design Lead · Driver",
+    cover: frcImg,
+    summary:
+      "tbd",
+    details: [
+      "tbd",
+      { text: "link", href: "https://onshape.com" },
+      "tbd",
+    ],
+    highlights: [
+      "2× District Event Winner",
+      "2× Excellence in Engineering Award",
+      "1× Engineering Inspiration Award",
+    ],
+    skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
+    gallery: [
+      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
+      { src: cadIsolated, caption: "Shooter — isolated frame view" },
+    ],
+    cad: [
+      { label: "Isolated", src: dpcad },
+      { label: "Powertrain", src: dpwireframe },
+    ],
+  },
+  {
+    slug: "flatline-2024",
+    title: "Flatline.",
+    tagline: "Design lead for pivoting disk launcher.",
+    category: "Robotics",
+    year: "2024",
+    role: "Subsystem Design Lead",
+    cover: frcImg,
+    summary:
+      "tbd",
+    details: [
+      "tbd",
+      { text: "link", href: "https://onshape.com" },
+      "tbd",
+    ],
+    highlights: [
+      "2× District Event Winner",
+      "2× Excellence in Engineering Award",
+      "1× Engineering Inspiration Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [

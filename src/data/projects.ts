@@ -8,6 +8,8 @@ import cadPowertrain from "@/assets/cad-powertrain.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 
+export type RichSegment = string | { text: string; href: string };
+
 export type Project = {
   slug: string;
   title: string;
@@ -17,6 +19,17 @@ export type Project = {
   role: string;
   cover: string;
   summary: string;
+  /**
+   * Extended summary rendered as a non-bold paragraph below the main summary.
+   * Mix plain strings and link objects. Example:
+   *   details: [
+   *     "I built it in ",
+   *     { text: "Onshape", href: "https://onshape.com" },
+   *     " over six months.",
+   *   ]
+   * Strings are concatenated as-is — include leading/trailing spaces yourself.
+   */
+  details?: RichSegment[];
   highlights: string[];
   skills: string[];
   gallery: { src: string; caption: string }[];

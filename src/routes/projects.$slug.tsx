@@ -125,12 +125,16 @@ function ProjectDetail() {
             <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">
               Toggle the <span className="italic text-primary">views.</span>
             </h2>
-            <p className="mt-3 text-muted-foreground max-w-xl">
-              Switch between an isolated frame view and the full powertrain to see how the mechanism comes together.
-            </p>
           </FadeUp>
-          <div className="mt-12">
-            <CadToggle views={project.cad} />
+          <div className="mt-10 grid gap-10 md:grid-cols-12 items-center">
+            <FadeUp className="md:col-span-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Switch between an isolated frame view and the full powertrain to see how the mechanism comes together.
+              </p>
+            </FadeUp>
+            <div className="md:col-span-8">
+              <CadToggle views={project.cad} />
+            </div>
           </div>
         </section>
       )}

@@ -171,6 +171,33 @@ function ProjectDetail() {
         </div>
       </section>
 
+      {/* Useful Links */}
+      {project.links && project.links.length > 0 && (
+        <section className="container-wide py-14 border-t border-border">
+          <FadeUp>
+            <p className="eyebrow">Useful Links</p>
+            <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">Dig <span className="italic text-primary">deeper.</span></h2>
+          </FadeUp>
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {project.links.map((l) => (
+              <li key={l.href + l.label}>
+                <a
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 hover-lift"
+                >
+                  <span className="font-display font-semibold text-base">{l.label}</span>
+                  <ArrowUpRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+
+
       {/* Next */}
       <section className="container-wide py-14 border-t border-border">
         <p className="eyebrow mb-8">Keep going</p>

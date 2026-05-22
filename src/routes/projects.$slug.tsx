@@ -77,6 +77,25 @@ function ProjectDetail() {
           <p className="text-foreground text-2xl font-display font-semibold leading-snug tracking-tight">
             {project.summary}
           </p>
+          {project.details && project.details.length > 0 && (
+            <p className="text-base md:text-lg font-normal text-muted-foreground leading-relaxed">
+              {project.details.map((seg, i) =>
+                typeof seg === "string" ? (
+                  <span key={i}>{seg}</span>
+                ) : (
+                  <a
+                    key={i}
+                    href={seg.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-medium underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-colors"
+                  >
+                    {seg.text}
+                  </a>
+                )
+              )}
+            </p>
+          )}
         </FadeUp>
         <FadeUp delay={0.1} className="md:col-span-5">
           <p className="eyebrow mb-4">Highlights</p>

@@ -8,6 +8,8 @@ import cadPowertrain from "@/assets/cad-powertrain.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 
+export type RichSegment = string | { text: string; href: string };
+
 export type Project = {
   slug: string;
   title: string;
@@ -17,6 +19,17 @@ export type Project = {
   role: string;
   cover: string;
   summary: string;
+  /**
+   * Extended summary rendered as a non-bold paragraph below the main summary.
+   * Mix plain strings and link objects. Example:
+   *   details: [
+   *     "I built it in ",
+   *     { text: "Onshape", href: "https://onshape.com" },
+   *     " over six months.",
+   *   ]
+   * Strings are concatenated as-is — include leading/trailing spaces yourself.
+   */
+  details?: RichSegment[];
   highlights: string[];
   skills: string[];
   gallery: { src: string; caption: string }[];
@@ -35,6 +48,11 @@ export const projects: Project[] = [
     cover: frcImg,
     summary:
       "I lead subsystem design for FRC Team 6800, a 35-student competitive robotics team. I drive top-down parametric CAD in Onshape, manage Jira workflows for 120+ purchased and fabricated parts, and oversee a 5-person manufacturing pod. I was also selected to drive the robot — undefeated at the Texas District Championship.",
+    details: [
+      "Beyond the headline numbers, Downpour was an exercise in disciplined iteration. Every subsystem started as a top-down parametric sketch in ",
+      { text: "Onshape", href: "https://onshape.com" },
+      ", which let the team branch experimental geometry without breaking the master assembly. This is placeholder copy — swap it for the real story of the build, the failures, the late nights, and the moments that made it click.",
+    ],
     highlights: [
       "FIRST World Championship Curie Division Winner",
       "FIRST In Texas District Championship Finalist",

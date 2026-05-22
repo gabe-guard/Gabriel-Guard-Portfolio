@@ -119,7 +119,7 @@ function ProjectDetail() {
 
       {/* CAD interactive */}
       {project.cad && project.cad.length > 0 && (
-        <section className="container-wide py-20 border-t border-border">
+        <section className="container-wide py-14 border-t border-border">
           <FadeUp>
             <p className="eyebrow">Interactive · CAD</p>
             <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">
@@ -136,7 +136,7 @@ function ProjectDetail() {
       )}
 
       {/* Gallery */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <FadeUp>
           <p className="eyebrow">Gallery</p>
           <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">Inside the build.</h2>
@@ -157,7 +157,7 @@ function ProjectDetail() {
       </section>
 
       {/* Skills */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <FadeUp>
           <p className="eyebrow">Skills Gained</p>
           <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">What I sharpened.</h2>
@@ -172,7 +172,7 @@ function ProjectDetail() {
       </section>
 
       {/* Next */}
-      <section className="container-wide py-20 border-t border-border">
+      <section className="container-wide py-14 border-t border-border">
         <p className="eyebrow mb-8">Keep going</p>
         <div className="grid gap-6 md:grid-cols-2">
           {others.map((p) => (

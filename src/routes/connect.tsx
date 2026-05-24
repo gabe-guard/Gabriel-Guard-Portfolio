@@ -18,7 +18,7 @@ export const Route = createFileRoute("/connect")({
 const channels = [
   { label: "Email", value: "gcguard1@gmail.com", href: "mailto:gcguard1@gmail.com" },
   { label: "Phone", value: "+1 (737) 781-9053", href: "tel:+17377819053" },
-  { label: "LinkedIn", value: "/in/gabriel-guard", href: "#" },
+  { label: "LinkedIn", value: "www.linkedin.com/in/gabriel-guard", href: "#" },
   { label: "GitHub", value: "@gabrielguard", href: "#" },
   { label: "Location", value: "Austin, TX · UT Austin", href: "#" },
 ];

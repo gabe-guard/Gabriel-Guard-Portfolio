@@ -7,11 +7,11 @@ import cadIsolated from "@/assets/cad-isolated.jpg";
 import cadPowertrain from "@/assets/cad-powertrain.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
-import dp1 from "@/assets/dp1.jpg",
-import dp2 from "@/assets/dp2.jpg",
-import dp3 from "@/assets/dp3.jpg",
-import dp4 from "@/assets/dp4.jpg",
-import dl1 from "@/assets/dl1.jpg",
+import dp1 from "@/assets/dp1.jpg";
+import dp2 from "@/assets/dp2.jpg";
+import dp3 from "@/assets/dp3.jpg";
+import dp4 from "@/assets/dp4.jpg";
+import dl1 from "@/assets/dl1.jpg";
 
 export type RichSegment = string | { text: string; href: string };
 

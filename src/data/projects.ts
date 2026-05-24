@@ -7,6 +7,11 @@ import cadIsolated from "@/assets/cad-isolated.jpg";
 import cadPowertrain from "@/assets/cad-powertrain.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
+import dp1 from "@/assets/dp1.jpg",
+import dp2 from "@/assets/dp2.jpg",
+import dp3 from "@/assets/dp3.jpg",
+import dp4 from "@/assets/dp4.jpg",
+import dl1 from "@/assets/dl1.jpg",
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -39,6 +44,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    // Downpour
     slug: "downpour-2026",
     title: "Downpour.",
     tagline: "Design lead for a world-championship competitive robot.",
@@ -61,9 +67,10 @@ export const projects: Project[] = [
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
-      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
-      { src: cadIsolated, caption: "Shooter — isolated frame view" },
+      { src: dp1, caption: "Starting position" },
+      { src: dp2, caption: "World Championship" },
+      { src: dp3, caption: "State Championship" },
+      { src: dp4, caption: "A volley of 'fuel'" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },
@@ -76,6 +83,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    //Drizzle
     slug: "drizzle-2026",
     title: "Drizzle.",
     tagline: "Design lead for 400 degree turreted ball launcher.",
@@ -112,6 +120,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    //Deadlock
     slug: "deadlock-2025",
     title: "Deadlock.",
     tagline: "Design lead for climb latching mechanism.",
@@ -148,6 +157,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    //Flatline
     slug: "flatline-2024",
     title: "Flatline.",
     tagline: "Design lead for pivoting disk launcher.",

@@ -127,7 +127,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2025",
     role: "Subsystem Design Lead · Driver",
-    cover: frcImg,
+    cover: dl1,
     summary:
       "tbd",
     details: [
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: dl1, caption: "Competition robot — full assembly" },
       { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
       { src: cadIsolated, caption: "Shooter — isolated frame view" },
     ],

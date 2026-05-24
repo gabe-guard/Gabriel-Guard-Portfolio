@@ -18,6 +18,7 @@ export const Route = createFileRoute("/certifications")({
 type Cert = { name: string; issuer: string; status: "Earned" | "In Progress" };
 
 const certs: Cert[] = [
+  { name: "Onshape Associate", issuer: "Onshape", status: "Earned" },
   { name: "Autodesk Inventor", issuer: "Autodesk", status: "Earned" },
   { name: "OSHA 10 — General Industry", issuer: "OSHA", status: "Earned" },
   { name: "Microsoft Office Associate", issuer: "Microsoft (Excel · Word · PowerPoint)", status: "Earned" },

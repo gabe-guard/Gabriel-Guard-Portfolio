@@ -16,11 +16,11 @@ export const Route = createFileRoute("/connect")({
 });
 
 const channels = [
-  { label: "Email", value: "gcguard1@gmail.com", href: "mailto:gcguard1@gmail.com" },
-  { label: "Phone", value: "+1 (737) 781-9053", href: "tel:+17377819053" },
-  { label: "LinkedIn", value: "/in/gabriel-guard", href: "www.linkedin.com/in/gabriel-guard" },
-  { label: "GitHub", value: "@gabrielguard", href: "#" },
-  { label: "Location", value: "Austin, TX · UT Austin", href: "https://github.com/gabe-guard" },
+  { label: "Email", value: "gcguard1@gmail.com", href: "mailto:gcguard1@gmail.com", external: false },
+  { label: "Phone", value: "+1 (737) 781-9053", href: "tel:+17377819053", external: false },
+  { label: "LinkedIn", value: "/in/gabriel-guard", href: "https://www.linkedin.com/in/gabriel-guard", external: true },
+  { label: "GitHub", value: "@gabe-guard", href: "https://github.com/gabe-guard", external: true },
+  { label: "Location", value: "Austin, TX · UT Austin", href: "#", external: false },
 ];
 
 function Connect() {
@@ -69,6 +69,7 @@ function Connect() {
               <li key={c.label} className="border-b border-border">
                 <a
                   href={c.href}
+                  {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="flex items-center justify-between py-4 group"
                 >
                   <span className="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground">

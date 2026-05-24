@@ -23,8 +23,8 @@ export function SiteFooter() {
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-accent" /> <a href="mailto:gcguard1@gmail.com" className="hover:text-primary">gcguard1@gmail.com</a></li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-accent" /> Austin, TX</li>
-            <li className="flex items-center gap-2"><Linkedin className="h-4 w-4 text-accent" /> <a href="#" className="hover:text-primary">LinkedIn</a></li>
-            <li className="flex items-center gap-2"><Github className="h-4 w-4 text-accent" /> <a href="#" className="hover:text-primary">GitHub</a></li>
+            <li className="flex items-center gap-2"><Linkedin className="h-4 w-4 text-accent" /> <a href="https://www.linkedin.com/in/gabriel-guard" target="_blank" rel="noopener noreferrer" className="hover:text-primary">LinkedIn</a></li>
+            <li className="flex items-center gap-2"><Github className="h-4 w-4 text-accent" /> <a href="https://github.com/gabe-guard" target="_blank" rel="noopener noreferrer" className="hover:text-primary">GitHub</a></li>
           </ul>
         </div>
         <div>

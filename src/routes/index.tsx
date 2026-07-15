@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Wrench, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
+import { PhotoCarousel } from "@/components/PhotoCarousel";
 import { projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -115,12 +116,6 @@ function Marquee() {
 }
 
 function About() {
-  const stats = [
-    { icon: Wrench, k: "120+", v: "parts tracked across FRC season" },
-    { icon: Sparkles, k: "5×", v: "championship awards earned" },
-    { icon: GraduationCap, k: "3.985", v: "unweighted GPA · UT Austin bound" },
-  ];
-
   return (
     <section className="container-wide py-28">
       <FadeUp>
@@ -143,17 +138,9 @@ function About() {
           </p>
         </FadeUp>
 
-        <div className="md:col-span-5 space-y-4">
-          {stats.map((s, i) => (
-            <FadeUp key={s.k} delay={0.1 + i * 0.08}>
-              <div className="group rounded-2xl border border-border bg-card p-6 hover-lift">
-                <s.icon className="h-6 w-6 text-accent" />
-                <div className="mt-4 font-display text-4xl font-extrabold tracking-tight">{s.k}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{s.v}</div>
-              </div>
-            </FadeUp>
-          ))}
-        </div>
+        <FadeUp delay={0.15} className="md:col-span-5">
+          <PhotoCarousel />
+        </FadeUp>
       </div>
     </section>
   );

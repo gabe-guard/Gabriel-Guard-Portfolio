@@ -3,8 +3,6 @@ import valorImg from "@/assets/project-valor.jpg";
 import umbraImg from "@/assets/project-umbra.jpg";
 import nexusImg from "@/assets/project-nexus.jpg";
 import piezoImg from "@/assets/project-piezo.jpg";
-import cadIsolated from "@/assets/cad-isolated.jpg";
-import cadPowertrain from "@/assets/cad-powertrain.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 import dp1 from "@/assets/dp1.jpg";
@@ -106,8 +104,6 @@ export const projects: Project[] = [
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
       { src: frcImg, caption: "Competition robot — full assembly" },
-      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
-      { src: cadIsolated, caption: "Shooter — isolated frame view" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },
@@ -143,8 +139,6 @@ export const projects: Project[] = [
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
-      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
-      { src: cadIsolated, caption: "Shooter — isolated frame view" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },
@@ -180,8 +174,6 @@ export const projects: Project[] = [
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
       { src: frcImg, caption: "Competition robot — full assembly" },
-      { src: cadPowertrain, caption: "Shooter powertrain — belt + gear stack" },
-      { src: cadIsolated, caption: "Shooter — isolated frame view" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },

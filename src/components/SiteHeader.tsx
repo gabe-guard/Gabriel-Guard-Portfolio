@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const nav = [
-  { to: "/", label: "Index" },
+  { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
   { to: "/certifications", label: "Certifications" },
   { to: "/connect", label: "Connect" },

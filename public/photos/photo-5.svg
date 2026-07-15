@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice">
+  <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="hsl(335, 45%, 78%)"/>
+    <stop offset="100%" stop-color="hsl(375, 55%, 55%)"/>
+  </linearGradient></defs>
+  <rect width="400" height="700" fill="url(#g5)"/>
+  <text x="200" y="350" font-family="system-ui,sans-serif" font-size="42" font-weight="800" fill="rgba(255,255,255,0.85)" text-anchor="middle">Photo 5</text>
+  <text x="200" y="390" font-family="system-ui,sans-serif" font-size="16" fill="rgba(255,255,255,0.7)" text-anchor="middle">replace with your photo</text>
+</svg>

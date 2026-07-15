@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Wrench, Sparkles, GraduationCap } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
+import { PhotoCarousel } from "@/components/PhotoCarousel";
 import { projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({

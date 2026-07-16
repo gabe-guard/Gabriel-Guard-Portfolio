@@ -116,36 +116,11 @@ function ProjectDetail() {
           </ul>
         </FadeUp>
       </section>
-      {/* Contribution / Accomplishments / Feature */}
-      {(project.contribution || project.accomplishments || project.feature) && (
-        <section className="container-wide py-10 border-t border-border grid gap-14 md:grid-cols-12">
-          {project.contribution && (
-            <FadeUp className="md:col-span-6 space-y-4">
-              <p className="eyebrow">My Contribution</p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{project.contribution}</p>
-            </FadeUp>
-          )}
-          {project.accomplishments && (
-            <FadeUp delay={0.05} className="md:col-span-6 space-y-4">
-              <p className="eyebrow">Accomplishments</p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{project.accomplishments}</p>
-            </FadeUp>
-          )}
-          {project.feature && (
-            <FadeUp delay={0.1} className="md:col-span-12 space-y-4">
-              <p className="eyebrow">{project.feature.title}</p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-4xl">{project.feature.body}</p>
-            </FadeUp>
-          )}
-        </section>
-      )}
-
-
       {/* CAD interactive */}
       {project.cad && project.cad.length > 0 && (
         <section className="container-wide py-10 border-t border-border">
           <FadeUp>
-            <p className="eyebrow">Interactive · CAD</p>
+            <p className="eyebrow">Interactive · CAD{project.feature ? ` · ${project.feature.title}` : ""}</p>
             <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">
               Toggle the <span className="italic text-primary">views.</span>
             </h2>
@@ -153,7 +128,8 @@ function ProjectDetail() {
           <div className="mt-10 grid gap-10 md:grid-cols-12 items-center">
             <FadeUp className="md:col-span-4">
               <p className="text-muted-foreground leading-relaxed">
-                Switch between an isolated frame view and the full powertrain to see how the mechanism comes together.
+                {project.feature?.body ??
+                  "Switch between an isolated frame view and the full powertrain to see how the mechanism comes together."}
               </p>
             </FadeUp>
             <div className="md:col-span-8">

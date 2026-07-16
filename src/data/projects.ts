@@ -259,7 +259,9 @@ export const projects: Project[] = [
     role: "Founder",
     cover: umbraImg,
     summary:
-      "I founded Umbra Design LLC to bring a proprietary translucent car sun visor from concept to production. I led a 4-person team through design, fabrication, branding, and a $1,000 fundraising round, and am currently pursuing a utility patent.",
+      "Umbra is a transparent vehicle sun visor that improves visibility while reducing glare during sunrise and sunset. Every component was designed in Onshape before being manufactured using 3D printing and laser cutting. The project gave me experience designing a product that could move beyond a prototype and toward production through our own LLC.",
+    contribution:
+      "The idea came from everyday driving. Traditional sun visors often block the road instead of just the sunlight. I wanted a better solution that preserved visibility while still reducing glare. Since then I have refined the design through multiple prototypes, tested manufacturing methods, and prepared the product for its first production run.",
     highlights: [
       "Founded LLC, pursuing utility patent",
       "Built brand identity in Figma",

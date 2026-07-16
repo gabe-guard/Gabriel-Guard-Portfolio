@@ -38,8 +38,6 @@ export type Project = {
   gallery: { src: string; caption: string }[];
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
-  contribution?: string;
-  accomplishments?: string;
   feature?: { title: string; body: string };
 };
 

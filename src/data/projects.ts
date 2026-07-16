@@ -54,16 +54,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
-      "I lead subsystem design for FRC Team 6800, a 35-student competitive robotics team. I drive top-down parametric CAD in Onshape, manage Jira workflows for 120+ purchased and fabricated parts, and oversee a 5-person manufacturing pod. I was also selected to drive the robot — undefeated at the Texas District Championship.",
-    details: [
-      "Beyond the headline numbers, Downpour was an exercise in disciplined iteration. Every subsystem started as a top-down parametric sketch in ",
-      { text: "Onshape", href: "https://onshape.com" },
-      ", which let the team branch experimental geometry without breaking the master assembly. This is placeholder copy — swap it for the real story of the build, the failures, the late nights, and the moments that made it click.",
-    ],
-    contribution:
       "I led the design of Downpour's entire drum shooter assembly from the first CAD model to the final competition robot. This included the drum shooter, feeder rollers, adjustable hood, camera mounts, radio mount, switch mount, and motor packaging. I also designed lightened frame components, managed manufacturing through Jira, created CAM for router parts, and helped oversee routing, lathe work, sandblasting, powder coating, and final assembly. Throughout the season I made small improvements to hood geometry and compression to improve consistency while keeping the original design intact.",
-    accomplishments:
+    details: [
       "Downpour became the most successful robot in team history. The robot won the Curie Division at the FIRST Championship and advanced to Einstein. Earlier in the season it won multiple district events and helped Team 6800 finish as FIRST in Texas State Champions. Downpour finished the season with more than sixty official match wins and established Valor as one of the top teams in the world.",
+    ],
     feature: {
       title: "Drum Shooter Design",
       body: "The shooter was built around a compact drum style design powered by three Kraken X60 motors with two additional Kraken motors driving the feeder. The adjustable hood traveled through about eighty degrees using a high reduction gearbox, allowing accurate control over shot trajectory from different locations on the field. A large focus of the design was packaging. Every motor, sensor, and electrical component fit inside a small footprint while remaining easy to service between matches. The design also emphasized rigidity to maintain shot consistency throughout a demanding competition season.",

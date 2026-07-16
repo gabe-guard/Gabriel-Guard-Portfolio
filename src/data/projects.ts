@@ -193,6 +193,14 @@ export const projects: Project[] = [
       { text: "link", href: "https://onshape.com" },
       "tbd",
     ],
+    contribution:
+      "I designed Flatline's complete shooter along with its pivot mechanism. The entire assembly was developed from scratch with the goal of creating a compact system that could score from multiple locations while remaining easy to tune throughout the season.",
+    accomplishments:
+      "Flatline established many of the engineering standards that carried into later robots. The robot performed consistently throughout the season and became the starting point for several future shooter designs.",
+    feature: {
+      title: "Double Sided Shooter",
+      body: "One of the defining features of the shooter was its ability to score from either side, giving the robot more options when navigating defense. The wheels applied controlled spin to stabilize the game piece in flight and improve shot consistency. A built in chain tensioning system allowed quick adjustments between matches without disassembling the mechanism.",
+    },
     highlights: [
       "2× District Event Winner",
       "2× Excellence in Engineering Award",

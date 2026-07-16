@@ -235,8 +235,9 @@ export const projects: Project[] = [
     cover: umbraImg,
     summary:
       "Umbra is a transparent vehicle sun visor that improves visibility while reducing glare during sunrise and sunset. Every component was designed in Onshape before being manufactured using 3D printing and laser cutting. The project gave me experience designing a product that could move beyond a prototype and toward production through our own LLC.",
-    contribution:
+    details: [
       "The idea came from everyday driving. Traditional sun visors often block the road instead of just the sunlight. I wanted a better solution that preserved visibility while still reducing glare. Since then I have refined the design through multiple prototypes, tested manufacturing methods, and prepared the product for its first production run.",
+    ],
     highlights: [
       "Founded LLC, pursuing utility patent",
       "Built brand identity in Figma",

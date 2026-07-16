@@ -107,6 +107,14 @@ export const projects: Project[] = [
       { text: "link", href: "https://onshape.com" },
       "tbd",
     ],
+    contribution:
+      "Drizzle was our first robot built for REBUILT and served as the foundation for many ideas used later on Downpour. I designed the turret, compact shooter, and adjustable hood. One of the biggest challenges was fitting everything inside an extremely small package while maintaining strength and reliability. The turret rings held a seven inch bearing and required precise machining, tapping, and heat fitting to achieve the final assembly.",
+    accomplishments:
+      "Although Drizzle was eventually replaced by Downpour, it proved many of the concepts that carried through the rest of the season. The robot earned district event wins early in competition and demonstrated the value of the turret architecture before the team shifted toward a new robot design.",
+    feature: {
+      title: "Turret Design",
+      body: "The turret rotated through roughly four hundred degrees while routing every wire through a large cable chain to prevent tangling. The hood was driven by a cycloidal gearbox that provided the torque and precision needed for accurate adjustment. Keeping the mechanism compact was the highest priority. Every component was designed to maximize space without sacrificing strength or serviceability.",
+    },
     highlights: [
       "2× District Event Winner",
       "2× Excellence in Engineering Award",

@@ -132,16 +132,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: dl1,
     summary:
-      "tbd",
-    details: [
-      "tbd",
-      { text: "link", href: "https://onshape.com" },
-      "tbd",
-    ],
-    contribution:
       "For Deadlock I designed the climb pivot mechanism that connected the climber to the robot. The design needed to handle repeated impacts while remaining compact and easy to manufacture. The final mechanism provided the strength needed for reliable climbs throughout the season.",
-    accomplishments:
+    details: [
       "Deadlock won the Tomball District Event, the Manor District Event, the FIRST in Texas State Championship, and reached the Division Finals at the FIRST Championship. It finished with a fifty nine and ten official record and became the most successful robot in team history before Downpour.",
+    ],
     feature: {
       title: "Climb Mechanism",
       body: "The pivot was designed to transfer large climbing loads into the robot frame while minimizing weight. A simple design reduced manufacturing time and improved reliability during repeated climbing cycles. The focus was durability instead of unnecessary complexity.",

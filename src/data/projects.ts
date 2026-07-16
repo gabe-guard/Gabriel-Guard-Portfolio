@@ -206,10 +206,9 @@ export const projects: Project[] = [
     cover: valorImg,
     summary:
       "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.",
-    contribution:
-      "Over roughly fifty hours I helped create nearly every part of the competition. I designed the full field and game elements in Onshape, wrote the game manual and rules, created the branding in Figma, built presentation material in Canva, managed communication through Discord, secured three hundred dollars in sponsorships from Studica and goBILDA, coordinated judging with students from teams across the country, and helped run the final livestream. The experience taught me how much planning and coordination goes into running an engineering competition beyond simply designing a robot.",
-    accomplishments:
-      "The challenge received twenty eight submissions from more than sixty students who collectively spent over one thousand hours designing their robots. The awards livestream reached more than seventeen hundred viewers and distributed three hundred dollars in sponsored prizes.",
+    details: [
+      "Over roughly fifty hours I helped create nearly every part of the competition. I designed the full field and game elements in Onshape, wrote the game manual and rules, created the branding in Figma, built presentation material in Canva, managed communication through Discord, secured three hundred dollars in sponsorships from Studica and goBILDA, coordinated judging with students from teams across the country, and helped run the final livestream. The challenge received twenty eight submissions from more than sixty students who collectively spent over one thousand hours designing their robots, and the awards livestream reached more than seventeen hundred viewers while distributing three hundred dollars in sponsored prizes.",
+    ],
     highlights: [
       "117 participants worldwide",
       "15-page mock game manual",

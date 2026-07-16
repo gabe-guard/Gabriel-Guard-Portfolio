@@ -38,8 +38,6 @@ export type Project = {
   gallery: { src: string; caption: string }[];
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
-  contribution?: string;
-  accomplishments?: string;
   feature?: { title: string; body: string };
 };
 
@@ -54,16 +52,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
-      "I lead subsystem design for FRC Team 6800, a 35-student competitive robotics team. I drive top-down parametric CAD in Onshape, manage Jira workflows for 120+ purchased and fabricated parts, and oversee a 5-person manufacturing pod. I was also selected to drive the robot — undefeated at the Texas District Championship.",
-    details: [
-      "Beyond the headline numbers, Downpour was an exercise in disciplined iteration. Every subsystem started as a top-down parametric sketch in ",
-      { text: "Onshape", href: "https://onshape.com" },
-      ", which let the team branch experimental geometry without breaking the master assembly. This is placeholder copy — swap it for the real story of the build, the failures, the late nights, and the moments that made it click.",
-    ],
-    contribution:
       "I led the design of Downpour's entire drum shooter assembly from the first CAD model to the final competition robot. This included the drum shooter, feeder rollers, adjustable hood, camera mounts, radio mount, switch mount, and motor packaging. I also designed lightened frame components, managed manufacturing through Jira, created CAM for router parts, and helped oversee routing, lathe work, sandblasting, powder coating, and final assembly. Throughout the season I made small improvements to hood geometry and compression to improve consistency while keeping the original design intact.",
-    accomplishments:
+    details: [
       "Downpour became the most successful robot in team history. The robot won the Curie Division at the FIRST Championship and advanced to Einstein. Earlier in the season it won multiple district events and helped Team 6800 finish as FIRST in Texas State Champions. Downpour finished the season with more than sixty official match wins and established Valor as one of the top teams in the world.",
+    ],
     feature: {
       title: "Drum Shooter Design",
       body: "The shooter was built around a compact drum style design powered by three Kraken X60 motors with two additional Kraken motors driving the feeder. The adjustable hood traveled through about eighty degrees using a high reduction gearbox, allowing accurate control over shot trajectory from different locations on the field. A large focus of the design was packaging. Every motor, sensor, and electrical component fit inside a small footprint while remaining easy to service between matches. The design also emphasized rigidity to maintain shot consistency throughout a demanding competition season.",
@@ -101,16 +93,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
-      "tbd",
-    details: [
-      "tbd",
-      { text: "link", href: "https://onshape.com" },
-      "tbd",
-    ],
-    contribution:
       "Drizzle was our first robot built for REBUILT and served as the foundation for many ideas used later on Downpour. I designed the turret, compact shooter, and adjustable hood. One of the biggest challenges was fitting everything inside an extremely small package while maintaining strength and reliability. The turret rings held a seven inch bearing and required precise machining, tapping, and heat fitting to achieve the final assembly.",
-    accomplishments:
+    details: [
       "Although Drizzle was eventually replaced by Downpour, it proved many of the concepts that carried through the rest of the season. The robot earned district event wins early in competition and demonstrated the value of the turret architecture before the team shifted toward a new robot design.",
+    ],
     feature: {
       title: "Turret Design",
       body: "The turret rotated through roughly four hundred degrees while routing every wire through a large cable chain to prevent tangling. The hood was driven by a cycloidal gearbox that provided the torque and precision needed for accurate adjustment. Keeping the mechanism compact was the highest priority. Every component was designed to maximize space without sacrificing strength or serviceability.",
@@ -144,16 +130,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: dl1,
     summary:
-      "tbd",
-    details: [
-      "tbd",
-      { text: "link", href: "https://onshape.com" },
-      "tbd",
-    ],
-    contribution:
       "For Deadlock I designed the climb pivot mechanism that connected the climber to the robot. The design needed to handle repeated impacts while remaining compact and easy to manufacture. The final mechanism provided the strength needed for reliable climbs throughout the season.",
-    accomplishments:
+    details: [
       "Deadlock won the Tomball District Event, the Manor District Event, the FIRST in Texas State Championship, and reached the Division Finals at the FIRST Championship. It finished with a fifty nine and ten official record and became the most successful robot in team history before Downpour.",
+    ],
     feature: {
       title: "Climb Mechanism",
       body: "The pivot was designed to transfer large climbing loads into the robot frame while minimizing weight. A simple design reduced manufacturing time and improved reliability during repeated climbing cycles. The focus was durability instead of unnecessary complexity.",
@@ -187,16 +167,10 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead",
     cover: frcImg,
     summary:
-      "tbd",
-    details: [
-      "tbd",
-      { text: "link", href: "https://onshape.com" },
-      "tbd",
-    ],
-    contribution:
       "I designed Flatline's complete shooter along with its pivot mechanism. The entire assembly was developed from scratch with the goal of creating a compact system that could score from multiple locations while remaining easy to tune throughout the season.",
-    accomplishments:
+    details: [
       "Flatline established many of the engineering standards that carried into later robots. The robot performed consistently throughout the season and became the starting point for several future shooter designs.",
+    ],
     feature: {
       title: "Double Sided Shooter",
       body: "One of the defining features of the shooter was its ability to score from either side, giving the robot more options when navigating defense. The wheels applied controlled spin to stabilize the game piece in flight and improve shot consistency. A built in chain tensioning system allowed quick adjustments between matches without disassembling the mechanism.",
@@ -230,10 +204,9 @@ export const projects: Project[] = [
     cover: valorImg,
     summary:
       "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.",
-    contribution:
-      "Over roughly fifty hours I helped create nearly every part of the competition. I designed the full field and game elements in Onshape, wrote the game manual and rules, created the branding in Figma, built presentation material in Canva, managed communication through Discord, secured three hundred dollars in sponsorships from Studica and goBILDA, coordinated judging with students from teams across the country, and helped run the final livestream. The experience taught me how much planning and coordination goes into running an engineering competition beyond simply designing a robot.",
-    accomplishments:
-      "The challenge received twenty eight submissions from more than sixty students who collectively spent over one thousand hours designing their robots. The awards livestream reached more than seventeen hundred viewers and distributed three hundred dollars in sponsored prizes.",
+    details: [
+      "Over roughly fifty hours I helped create nearly every part of the competition. I designed the full field and game elements in Onshape, wrote the game manual and rules, created the branding in Figma, built presentation material in Canva, managed communication through Discord, secured three hundred dollars in sponsorships from Studica and goBILDA, coordinated judging with students from teams across the country, and helped run the final livestream. The challenge received twenty eight submissions from more than sixty students who collectively spent over one thousand hours designing their robots, and the awards livestream reached more than seventeen hundred viewers while distributing three hundred dollars in sponsored prizes.",
+    ],
     highlights: [
       "117 participants worldwide",
       "15-page mock game manual",
@@ -260,8 +233,9 @@ export const projects: Project[] = [
     cover: umbraImg,
     summary:
       "Umbra is a transparent vehicle sun visor that improves visibility while reducing glare during sunrise and sunset. Every component was designed in Onshape before being manufactured using 3D printing and laser cutting. The project gave me experience designing a product that could move beyond a prototype and toward production through our own LLC.",
-    contribution:
+    details: [
       "The idea came from everyday driving. Traditional sun visors often block the road instead of just the sunlight. I wanted a better solution that preserved visibility while still reducing glare. Since then I have refined the design through multiple prototypes, tested manufacturing methods, and prepared the product for its first production run.",
+    ],
     highlights: [
       "Founded LLC, pursuing utility patent",
       "Built brand identity in Figma",

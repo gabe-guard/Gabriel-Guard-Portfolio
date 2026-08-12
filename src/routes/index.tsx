@@ -128,13 +128,10 @@ function About() {
       <div className="mt-14 grid gap-12 md:grid-cols-12">
         <FadeUp delay={0.05} className="md:col-span-7 space-y-5 text-lg leading-relaxed text-muted-foreground">
           <p>
-            I'm a senior at Vandegrift High School in Austin, Texas, headed to The University of Texas at Austin to study Mechanical Engineering. My obsession started in middle school robotics — and four years later, I lead subsystem design and drive the robot for FRC Team 6800.
+            Engineering has always been the way I turn ideas into something real. I enjoy solving problems through CAD, machining, and rapid prototyping, then seeing those designs come together into a finished product. As an incoming <span className="text-foreground font-semibold">Mechanical Engineering</span> student with a <span className="text-foreground font-semibold">Robotics minor</span>, I want to continue designing machines that are simple, reliable, and built with purpose.
           </p>
           <p>
-            Outside of robotics, I founded <span className="text-foreground font-semibold">Umbra Design LLC</span> to bring a translucent sun visor from sketch to production, organized the <span className="text-foreground font-semibold">Valor CAD Challenge</span> for 117 participants worldwide, and run independent research on cost-effective piezoelectric 3D printing.
-          </p>
-          <p>
-            I love the loop: design top-down in CAD, manufacture on the router and lathe, drive at competition, learn what broke, and refine. This site is the living version of that loop.
+            Outside of robotics, I spend my time designing and printing projects, cooking, and bouldering. I enjoy learning new manufacturing methods and finding better ways to build things. Whether I am leading a robot design, organizing an engineering competition, or developing a product, I enjoy creating work that people can use and improve on.
           </p>
         </FadeUp>
 

@@ -24,12 +24,12 @@ export function CadToggle({ views }: { views: View[] }) {
           />
         </AnimatePresence>
       </div>
-      <div className="mt-6 inline-flex rounded-full bg-secondary p-1.5 border border-border">
+      <div className="mt-4 inline-flex rounded-full bg-secondary p-1 border border-border">
         {views.map((v, i) => (
           <button
             key={v.label}
             onClick={() => setActive(i)}
-            className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-[0.18em] transition-all ${
+            className={`px-4 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.14em] transition-all ${
               i === active
                 ? "bg-primary text-primary-foreground shadow-sm"
                 : "text-muted-foreground hover:text-primary"

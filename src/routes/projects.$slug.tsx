@@ -3,6 +3,8 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { FadeUp, Parallax } from "@/components/Parallax";
 import { CadToggle } from "@/components/CadToggle";
+import { Breakdown } from "@/components/Breakdown";
+
 import { getProject, projects, type Project } from "@/data/projects";
 
 export const Route = createFileRoute("/projects/$slug")({
@@ -125,19 +127,23 @@ function ProjectDetail() {
               Toggle the <span className="italic text-primary">views.</span>
             </h2>
           </FadeUp>
-          <div className="mt-10 grid gap-10 md:grid-cols-12 items-center">
-            <FadeUp className="md:col-span-4">
+          <div className="mt-10 grid gap-8 md:grid-cols-12 items-center">
+            <FadeUp className="md:col-span-5">
               <p className="text-muted-foreground leading-relaxed">
                 {project.feature?.body ??
                   "Switch between an isolated frame view and the full powertrain to see how the mechanism comes together."}
               </p>
             </FadeUp>
-            <div className="md:col-span-8">
+            <div className="md:col-span-7">
               <CadToggle views={project.cad} />
             </div>
           </div>
         </section>
       )}
+
+      {project.breakdown && <Breakdown data={project.breakdown} />}
+
+
 
       {/* Gallery */}
       <section className="container-wide py-10 border-t border-border">

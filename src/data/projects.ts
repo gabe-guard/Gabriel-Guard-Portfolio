@@ -1,4 +1,8 @@
+import type React from "react";
+import breakdownImg from "@/assets/breakdown-placeholder.png";
+import breakdownLine from "@/assets/breakdown-lineart.png";
 import frcImg from "@/assets/downpourmain.jpg";
+
 import valorImg from "@/assets/project-valor.jpg";
 import umbraImg from "@/assets/project-umbra.jpg";
 import nexusImg from "@/assets/project-nexus.jpg";
@@ -12,6 +16,24 @@ import dp4 from "@/assets/dp4.jpg";
 import dl1 from "@/assets/dl1.jpg";
 
 export type RichSegment = string | { text: string; href: string };
+
+/** Transparent image with tweakable CSS placement. */
+export type BreakdownImage = {
+  src: string;
+  alt: string;
+  /** Inline CSS to fine-tune position/size, e.g. { right: "-4%", bottom: "-18%", width: "55%" } */
+  style?: React.CSSProperties;
+};
+
+export type Breakdown = {
+  hero: {
+    blocks: { heading: string; body: string }[];
+    image?: BreakdownImage;
+  };
+  cards: { heading: string; body: string; image?: BreakdownImage }[];
+  lineArt?: BreakdownImage;
+};
+
 
 export type Project = {
   slug: string;
@@ -39,6 +61,8 @@ export type Project = {
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
   feature?: { title: string; body: string };
+  breakdown?: Breakdown;
+
 };
 
 export const projects: Project[] = [
@@ -52,13 +76,13 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
-      "I led the design of Downpour's entire drum shooter assembly from the first CAD model to the final competition robot. This included the drum shooter, feeder rollers, adjustable hood, camera mounts, radio mount, switch mount, and motor packaging. I also designed lightened frame components, managed manufacturing through Jira, created CAM for router parts, and helped oversee routing, lathe work, sandblasting, powder coating, and final assembly. Throughout the season I made small improvements to hood geometry and compression to improve consistency while keeping the original design intact.",
+      "Downpour was our robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot marked a milestone in our team's history, winning the Curie Division at the World Championship and competing in playoff matches on the Einsteins field. Downpour also featured at the Texas District Championship winning runner-up on its debut. The robot earned the Excellence in Engineering Award and Industrial Design Award.",
     details: [
-      "Downpour became the most successful robot in team history. The robot won the Curie Division at the FIRST Championship and advanced to Einstein. Earlier in the season it won multiple district events and helped Team 6800 finish as FIRST in Texas State Champions. Downpour finished the season with more than sixty official match wins and established Valor as one of the top teams in the world.",
+      "Downpour was designed for a fast paced 3v3 game where robots collect foam balls, called \"fuel\", and score them in a hexagonal goal or \"hub\". As a mechanical design lead, I designed the Shooter Subsystem to launch the fuel into the goal. Iterating off of my previous turreted design, that shot a single stream of fuel, Downpour's shooter was designed to launch volleys of fuel using a full-width drum shooter.",
     ],
     feature: {
       title: "Drum Shooter Design",
-      body: "The shooter was built around a compact drum style design powered by three Kraken X60 motors with two additional Kraken motors driving the feeder. The adjustable hood traveled through about eighty degrees using a high reduction gearbox, allowing accurate control over shot trajectory from different locations on the field. A large focus of the design was packaging. Every motor, sensor, and electrical component fit inside a small footprint while remaining easy to service between matches. The design also emphasized rigidity to maintain shot consistency throughout a demanding competition season.",
+      body: "The Shooter Subsystem is made up of three sub-assemblies which I designed using Onshape, including a superstructure, variable hood, and \"feeder\". The superstructure, constructed from a rigid tab-and-slot aluminum assembly, housed much of the robot's electronics including the power switch, radio, and cameras. Additionally, the structure packaged the 5 Kraken x60 motors used to power the shooter. One of the motors, linked to the hood via belts, controlled the pitch of the hood, allowing the robot to adjust its shot angle according to the distance between the robot and the goal. Three more motors powered the aluminum drum flywheel and polycarbonate back-rollers. Coated in rubber grip tape, these rollers minimized slip while maximizing moment of inertia. This helped maintain consistent wheel speed and reduced motor strain as the system worked to reach and maintain its PID targets during fuel launches. The remaining 2 motors were used to feed fuel from the robot's hopper into the shooter, agitating fuel and pulling it through the system.\n\nOnce the design was complete, parts were converted into manufacturing tickets in Jira to be claimed by members of the manufacturing team. All parts were designed with manufacturing in mind, using features such as tab and slot joints with machining and powder coating tolerances accounted for. Modular subsections also allowed us to add more motors or flywheel mass without redesigning the entire assembly. Using Jira, I ordered COTS parts and verified critical dimensions of parts manufactured in-house. Additionally, I oversaw the powdercoating of parts ensuring that each part was painted the correct color to remain true to the original design.\n\nOnce all parts were fabricated, labeled, and verified, I began assembly. Once the subsystem was constructed I worked with the electrical and software teams to integrate the shooter into the rest of the robot. This included providing wiring diagrams and gear ratios to convert motor rotations to mechanical output in code.",
     },
     highlights: [
       "FIRST World Championship Curie Division Winner",
@@ -101,6 +125,40 @@ export const projects: Project[] = [
       title: "Turret Design",
       body: "The turret rotated through roughly four hundred degrees while routing every wire through a large cable chain to prevent tangling. The hood was driven by a cycloidal gearbox that provided the torque and precision needed for accurate adjustment. Keeping the mechanism compact was the highest priority. Every component was designed to maximize space without sacrificing strength or serviceability.",
     },
+    breakdown: {
+      hero: {
+        blocks: [
+          {
+            heading: "Cycloidal Hood",
+            body: "Placeholder copy. Describe the hood drivetrain here — reduction, travel range, and why the cycloidal stage was the right call for precision under load.",
+          },
+          {
+            heading: "Custom Bearing Fitting",
+            body: "Placeholder copy. Describe the seven inch turret bearing, the machining and heat fitting process, and how the stackup keeps the turret concentric.",
+          },
+        ],
+        image: {
+          src: breakdownImg,
+          alt: "Turret mechanism render",
+          // Tweak these to perfect the placement
+          style: { right: "-2%", bottom: "-14%", width: "52%" },
+        },
+      },
+      cards: [
+        {
+          heading: "Cycloidal Hood",
+          body: "Placeholder copy for the left card. Keep it short — two or three sentences that set up the detail image below.",
+          image: { src: breakdownImg, alt: "Hood gearbox detail" },
+        },
+        {
+          heading: "Bearing Stackup",
+          body: "Placeholder copy for the right card. Call out the tolerances, the retention scheme, and anything that had to be re-machined after the first fit.",
+          image: { src: breakdownImg, alt: "Bearing stackup section view" },
+        },
+      ],
+      lineArt: { src: breakdownLine, alt: "Line drawing of the turret assembly" },
+    },
+
     highlights: [
       "2× District Event Winner",
       "2× Excellence in Engineering Award",

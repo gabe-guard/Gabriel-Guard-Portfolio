@@ -15,6 +15,12 @@ import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
 import dl1 from "@/assets/dl1.jpg";
 
+import dp_fullwire from "@/assets/dp_fullwire.png";
+import dp_isowire from "@/assets/dp_isowire.png";
+import dp_cnc2 from "@/assets/dp_cnc2.jpg";
+import dp_parts from "@/assets/dp_parts.JPEG";
+
+
 export type RichSegment = string | { text: string; href: string };
 
 /** Transparent image with tweakable CSS placement. */

@@ -2,16 +2,14 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import car1 from "../assets/car1.jpeg";
-import car2 from "../assets/car2.jpeg";
-import car3 from "../assets/car3.jpeg";
-import car4 from "../assets/car4.jpg";
+import car1 from "../assets/intro1.jpg";
+import car2 from "../assets/intro2.jpg";
+import car3 from "../assets/intro3.jpeg";
 
 const photos = [
   { src: car1, alt: "Car photo 1" },
   { src: car2, alt: "Car photo 2" },
   { src: car3, alt: "Car photo 3" },
-  { src: car4, alt: "Car photo 4" },
 ];
 
 export function PhotoCarousel() {
@@ -64,7 +62,7 @@ export function PhotoCarousel() {
               type="button"
               onClick={() => setActive(i)}
               aria-label={`Show ${p.alt}`}
-              className="absolute left-1/2 top-1/8 aspect-[16/9] h-[30%] overflow-hidden rounded-md border border-border bg-surface shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="absolute left-1/2 top-1/8 aspect-[9/16] h-[30%] overflow-hidden rounded-md border border-border bg-surface shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               initial={false}
               animate={{
                 x: `calc(-50% + ${x}%)`,

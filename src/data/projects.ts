@@ -117,47 +117,19 @@ export const projects: Project[] = [
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
     summary:
-      "Drizzle was our first robot built for REBUILT and served as the foundation for many ideas used later on Downpour. I designed the turret, compact shooter, and adjustable hood. One of the biggest challenges was fitting everything inside an extremely small package while maintaining strength and reliability. The turret rings held a seven inch bearing and required precise machining, tapping, and heat fitting to achieve the final assembly.",
+      "Drizzle was our first robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot debuted at the FIT Space City District Event winning the competition and earning the Excellence in Engineering Award. The robot later won the FIT Manor District Event and was awarded the Engineering Inspiration Award.",
     details: [
-      "Although Drizzle was eventually replaced by Downpour, it proved many of the concepts that carried through the rest of the season. The robot earned district event wins early in competition and demonstrated the value of the turret architecture before the team shifted toward a new robot design.",
+      "Similar to our second robot Downpour, Drizzle was designed for a fast paced 3v3 game where robots collect foam balls, called \"fuel\", and score them in a hexagonal goal or \"hub\". As a mechanical design lead, I designed the Turret and Shooter Subsystems to launch the fuel into the goal from anywhere on the field. Using a turret and adjustable hood, I was able to design a ball launcher that could shoot from any distance both stationary and while moving.",
     ],
     feature: {
       title: "Turret Design",
-      body: "The turret rotated through roughly four hundred degrees while routing every wire through a large cable chain to prevent tangling. The hood was driven by a cycloidal gearbox that provided the torque and precision needed for accurate adjustment. Keeping the mechanism compact was the highest priority. Every component was designed to maximize space without sacrificing strength or serviceability.",
+      body: "The Turret Subsystem was made up of a rotating turret, compact shooter, and adjustable hood which I designed using Onshape. The turret was limited to roughly 400 degrees of rotation and used bi-directional cable chain to route wiring between the rotating and stationary sections. The turret rings were designed around a 7 inch diameter bearing and required precise machining, tapping, and heat shrinking to assemble the components together. The compact packaging of the turret and shooter mechanism allowed the shooter to rotate without taking up unnecessary space on the robot. The hood used a cycloidal drive to provide torque and precision required to adjust the launch angle.\n\nPackaging was the main constraint throughout the design. The turret has to fit the bearing, drive system, shooter, hood, motors, and cable chain within a limited footprint while maintaining enough clearance for the full range of motion. I designed the turret rings and mounting interfaces around the manufacturing process, accounting for machining tolerances and the fit between the bearing and surrounding components so the turret could be assembled and serviced without removing the entire mechanism.\n\nOnce the design was complete, I worked with the manufacturing team to machine and assemble the turret components. The rings required precision machining and tapping, while the bearing interfaces used heat fitting to achieve the required fit. After fabrication, I assembled the turret and shooter and worked with the electrical and software teams to integrate the rotating mechanism, including routing the wiring through the cable chain and providing the mechanical details needed to control the turret and hood.",
     },
-    breakdown: {
-      hero: {
-        blocks: [
-          {
-            heading: "Cycloidal Hood",
-            body: "Placeholder copy. Describe the hood drivetrain here — reduction, travel range, and why the cycloidal stage was the right call for precision under load.",
-          },
-          {
-            heading: "Custom Bearing Fitting",
-            body: "Placeholder copy. Describe the seven inch turret bearing, the machining and heat fitting process, and how the stackup keeps the turret concentric.",
-          },
-        ],
-        image: {
-          src: breakdownImg,
-          alt: "Turret mechanism render",
-          // Tweak these to perfect the placement
-          style: { right: "-2%", bottom: "-14%", width: "52%" },
-        },
-      },
-      cards: [
-        {
-          heading: "Cycloidal Hood",
-          body: "Placeholder copy for the left card. Keep it short — two or three sentences that set up the detail image below.",
-          image: { src: breakdownImg, alt: "Hood gearbox detail" },
-        },
-        {
-          heading: "Bearing Stackup",
-          body: "Placeholder copy for the right card. Call out the tolerances, the retention scheme, and anything that had to be re-machined after the first fit.",
-          image: { src: breakdownImg, alt: "Bearing stackup section view" },
-        },
-      ],
-      lineArt: { src: breakdownLine, alt: "Line drawing of the turret assembly" },
-    },
+    processShots: [
+      { src: breakdownImg, caption: "Placeholder — turret ring machining." },
+      { src: breakdownImg, caption: "Placeholder — cycloidal hood drive." },
+    ],
+
 
     highlights: [
       "2× District Event Winner",

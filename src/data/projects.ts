@@ -1,6 +1,6 @@
 import type React from "react";
 import breakdownImg from "@/assets/breakdown-placeholder.png";
-import breakdownLine from "@/assets/breakdown-lineart.png";
+
 import frcImg from "@/assets/downpourmain.jpg";
 
 import valorImg from "@/assets/project-valor.jpg";

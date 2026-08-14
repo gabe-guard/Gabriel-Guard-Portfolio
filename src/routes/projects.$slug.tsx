@@ -127,21 +127,38 @@ function ProjectDetail() {
               Toggle the <span className="italic text-primary">views.</span>
             </h2>
           </FadeUp>
-          <div className="mt-10 grid gap-8 md:grid-cols-12 items-center">
-            <FadeUp className="md:col-span-5">
-              <p className="text-muted-foreground leading-relaxed">
-                {project.feature?.body ??
-                  "Switch between an isolated frame view and the full powertrain to see how the mechanism comes together."}
-              </p>
+          <div className="mt-10 grid gap-8 md:grid-cols-12 items-start">
+            <FadeUp className="md:col-span-5 space-y-4">
+              {(project.feature?.body ??
+                "Switch between an isolated frame view and the full powertrain to see how the mechanism comes together.")
+                .split("\n\n")
+                .map((para, i) => (
+                  <p key={i} className="text-muted-foreground leading-relaxed">
+                    {para}
+                  </p>
+                ))}
             </FadeUp>
-            <div className="md:col-span-7">
+            <div className="md:col-span-7 space-y-8">
               <CadToggle views={project.cad} />
+              {project.processShots && project.processShots.length > 0 && (
+                <div className="grid gap-6 sm:grid-cols-2">
+                  {project.processShots.map((s, i) => (
+                    <figure key={s.src + i} className="rounded-lg overflow-hidden border border-border bg-card">
+                      <div className="aspect-[4/3] bg-surface overflow-hidden">
+                        <img src={s.src} alt={s.caption} loading="lazy" className="h-full w-full object-contain" />
+                      </div>
+                      <figcaption className="p-4 text-sm text-muted-foreground">{s.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
       )}
 
       {project.breakdown && <Breakdown data={project.breakdown} />}
+
 
 
 

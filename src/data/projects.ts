@@ -95,23 +95,23 @@ export const projects: Project[] = [
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
-      { src: dp1, caption: "Starting position" },
+      { src: dp1, caption: "World Finals" },
       { src: dp2, caption: "World Championship" },
       { src: dp3, caption: "State Championship" },
       { src: dp4, caption: "A volley of 'fuel'" },
     ],
     cad: [
-      { label: "Isolated", src: dpcad },
-      { label: "Powertrain", src: dpwireframe },
+      { label: "Isolated", src: dp_fullwire },
+      { label: "Powertrain", src: dp_isowire },
     ],
     links: [
-      { label: "Onshape CAD", href: "https://onshape.com" },
-      { label: "Technical Write-up", href: "https://onshape.com" },
-      { label: "Build Video", href: "https://onshape.com" },
+      { label: "CAD Release", href: "https://www.chiefdelphi.com/t/frc-6800-valor-2026-robot-cad-release/520715" },
+      { label: "Behind the Bumpers", href: "https://www.youtube.com/watch?v=mPNj9xn-3dk" },
+      { label: "Worlds Finals", href: "https://www.youtube.com/watch?v=8blsQjuCjso" },
     ],
     processShots: [
-      { src: breakdownImg, caption: "Placeholder — superstructure assembly." },
-      { src: breakdownImg, caption: "Placeholder — drum flywheel and back-rollers." },
+      { src: dp_cnc2, caption: "Alumnium shooter parts machined on Laguna IQ CNC" },
+      { src: dp_parts, caption: "Post-processed and sandblasted parts prepared for powdercoating" },
     ],
   },
 

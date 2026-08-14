@@ -61,7 +61,10 @@ export type Project = {
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
   feature?: { title: string; body: string };
+  /** Extra process images shown under the interactive CAD toggle. */
+  processShots?: { src: string; caption: string }[];
   breakdown?: Breakdown;
+
 
 };
 

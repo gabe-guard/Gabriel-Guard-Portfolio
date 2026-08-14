@@ -109,7 +109,12 @@ export const projects: Project[] = [
       { label: "Technical Write-up", href: "https://onshape.com" },
       { label: "Build Video", href: "https://onshape.com" },
     ],
+    processShots: [
+      { src: breakdownImg, caption: "Placeholder — superstructure assembly." },
+      { src: breakdownImg, caption: "Placeholder — drum flywheel and back-rollers." },
+    ],
   },
+
   {
     //Drizzle
     slug: "drizzle-2026",

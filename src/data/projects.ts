@@ -18,7 +18,7 @@ import dl1 from "@/assets/dl1.jpg";
 import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
-import dp_parts from "@/assets/dp_parts.JPEG";
+import dp_parts from "@/assets/dp_parts.jpg";
 
 
 export type RichSegment = string | { text: string; href: string };

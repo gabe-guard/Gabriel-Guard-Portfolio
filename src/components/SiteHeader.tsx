@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/", hash: "coursework", label: "Coursework & Skills" },
+  { to: "/", hash: "coursework", label: "Coursework" },
+  { to: "/", hash: "skills", label: "Skills" },
+  { to: "/", hash: "certifications", label: "Certifications" },
+  { to: "/", hash: "connect", label: "Connect" },
   { to: "/projects", label: "Projects" },
-  { to: "/certifications", label: "Certifications" },
-  { to: "/connect", label: "Connect" },
 ];
 
 export function SiteHeader() {

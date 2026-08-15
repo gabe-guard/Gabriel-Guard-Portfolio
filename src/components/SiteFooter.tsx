@@ -31,8 +31,9 @@ export function SiteFooter() {
           <p className="eyebrow mb-3">Pages</p>
           <ul className="space-y-2 text-sm">
             <li><Link to="/projects" className="hover:text-primary">Projects</Link></li>
-            <li><Link to="/certifications" className="hover:text-primary">Certifications</Link></li>
-            <li><Link to="/connect" className="hover:text-primary">Connect</Link></li>
+            <li><Link to="/" hash="certifications" className="hover:text-primary">Certifications</Link></li>
+            <li><Link to="/" hash="connect" className="hover:text-primary">Connect</Link></li>
+            <li><Link to="/" hash="coursework" className="hover:text-primary">Coursework</Link></li>
           </ul>
         </div>
       </div>

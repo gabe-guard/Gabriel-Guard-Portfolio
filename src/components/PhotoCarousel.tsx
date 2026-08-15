@@ -62,7 +62,7 @@ export function PhotoCarousel() {
               type="button"
               onClick={() => setActive(i)}
               aria-label={`Show ${p.alt}`}
-              className="absolute left-1/2 top-1/8 aspect-[9/16] h-[30%] overflow-hidden rounded-md border border-border bg-surface shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="absolute left-1/2 top-1/8 aspect-[9/16] h-[90%] overflow-hidden rounded-md border border-border bg-surface shadow-[0_30px_80px_-30px_rgba(0,0,0,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               initial={false}
               animate={{
                 x: `calc(-50% + ${x}%)`,

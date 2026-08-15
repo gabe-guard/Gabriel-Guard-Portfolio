@@ -10,10 +10,10 @@ const Linkedin = (p: React.SVGProps<SVGSVGElement>) => (
 
 export function SiteFooter() {
   return (
-    <footer className="mt-32 border-t border-border bg-surface">
-      <div className="container-wide py-16 grid gap-10 md:grid-cols-4">
+    <footer className="mt-20 border-t border-border bg-surface">
+      <div className="container-wide py-12 grid gap-8 md:grid-cols-4">
         <div className="md:col-span-2">
-          <h3 className="font-display text-3xl font-extrabold italic tracking-tight">GABRIEL GUARD</h3>
+          <h3 className="font-display text-2xl font-extrabold italic tracking-tight">GABRIEL GUARD</h3>
           <p className="mt-3 max-w-md text-sm text-muted-foreground leading-relaxed">
             Mechanical Engineering @ The University of Texas at Austin. Designer, driver, founder — building things that move.
           </p>

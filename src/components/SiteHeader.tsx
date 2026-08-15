@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const nav = [
   { to: "/", label: "Home" },
+  { to: "/", hash: "coursework", label: "Coursework & Skills" },
   { to: "/projects", label: "Projects" },
   { to: "/certifications", label: "Certifications" },
   { to: "/connect", label: "Connect" },
@@ -30,16 +31,17 @@ export function SiteHeader() {
             Portfolio · 2026
           </span>
         </Link>
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex items-center gap-0.5 sm:gap-1">
           {nav.map((item) => (
             <Link
-              key={item.to}
+              key={item.label}
               to={item.to}
-              className="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
-              activeOptions={{ exact: item.to === "/" }}
+              hash={item.hash}
+              className="px-2.5 py-1.5 text-[0.82rem] font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
+              activeOptions={{ exact: item.to === "/", includeHash: true }}
               activeProps={{
                 className:
-                  "px-3 py-1.5 text-sm font-semibold text-primary-foreground bg-primary rounded-full",
+                  "px-2.5 py-1.5 text-[0.82rem] font-semibold text-primary-foreground bg-primary rounded-full",
               }}
             >
               {item.label}

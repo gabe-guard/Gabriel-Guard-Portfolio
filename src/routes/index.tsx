@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
 import { PhotoCarousel } from "@/components/PhotoCarousel";
-import { CourseworkSkills } from "@/components/CourseworkSkills";
+import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills";
+import { CertificationsSection } from "@/components/CertificationsSection";
+import { ConnectSection } from "@/components/ConnectSection";
 import { projects } from "@/data/projects";
 
 export const Route = createFileRoute("/")({
@@ -25,7 +27,10 @@ function Home() {
       <Hero />
       <Marquee />
       <About />
-      <CourseworkSkills />
+      <CourseworkSection />
+      <SkillsSection />
+      <CertificationsSection />
+      <ConnectSection />
       <FeaturedProjects />
     </>
   );
@@ -33,7 +38,7 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-24 sm:pt-16 sm:pb-28">
+    <section className="relative overflow-hidden min-h-[calc(100vh-4.5rem)] flex flex-col justify-center pt-16 pb-28 sm:pt-20 sm:pb-36">
       <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
       <Parallax offset={50} className="absolute -top-32 -right-40 h-[520px] w-[520px] rounded-full bg-accent/30 blur-3xl pointer-events-none" />
       <Parallax offset={-40} className="absolute top-1/2 -left-32 h-[420px] w-[420px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
@@ -52,14 +57,14 @@ function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
-          className="mt-5 font-display font-extrabold leading-[0.9] tracking-tight text-[clamp(2.75rem,10vw,8.5rem)]"
+          className="mt-6 font-display font-extrabold leading-[0.92] tracking-tight text-[clamp(3rem,10.5vw,9rem)]"
         >
           Gabriel
           <br />
           <span className="italic text-primary">Guard.</span>
         </motion.h1>
 
-        <div className="mt-8 grid gap-8 md:grid-cols-12 items-end">
+        <div className="mt-10 grid gap-10 md:grid-cols-12 items-end">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -119,7 +124,7 @@ function Marquee() {
 
 function About() {
   return (
-    <section className="container-wide py-16">
+    <section className="container-wide py-24">
       <FadeUp>
         <p className="eyebrow">About · 01</p>
         <h2 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold tracking-tight max-w-4xl">
@@ -127,7 +132,7 @@ function About() {
         </h2>
       </FadeUp>
 
-      <div className="mt-10 grid gap-10 md:grid-cols-12">
+      <div className="mt-12 grid gap-12 md:grid-cols-12">
         <FadeUp delay={0.05} className="md:col-span-7 space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
             Engineering has always been the way I turn ideas into something real. I enjoy solving problems through CAD, machining, and rapid prototyping, then seeing those designs come together into a finished product. As an incoming <span className="text-foreground font-semibold">Mechanical Engineering</span> student with a <span className="text-foreground font-semibold">Robotics minor</span>, I want to continue designing machines that are simple, reliable, and built with purpose.
@@ -148,11 +153,11 @@ function About() {
 function FeaturedProjects() {
   const featured = projects.slice(0, 3);
   return (
-    <section className="container-wide py-16">
+    <section className="container-wide py-24">
       <FadeUp>
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
-            <p className="eyebrow">Selected work · 03</p>
+            <p className="eyebrow">Selected work · 06</p>
             <h2 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold">A few favorites.</h2>
           </div>
           <Link to="/projects" className="group inline-flex items-center gap-2 text-sm font-semibold text-primary">
@@ -162,13 +167,13 @@ function FeaturedProjects() {
         </div>
       </FadeUp>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {featured.map((p, i) => (
           <FadeUp key={p.slug} delay={i * 0.08}>
             <Link
               to="/projects/$slug"
               params={{ slug: p.slug }}
-              className="group block rounded-lg overflow-hidden bg-card border border-border hover-lift"
+              className="group block rounded-2xl overflow-hidden bg-card border border-border hover-lift"
             >
               <div className="aspect-[5/4] overflow-hidden bg-surface">
                 <img
@@ -178,7 +183,7 @@ function FeaturedProjects() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div className="p-5">
+              <div className="p-6">
                 <p className="text-xs uppercase tracking-[0.2em] text-accent font-semibold">{p.category}</p>
                 <h3 className="mt-1.5 font-display text-xl font-bold">{p.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{p.tagline}</p>

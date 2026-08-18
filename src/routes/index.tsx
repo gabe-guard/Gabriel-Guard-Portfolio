@@ -89,12 +89,14 @@ function Hero() {
               View projects
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-            <Link
-              to="/connect"
+            <a
+              href="/GabrielGuardResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold hover:border-primary transition-all"
             >
-              Get in touch
-            </Link>
+              View resume
+            </a>
           </motion.div>
         </div>
       </div>

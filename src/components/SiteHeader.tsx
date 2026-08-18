@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/", hash: "projects", label: "Projects" },
+  { to: "/projects", label: "Projects" },
   { to: "/", hash: "coursework", label: "Coursework" },
   { to: "/", hash: "skills", label: "Skills" },
   { to: "/", hash: "certifications", label: "Certifications" },

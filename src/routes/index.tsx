@@ -134,7 +134,7 @@ function About() {
         </h2>
       </FadeUp>
 
-      <div className="mt-12 grid gap-12 md:grid-cols-12">
+      <div className="mt-12 grid gap-12 md:grid-cols-12 items-start">
         <FadeUp delay={0.05} className="md:col-span-7 space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
             Engineering has always been the way I turn ideas into something real. I enjoy solving problems through CAD, machining, and rapid prototyping, then seeing those designs come together into a finished product. As an incoming <span className="text-foreground font-semibold">Mechanical Engineering</span> student with a <span className="text-foreground font-semibold">Robotics minor</span>, I want to continue designing machines that are simple, reliable, and built with purpose.
@@ -145,7 +145,7 @@ function About() {
         </FadeUp>
 
         <FadeUp delay={0.15} className="md:col-span-5">
-          <PhotoCarousel />
+          <PhotoCarousel className="h-[280px] sm:h-[320px]" />
         </FadeUp>
       </div>
     </section>

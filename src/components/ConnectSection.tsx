@@ -39,7 +39,24 @@ export function ConnectSection() {
         </FadeUp>
 
         <FadeUp delay={0.1} className="md:col-span-5">
-          <div className="rounded-2xl border border-border bg-card p-7">
+          <a
+            href="/GabrielGuardResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block rounded-2xl border border-border bg-card p-7 hover-lift"
+          >
+            <div className="flex items-center gap-3">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <ArrowUpRight className="h-5 w-5" />
+              </div>
+              <p className="font-display text-lg font-bold">View resume</p>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+              Download or open my full resume for internships, research roles, and collaboration opportunities.
+            </p>
+          </a>
+
+          <div className="mt-5 rounded-2xl border border-border bg-card p-7">
             <div className="flex items-center gap-3">
               <MapPin className="h-5 w-5 text-accent" />
               <p className="font-display text-lg font-bold">Austin, Texas</p>

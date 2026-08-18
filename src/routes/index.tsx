@@ -89,12 +89,14 @@ function Hero() {
               View projects
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
-            <Link
-              to="/connect"
+            <a
+              href="/GabrielGuardResume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-semibold hover:border-primary transition-all"
             >
-              Get in touch
-            </Link>
+              View resume
+            </a>
           </motion.div>
         </div>
       </div>
@@ -132,7 +134,7 @@ function About() {
         </h2>
       </FadeUp>
 
-      <div className="mt-12 grid gap-12 md:grid-cols-12">
+      <div className="mt-12 grid gap-12 md:grid-cols-12 items-start">
         <FadeUp delay={0.05} className="md:col-span-7 space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
             Engineering has always been the way I turn ideas into something real. I enjoy solving problems through CAD, machining, and rapid prototyping, then seeing those designs come together into a finished product. As an incoming <span className="text-foreground font-semibold">Mechanical Engineering</span> student with a <span className="text-foreground font-semibold">Robotics minor</span>, I want to continue designing machines that are simple, reliable, and built with purpose.
@@ -143,7 +145,7 @@ function About() {
         </FadeUp>
 
         <FadeUp delay={0.15} className="md:col-span-5">
-          <PhotoCarousel />
+          <PhotoCarousel className="h-[280px] sm:h-[320px]" />
         </FadeUp>
       </div>
     </section>

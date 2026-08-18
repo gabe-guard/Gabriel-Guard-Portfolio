@@ -64,7 +64,7 @@ export function CourseworkSection() {
         </h2>
       </FadeUp>
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-3">
+      <div className="mt-12 grid gap-8 lg:grid-cols-2">
         <FadeUp delay={0.05} className="lg:col-span-1">
           <div className="h-full rounded-2xl border border-border bg-card p-7">
             <p className="eyebrow">Relevant coursework</p>
@@ -79,7 +79,7 @@ export function CourseworkSection() {
           </div>
         </FadeUp>
 
-        <div className="lg:col-span-2 grid gap-6">
+        <div className="lg:col-span-1 grid gap-6">
           {classProjects.map((p, i) => (
             <FadeUp key={p.title} delay={0.08 + i * 0.06}>
               <article className="rounded-2xl border border-border bg-surface p-7 hover-lift">

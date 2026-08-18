@@ -12,7 +12,7 @@ const photos = [
   { src: car3, alt: "Car photo 3" },
 ];
 
-export function PhotoCarousel() {
+export function PhotoCarousel({ className }: { className?: string }) {
   const [active, setActive] = useState(0);
   const reduced = useReducedMotion();
   const n = photos.length;
@@ -37,9 +37,9 @@ export function PhotoCarousel() {
   };
 
   return (
-    <div className="relative w-full select-none">
+    <div className={`relative w-full select-none ${className ?? "h-[360px] sm:h-[420px]"}`}>
       <div
-        className="relative mx-auto h-[560px] sm:h-[640px] w-full overflow-hidden"
+        className="relative mx-auto h-full w-full overflow-hidden"
         style={{ perspective: "1400px" }}
       >
         {photos.map((p, i) => {

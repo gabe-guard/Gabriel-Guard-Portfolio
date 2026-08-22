@@ -68,9 +68,9 @@ export function CourseworkSection() {
         <FadeUp delay={0.05} className="lg:col-span-1">
           <div className="h-full rounded-2xl border border-border bg-card p-7">
             <p className="eyebrow">Relevant coursework</p>
-            <div className="mt-5">
+            <div className="mt-5 grid grid-cols-2 gap-x-4">
               {courses.map((c) => (
-                <div key={c.code} className="border-b border-border py-3 last:border-b-0 last:pb-0">
+                <div key={c.code} className="border-b border-border py-3">
                   <p className="font-display text-sm font-bold tracking-tight">{c.code}</p>
                   <p className="text-[0.82rem] leading-snug text-muted-foreground">{c.name}</p>
                 </div>

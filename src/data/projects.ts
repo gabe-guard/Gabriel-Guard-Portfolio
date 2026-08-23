@@ -207,26 +207,25 @@ export const projects: Project[] = [
     //Flatline
     slug: "flatline-2024",
     title: "Flatline.",
-    tagline: "Design lead for pivoting disk launcher.",
+    tagline: "Two-sided pivoting shooter for a rookie-season robot.",
     category: "Robotics",
     year: "2024",
     role: "Subsystem Design Lead",
     cover: frcImg,
     summary:
-      "I designed Flatline's complete shooter along with its pivot mechanism. The entire assembly was developed from scratch with the goal of creating a compact system that could score from multiple locations while remaining easy to tune throughout the season.",
+      "Flatline was our robot for the 2024 FIRST Robotics Competition game CRESCENDO. The game centered around collecting foam disks called “notes” and scoring them in the Speaker and Amp before climbing the Stage at the end of the match. Flatline received two Industrial Design Awards and an Excellence in Engineering Award during the season. I was a rookie on the team and worked as the sole designer of the shooter in Onshape before overseeing its fabrication and assembly.",
     details: [
-      "Flatline established many of the engineering standards that carried into later robots. The robot performed consistently throughout the season and became the starting point for several future shooter designs.",
+      "I designed the shooter as a two sided system that could launch notes from either end of the robot. The design went through two major iterations, starting with a low pivot and four independently driven flywheels before moving to a lighter high pivot design with a split axle. The final shooter could rotate to shoot in any direction while maintaining a compact package and minimal spin up time. The shooter also integrated directly with our intake, allowing the robot to collect and shoot notes from either side.",
     ],
     feature: {
       title: "Double Sided Shooter",
-      body: "One of the defining features of the shooter was its ability to score from either side, giving the robot more options when navigating defense. The wheels applied controlled spin to stabilize the game piece in flight and improve shot consistency. A built in chain tensioning system allowed quick adjustments between matches without disassembling the mechanism.",
+      body: "The first shooter used four independently driven flywheels to launch the note, with a pair of motors powering the roller that pushed the note into the wheels. Running the flywheels at independent velocities allowed us to control the amount of spin applied to the note and improve its stability in flight. A rack and pinion mechanism controlled the pitch of the shooter, allowing it to pivot while keeping the flywheel assembly compact.\n\nThe second iteration moved to a higher pivot and a split axle design that allowed the shooter to rotate from above the assembly. A gearbox connected to the pivot through a chain controlled the rotation, while a built in chain tensioner allowed the chain to be tightened between matches without disassembling the mechanism. The shooter superstructure also housed the climber and other mechanisms while mounting directly to the intake on either side of the robot. The final design could take shots from anywhere in the close zone with minimal flywheel spin up time.\n\nI designed both iterations in Onshape and used Jira to oversee fabrication and track the parts inventory after completing the CAD. The final shooter was manufactured using a combination of powder coating, CNC routing, lathe work, milling, and 3D printing. I worked with four other students during assembly to build the shooter and mount it to the robot. The mounting system was designed as a modular interface so the completed shooter could be installed on the robot without rebuilding the surrounding structure.",
     },
     highlights: [
-      "2× District Event Winner",
-      "2× Excellence in Engineering Award",
-      "1× Engineering Inspiration Award",
+      "2× Industrial Design Award",
+      "1× Excellence in Engineering Award",
     ],
-    skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
+    skills: ["Onshape", "Jira", "CNC Routing", "Manual Lathe", "Milling", "3D Printing", "Powder Coating", "Modular Assembly"],
     gallery: [
       { src: frcImg, caption: "Competition robot — full assembly" },
     ],

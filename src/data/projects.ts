@@ -168,26 +168,28 @@ export const projects: Project[] = [
     //Deadlock
     slug: "deadlock-2025",
     title: "Deadlock.",
-    tagline: "Design lead for climb latching mechanism.",
+    tagline: "Climber and pivot design for a championship climbing robot.",
     category: "Robotics",
     year: "2025",
     role: "Subsystem Design Lead · Driver",
     cover: dl1,
     summary:
-      "For Deadlock I designed the climb pivot mechanism that connected the climber to the robot. The design needed to handle repeated impacts while remaining compact and easy to manufacture. The final mechanism provided the strength needed for reliable climbs throughout the season.",
+      "Deadlock was our robot for the 2025 FIRST Robotics Competition game REEFSCAPE. The game centered around scoring coral on a reef and ended with robots climbing onto hanging cages. Deadlock won two district events and the Texas District Championship in a clean sweep. The robot also received three Industrial Design Awards and one Autonomous Award. I spent the season designing and fabricating mechanisms for Deadlock and had the opportunity to drive the robot throughout the season.",
     details: [
-      "Deadlock won the Tomball District Event, the Manor District Event, the FIRST in Texas State Championship, and reached the Division Finals at the FIRST Championship. It finished with a fifty nine and ten official record and became the most successful robot in team history before Downpour.",
+      "I worked on the climber, which was designed to grapple onto a cage hanging from a chain and lift the entire robot off the ground. I designed the latch mechanism and pivot system around the forces generated during the climb, using motor curves and lever arm calculations to determine the required torque. I also calculated the robot's center of gravity during the climb to make sure the robot would remain balanced once it was hanging from the cage. The final design helped Deadlock rank in the top three robots in the world for climb EPA (Estimated Points Added, a measure of how much a robot's climbing performance contributed to its overall match performance).",
     ],
     feature: {
       title: "Climb Mechanism",
-      body: "The pivot was designed to transfer large climbing loads into the robot frame while minimizing weight. A simple design reduced manufacturing time and improved reliability during repeated climbing cycles. The focus was durability instead of unnecessary complexity.",
+      body: "The climber went through several prototypes as we tested different ways to reliably engage the cage. The original design used an active latch with powered rollers to pull the cage into the mechanism. After testing, I changed the design to a passive latch with a larger contact surface. This made the mechanism easier to line up with the cage and removed the need to actively control the latch during the climb. Motor curve and lever arm calculations were used to size the pivot gearbox around the torque required to lift the robot.\n\nThe pivot location was selected using center of gravity calculations to keep the robot balanced while hanging from the cage. I first 3D printed the mechanism to test the geometry and mounting points before moving to machined aluminum for the final design. The final assembly was designed in Onshape and manufactured through our shop. I oversaw the manufacturing process, managed the BOM, and tracked parts through Jira before assembling the entire climber subsystem myself.",
     },
     highlights: [
       "2× District Event Winner",
-      "2× Excellence in Engineering Award",
-      "1× Engineering Inspiration Award",
+      "Texas District Championship Winner",
+      "3× Industrial Design Award",
+      "1× Autonomous Award",
+      "Top 3 world climb EPA",
     ],
-    skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
+    skills: ["Onshape", "Motor Curve Analysis", "Lever Arm Calculations", "Center of Gravity Analysis", "Jira", "CNC Machining", "3D Printing", "Manual Assembly"],
     gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
     ],

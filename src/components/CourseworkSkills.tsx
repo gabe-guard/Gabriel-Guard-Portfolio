@@ -6,36 +6,37 @@ type SkillGroup = { title: string; items: string[] };
 
 const courses: Course[] = [
   { code: "ME 302", name: "Introduction to Engineering Design & Graphics" },
-  { code: "M 408C", name: "Differential & Integral Calculus" },
-  { code: "PHY 303K", name: "Engineering Physics I — Mechanics" },
+  { code: "PHY 303L", name: "Engineering Physics II" },
+  { code: "PHY 303K", name: "Engineering Physics I" },
+  { code: "M 408D", name: "Sequences, Series & Multivariable Calculus" },
+  { code: "M 408C", name: "Differential and Integral Calculus" },
   { code: "CH 301", name: "Principles of Chemistry I" },
-  { code: "ME 205", name: "Introduction to Mechanical Engineering" },
-  { code: "EM 306", name: "Statics" },
-  { code: "ME 209", name: "Engineering Computation" },
-  { code: "RHE 306", name: "Rhetoric & Writing" },
+  { code: "HS", name: "Practicum in STEM: Engineering" },
+  { code: "HS", name: "Engineering Design Process" },
+  { code: "HS", name: "Aerospace" },
 ];
 
 const classProjects: ClassProject[] = [
   {
     code: "ME 302",
     course: "Engineering Design & Graphics",
-    title: "Parametric Assembly Study",
+    title: "Project 1",
     description:
-      "Placeholder — describe the CAD assembly, tolerancing approach, and drawing package produced for this course.",
+      "Coming soon",
   },
   {
-    code: "ME 205",
-    course: "Introduction to Mechanical Engineering",
-    title: "Team Design Challenge",
+    code: "ME 302",
+    course: "Engineering Design & Graphics",
+    title: "Project 2",
     description:
-      "Placeholder — describe the problem statement, your role on the team, and the final prototype outcome.",
+      "Coming soon",
   },
   {
-    code: "ME 209",
-    course: "Engineering Computation",
-    title: "Numerical Analysis Tool",
+    code: "ME 302",
+    course: "Engineering Design & Graphics",
+    title: "Project 3",
     description:
-      "Placeholder — describe the script or model you built and what engineering problem it solved.",
+      "Coming soon",
   },
 ];
 

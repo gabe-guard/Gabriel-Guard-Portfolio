@@ -43,15 +43,15 @@ const classProjects: ClassProject[] = [
 const skillGroups: SkillGroup[] = [
   {
     title: "Design & Analysis",
-    items: ["Onshape", "SolidWorks", "Fusion 360", "Autodesk Inventor", "FEA / Stress Studies", "GD&T", "Technical Drawings"],
+    items: ["Onshape", "Fusion 360", "Autodesk Inventor", "Technical Drawings", "Fusion CAM"],
   },
   {
     title: "Software & Data",
-    items: ["Python", "MATLAB", "Excel / Sheets", "Java", "Git & GitHub", "Jira", "Figma", "Raspberry Pi"],
+    items: ["Python", "Excel / Sheets", "Java", "Git & GitHub", "Jira", "Figma"],
   },
   {
     title: "Manufacturing",
-    items: ["3-Axis CNC Milling", "Lathe", "FDM & Resin Printing", "Laser Cutting", "Band Saw / Drill Press", "Riveting & Tapping", "Wiring & Soldering"],
+    items: ["3-Axis CNC Milling", "Lathe", "FDM Printing", "Laser Cutting", "Band Saw / Drill Press", "Riveting & Tapping", "Wiring & Soldering"],
   },
 ];
 

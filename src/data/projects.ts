@@ -164,26 +164,26 @@ export const projects: Project[] = [
   {
     slug: "solidworks-practice",
     title: "SolidWorks Practice.",
-    tagline: "Self-driven CAD studies and part modeling exercises.",
+    tagline: "Transitioning from Onshape to SolidWorks",
     category: "Design",
     year: "2025",
-    role: "Student Designer",
+    role: "Self Development",
     cover: breakdownImg,
     summary:
-      "A collection of independent SolidWorks exercises I used to build fluency in parametric modeling, assembly constraints, and detail drawings. These practice parts range from simple mechanical components to more complex multi-body assemblies that mirror real-world design problems.",
+      "  After four years of working primarily in Onshape, I started learning SolidWorks to prepare for future engineering opportunities where it is commonly used. To make the transition more practical, I decided to design an SAE style race car assembly consisting of a chassis and suspension. This gave me a project to work through SolidWorks' workflow while applying mechanical design concepts I already understood from robotics.",
     details: [
-      "I worked through a set of modeled parts and assemblies to strengthen my SolidWorks workflow before using it on larger team projects. The exercises focused on sketches, feature trees, mates, and drawing documentation. I also practiced exporting STEP files and preparing models for 3D printing.",
+      "  I used the chassis and suspension as a way to learn SolidWorks while designing a complete vehicle assembly. I gained experience with SolidWorks' weldments, custom weldment profiles, and 3D sketches while also learning more about suspension geometry and variables such as camber. The project helped me understand how SolidWorks approaches assemblies and design workflows differently from the Onshape workflow I was used to.",
     ],
     feature: {
       title: "Parametric Modeling",
-      body: "Each exercise started with a 2D sketch that was fully defined using dimensions and geometric relations. I then used features such as extrude, revolve, sweep, and loft to build solid geometry. For assemblies, I applied standard mates to constrain degrees of freedom and verify motion. I also created drawing sheets with orthographic views, section views, and bill of materials tables to practice manufacturing documentation.\n\nThe goal of this work was to develop a clean, editable feature tree so that future design changes propagate predictably. I focused on design intent, using reference geometry and shared sketches to keep models robust. These practice files now serve as a reference library I can reuse when starting new mechanical designs.",
+      body: " To begin the chassis, I created a master sketch with a driver model to establish the overall ergonomics of the car. Once the side profile had the proportions I wanted, I added cross sections at the locations where the outer edges of the frame would run. I then added braces between the main tubes to improve the structure while keeping the frame layout simple. \n\nI created a custom weldment profile and used SolidWorks Weldments to turn the 3D sketches into structural tubes. The tubes had to be trimmed using weldment corner treatment and trim tools so that they did not interfere with each other and could be manufactured. I tried to avoid difficult geometries such as four way tube intersections and instead designed the frame around simpler joints that would be easier to fabricate. \n\nAfter establishing the chassis hardpoints, I began working on the suspension geometry. I used this part of the project to learn the major components of a suspension system and how variables such as camber affect handling and cornering. From there, I developed a geometry intended to keep the car level relative to the ground while naturally changing camber as the suspension moved through a turn. \n\nI was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
     },
     highlights: [
       "Independent modeling practice",
-      "Assembly constraints and motion studies",
-      "Detail drawings with BOM tables",
+      "Learned custom weldmetns profiles",
+      "Practiced 3D sketching",
     ],
-    skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates", "Detail Drawings", "STEP Export", "3D Printing Prep"],
+    skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates"],
     gallery: [
       { src: breakdownImg, caption: "Placeholder — SolidWorks practice render" },
     ],

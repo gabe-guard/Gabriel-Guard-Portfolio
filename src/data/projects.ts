@@ -4,9 +4,6 @@ import breakdownImg from "@/assets/breakdown-placeholder.png";
 import frcImg from "@/assets/downpourmain.jpg";
 
 import valorImg from "@/assets/project-valor.jpg";
-import umbraImg from "@/assets/project-umbra.jpg";
-import nexusImg from "@/assets/project-nexus.jpg";
-import piezoImg from "@/assets/project-piezo.jpg";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 import dp1 from "@/assets/dp1.jpg";
@@ -165,6 +162,41 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "solidworks-practice",
+    title: "SolidWorks Practice.",
+    tagline: "Self-driven CAD studies and part modeling exercises.",
+    category: "Design",
+    year: "2025",
+    role: "Student Designer",
+    cover: breakdownImg,
+    summary:
+      "A collection of independent SolidWorks exercises I used to build fluency in parametric modeling, assembly constraints, and detail drawings. These practice parts range from simple mechanical components to more complex multi-body assemblies that mirror real-world design problems.",
+    details: [
+      "I worked through a set of modeled parts and assemblies to strengthen my SolidWorks workflow before using it on larger team projects. The exercises focused on sketches, feature trees, mates, and drawing documentation. I also practiced exporting STEP files and preparing models for 3D printing.",
+    ],
+    feature: {
+      title: "Parametric Modeling",
+      body: "Each exercise started with a 2D sketch that was fully defined using dimensions and geometric relations. I then used features such as extrude, revolve, sweep, and loft to build solid geometry. For assemblies, I applied standard mates to constrain degrees of freedom and verify motion. I also created drawing sheets with orthographic views, section views, and bill of materials tables to practice manufacturing documentation.\n\nThe goal of this work was to develop a clean, editable feature tree so that future design changes propagate predictably. I focused on design intent, using reference geometry and shared sketches to keep models robust. These practice files now serve as a reference library I can reuse when starting new mechanical designs.",
+    },
+    highlights: [
+      "Independent modeling practice",
+      "Assembly constraints and motion studies",
+      "Detail drawings with BOM tables",
+    ],
+    skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates", "Detail Drawings", "STEP Export", "3D Printing Prep"],
+    gallery: [
+      { src: breakdownImg, caption: "Placeholder — SolidWorks practice render" },
+    ],
+    links: [
+      { label: "Portfolio Folder", href: "https://onshape.com" },
+      { label: "Practice Log", href: "https://onshape.com" },
+    ],
+    processShots: [
+      { src: breakdownImg, caption: "Placeholder — part studio screenshot" },
+      { src: breakdownImg, caption: "Placeholder — assembly mate study" },
+    ],
+  },
+  {
     //Deadlock
     slug: "deadlock-2025",
     title: "Deadlock.",
@@ -261,86 +293,6 @@ export const projects: Project[] = [
     skills: ["Onshape", "Event Production", "Technical Writing", "Livestream Direction", "Sponsor Relations"],
     gallery: [
       { src: valorImg, caption: "Mock FTC field render" },
-    ],
-    links: [
-      { label: "Onshape CAD", href: "https://onshape.com" },
-      { label: "Technical Write-up", href: "https://onshape.com" },
-      { label: "Build Video", href: "https://onshape.com" },
-    ],
-  },
-  {
-    slug: "umbra-design",
-    title: "Umbra Design LLC.",
-    tagline: "A translucent sun visor — concept, company, and product.",
-    category: "Product · Entrepreneurship",
-    year: "2024 — Present",
-    role: "Founder",
-    cover: umbraImg,
-    summary:
-      "Umbra is a transparent vehicle sun visor that improves visibility while reducing glare during sunrise and sunset. Every component was designed in Onshape before being manufactured using 3D printing and laser cutting. The project gave me experience designing a product that could move beyond a prototype and toward production through our own LLC.",
-    details: [
-      "The idea came from everyday driving. Traditional sun visors often block the road instead of just the sunlight. I wanted a better solution that preserved visibility while still reducing glare. Since then I have refined the design through multiple prototypes, tested manufacturing methods, and prepared the product for its first production run.",
-    ],
-    highlights: [
-      "Founded LLC, pursuing utility patent",
-      "Built brand identity in Figma",
-      "Fundraised $1,000 for marketing & inventory",
-      "3D printing, laser cutting, manual assembly",
-    ],
-    skills: ["Product Design", "Figma", "3D Printing", "Laser Cutting", "Brand Identity", "Fundraising"],
-    gallery: [
-      { src: umbraImg, caption: "Translucent visor prototype" },
-    ],
-    links: [
-      { label: "Onshape CAD", href: "https://onshape.com" },
-      { label: "Technical Write-up", href: "https://onshape.com" },
-      { label: "Build Video", href: "https://onshape.com" },
-    ],
-  },
-  {
-    slug: "nexus-ai",
-    title: "Nexus AI.",
-    tagline: "Teaching machine learning with block-based code.",
-    category: "Software · Education",
-    year: "2023 — Present",
-    role: "Co-founder",
-    cover: nexusImg,
-    summary:
-      "Nexus AI is an educational platform that teaches machine learning through block-based coding. I co-founded the project, designed the UI graphics in Figma, and advanced it to the Greater Austin Regional Science and Engineering Fair.",
-    highlights: [
-      "Advanced to Greater Austin Regional Science & Engineering Fair",
-      "Designed full UI system in Figma",
-      "Block-based ML learning approach",
-    ],
-    skills: ["Figma", "UI Design", "Machine Learning", "Education Design"],
-    gallery: [
-      { src: nexusImg, caption: "Block-based interface concept" },
-    ],
-    links: [
-      { label: "Onshape CAD", href: "https://onshape.com" },
-      { label: "Technical Write-up", href: "https://onshape.com" },
-      { label: "Build Video", href: "https://onshape.com" },
-    ],
-  },
-  {
-    slug: "piezoelectric-research",
-    title: "Piezoelectric 3D Printing.",
-    tagline: "Cost-effective piezoelectric fabrication through void reduction.",
-    category: "Research",
-    year: "2024 — Present",
-    role: "Independent Researcher",
-    cover: piezoImg,
-    summary:
-      "I'm developing a piezoelectric sensor for structural health monitoring using consumer-grade 3D printers. The work spans custom G-code generation, an accessible electronic poling process, and a Raspberry Pi-based data acquisition system for measuring sensitivity.",
-    highlights: [
-      "Custom G-code for consumer 3D printers",
-      "Accessible electronic poling method",
-      "Raspberry Pi DAQ for sensitivity testing",
-      "30+ research hours invested",
-    ],
-    skills: ["G-code", "Raspberry Pi", "DAQ Design", "Material Science", "Research"],
-    gallery: [
-      { src: piezoImg, caption: "Print process — close detail" },
     ],
     links: [
       { label: "Onshape CAD", href: "https://onshape.com" },

@@ -17,6 +17,13 @@ import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
 import dp_parts from "@/assets/dp_parts.png";
 
+import swTitle from "@/assets/sw_title.png";
+import swWire from "@/assets/sw_wire.png";
+import swMaster from "@/assets/sw_master.png";
+import swWide from "@/assets/sw_wide.png";
+import swUpright from "@/assets/sw_upright.png";
+import swMasterGif from "@/assets/sw_master.gif.asset.json";
+
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -33,6 +40,8 @@ export type Breakdown = {
     blocks: { heading: string; body: string }[];
     image?: BreakdownImage;
   };
+  /** Optional vertically-stacked captioned images shown on the right of the hero card. */
+  stack?: { src: string; alt: string; caption: string }[];
   cards: { heading: string; body: string; image?: BreakdownImage }[];
   lineArt?: BreakdownImage;
 };
@@ -168,7 +177,7 @@ export const projects: Project[] = [
     category: "Design",
     year: "2025",
     role: "Self Development",
-    cover: breakdownImg,
+    cover: swTitle,
     summary:
       "  After four years of working primarily in Onshape, I started learning SolidWorks to prepare for future engineering opportunities where it is commonly used. To make the transition more practical, I decided to design an SAE style race car assembly consisting of a chassis and suspension. This gave me a project to work through SolidWorks' workflow while applying mechanical design concepts I already understood from robotics.",
     details: [
@@ -185,7 +194,8 @@ export const projects: Project[] = [
     ],
     skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates"],
     gallery: [
-      { src: breakdownImg, caption: "Placeholder — SolidWorks practice render" },
+      { src: swTitle, caption: "Placeholder — chassis title render." },
+      { src: swWire, caption: "Placeholder — chassis wireframe." },
     ],
     links: [
       { label: "Portfolio Folder", href: "https://onshape.com" },
@@ -195,6 +205,35 @@ export const projects: Project[] = [
       { src: breakdownImg, caption: "Placeholder — part studio screenshot" },
       { src: breakdownImg, caption: "Placeholder — assembly mate study" },
     ],
+    breakdown: {
+      hero: {
+        blocks: [
+          {
+            heading: "Master Sketch",
+            body: "I began the chassis with a master sketch and driver model to establish the ergonomics of the car, then added cross sections and braces to build out a simple, rigid frame layout.",
+          },
+          {
+            heading: "Weldments",
+            body: "Using a custom weldment profile and SolidWorks Weldments, I turned 3D sketches into structural tubes, trimming joints with corner treatments so the frame could actually be fabricated.",
+          },
+          {
+            heading: "Suspension Geometry",
+            body: "I used the suspension to learn how variables like camber affect handling, developing a geometry intended to keep the car level while changing camber through a turn.",
+          },
+          {
+            heading: "Upright Design",
+            body: "I practiced part modeling and design for manufacturing on a simple upright, considering how it would be machined and assembled rather than only the CAD geometry.",
+          },
+        ],
+      },
+      stack: [
+        { src: swMaster, alt: "Chassis master sketch", caption: "Placeholder — master sketch overview." },
+        { src: swWide, alt: "Chassis wide view", caption: "Placeholder — wide chassis view." },
+        { src: swMasterGif.url, alt: "Suspension geometry animation", caption: "Placeholder — dynamic suspension geometry." },
+        { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
+      ],
+      cards: [],
+    },
   },
   {
     //Deadlock

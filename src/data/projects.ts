@@ -338,11 +338,18 @@ export const projects: Project[] = [
     gallery: [
       { src: valorImg, caption: "Mock FTC field render" },
     ],
-    links: [
+links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
       { label: "Technical Write-up", href: "https://onshape.com" },
       { label: "Build Video", href: "https://onshape.com" },
     ],
+    media: {
+      videoUrl: "https://www.youtube.com/embed/qjLuDLwSYGI?si=u9VznB1GNOrXcM-N",
+      pdf: {
+        src: vccStackUp,
+        label: "VCC 2025 Stack Up",
+      },
+    },
   },
 ];
 

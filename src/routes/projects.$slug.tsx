@@ -98,7 +98,43 @@ function ProjectDetail() {
               )}
             </p>
           )}
+          {project.media && (
+            <div className="grid gap-5 md:grid-cols-2 items-start pt-2">
+              <div className="overflow-hidden rounded-xl border border-border bg-card aspect-video">
+                <iframe
+                  src={project.media.videoUrl}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="overflow-hidden rounded-xl border border-border bg-card">
+                <iframe
+                  src={`${project.media.pdf.src}#view=FitH`}
+                  title={project.media.pdf.label}
+                  className="w-full aspect-video bg-surface"
+                />
+                <div className="flex items-center justify-between gap-3 border-t border-border px-4 py-3">
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-foreground">
+                    <FileText className="h-4 w-4 text-accent" /> {project.media.pdf.label}
+                  </span>
+                  <a
+                    href={project.media.pdf.src}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-primary"
+                  >
+                    Open <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
         </FadeUp>
+
         <FadeUp delay={0.1} className="md:col-span-5">
           <p className="eyebrow mb-4">Highlights</p>
           <ul className="border-t border-border">
@@ -223,55 +259,7 @@ function ProjectDetail() {
         </section>
 )}
 
-      {/* Media: video + PDF */}
-      {project.media && (
-        <section className="container-wide py-10 border-t border-border">
-          <FadeUp>
-            <p className="eyebrow">Media</p>
-            <h2 className="mt-3 font-display text-5xl font-extrabold tracking-tight">
-              Watch &amp; <span className="italic text-primary">read.</span>
-            </h2>
-          </FadeUp>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 items-start">
-            <FadeUp>
-              <div className="overflow-hidden rounded-xl border border-border bg-card aspect-video">
-                <iframe
-                  width="560"
-                  height="315"
-                  src={project.media.videoUrl}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="h-full w-full"
-                />
-              </div>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <a
-                href={project.media.pdf.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex h-full min-h-[220px] flex-col items-start justify-between rounded-xl border border-border bg-card p-6 hover-lift"
-              >
-                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-accent font-semibold">
-                  <FileText className="h-4 w-4" /> PDF
-                </span>
-                <div>
-                  <h3 className="font-display text-2xl font-bold">{project.media.pdf.label}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    Open the document in a new tab.
-                  </p>
-                </div>
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
-                  View PDF <ArrowUpRight className="h-4 w-4" />
-                </span>
-              </a>
-            </FadeUp>
-          </div>
-        </section>
-      )}
+
 
       {/* Next */}
       <section className="container-wide py-10 border-t border-border">

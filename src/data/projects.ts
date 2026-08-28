@@ -4,6 +4,7 @@ import breakdownImg from "@/assets/breakdown-placeholder.png";
 import frcImg from "@/assets/downpourmain.jpg";
 
 import valorImg from "@/assets/project-valor.jpg";
+import vccTitle from "@/assets/vcc_title.png";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 import dp1 from "@/assets/dp1.jpg";
@@ -322,7 +323,7 @@ export const projects: Project[] = [
     category: "Event · Design",
     year: "2024 — Present",
     role: "Lead Organizer",
-    cover: valorImg,
+    cover: vccTitle,
     summary:
       "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.",
     details: [

@@ -31,11 +31,30 @@ export function Breakdown({ data }: { data: BreakdownData }) {
                 </div>
               ))}
             </div>
-            {/* spacer for the image column on desktop */}
-            <div className="hidden md:block min-h-[260px]" />
+            {data.stack && data.stack.length > 0 ? (
+              /* Vertically stacked captioned images on the right */
+              <div className="space-y-6">
+                {data.stack.map((img, i) => (
+                  <figure key={img.src + i} className="rounded-lg overflow-hidden border border-border bg-surface">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full object-contain"
+                    />
+                    <figcaption className="p-3 text-sm text-muted-foreground border-t border-border bg-card">
+                      {img.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              /* spacer for the image column on desktop */
+              <div className="hidden md:block min-h-[260px]" />
+            )}
           </div>
 
-          {data.hero.image && (
+          {!data.stack?.length && data.hero.image && (
             <img
               src={data.hero.image.src}
               alt={data.hero.image.alt}

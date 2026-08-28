@@ -31,11 +31,12 @@ function ProjectsIndex() {
 
       <div className="mt-16 grid gap-8 md:grid-cols-6">
         {projects.map((p, i) => {
-          const span =
-            i % 5 === 0 ? "md:col-span-4" :
-            i % 5 === 1 ? "md:col-span-2" :
-            i % 5 === 2 ? "md:col-span-3" :
-            i % 5 === 3 ? "md:col-span-3" : "md:col-span-6";
+const span =
+            i % 6 === 0 ? "md:col-span-4" :
+            i % 6 === 1 ? "md:col-span-2" :
+            i % 6 === 2 ? "md:col-span-3" :
+            i % 6 === 3 ? "md:col-span-3" :
+            i % 6 === 4 ? "md:col-span-3" : "md:col-span-3";
           return (
             <FadeUp key={p.slug} delay={i * 0.06} className={span}>
               <Link

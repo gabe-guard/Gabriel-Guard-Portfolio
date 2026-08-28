@@ -24,6 +24,8 @@ import swWide from "@/assets/sw_wide.png";
 import swUpright from "@/assets/sw_upright.png";
 import swMasterGif from "@/assets/sw_master.gif.asset.json";
 
+import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
+
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -73,10 +75,13 @@ export type Project = {
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
   feature?: { title: string; body: string };
-  /** Extra process images shown under the interactive CAD toggle. */
+/** Extra process images shown under the interactive CAD toggle. */
   processShots?: { src: string; caption: string }[];
   breakdown?: Breakdown;
-
+  /**
+   * Bottom media section: embedded video on the left, downloadable PDF on the right.
+   */
+  media?: { videoUrl: string; pdf: { src: string; label: string } };
 
 };
 
@@ -333,11 +338,18 @@ export const projects: Project[] = [
     gallery: [
       { src: valorImg, caption: "Mock FTC field render" },
     ],
-    links: [
+links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
       { label: "Technical Write-up", href: "https://onshape.com" },
       { label: "Build Video", href: "https://onshape.com" },
     ],
+    media: {
+      videoUrl: "https://www.youtube.com/embed/qjLuDLwSYGI?si=u9VznB1GNOrXcM-N",
+      pdf: {
+        src: vccStackUp,
+        label: "VCC 2025 Stack Up",
+      },
+    },
   },
 ];
 

@@ -177,7 +177,7 @@ export const projects: Project[] = [
     category: "Design",
     year: "2025",
     role: "Self Development",
-    cover: breakdownImg,
+    cover: swTitle,
     summary:
       "  After four years of working primarily in Onshape, I started learning SolidWorks to prepare for future engineering opportunities where it is commonly used. To make the transition more practical, I decided to design an SAE style race car assembly consisting of a chassis and suspension. This gave me a project to work through SolidWorks' workflow while applying mechanical design concepts I already understood from robotics.",
     details: [

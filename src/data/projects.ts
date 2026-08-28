@@ -24,6 +24,8 @@ import swWide from "@/assets/sw_wide.png";
 import swUpright from "@/assets/sw_upright.png";
 import swMasterGif from "@/assets/sw_master.gif.asset.json";
 
+import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
+
 
 export type RichSegment = string | { text: string; href: string };
 

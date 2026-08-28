@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import { FadeUp, Parallax } from "@/components/Parallax";
 import { CadToggle } from "@/components/CadToggle";

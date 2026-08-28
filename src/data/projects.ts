@@ -75,10 +75,13 @@ export type Project = {
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
   feature?: { title: string; body: string };
-  /** Extra process images shown under the interactive CAD toggle. */
+/** Extra process images shown under the interactive CAD toggle. */
   processShots?: { src: string; caption: string }[];
   breakdown?: Breakdown;
-
+  /**
+   * Bottom media section: embedded video on the left, downloadable PDF on the right.
+   */
+  media?: { videoUrl: string; pdf: { src: string; label: string } };
 
 };
 

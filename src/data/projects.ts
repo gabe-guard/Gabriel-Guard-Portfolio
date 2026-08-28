@@ -17,6 +17,13 @@ import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
 import dp_parts from "@/assets/dp_parts.png";
 
+import swTitle from "@/assets/sw_title.png";
+import swWire from "@/assets/sw_wire.png";
+import swMaster from "@/assets/sw_master.png";
+import swWide from "@/assets/sw_wide.png";
+import swUpright from "@/assets/sw_upright.png";
+import swMasterGif from "@/assets/sw_master.gif.asset.json";
+
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -33,6 +40,8 @@ export type Breakdown = {
     blocks: { heading: string; body: string }[];
     image?: BreakdownImage;
   };
+  /** Optional vertically-stacked captioned images shown on the right of the hero card. */
+  stack?: { src: string; alt: string; caption: string }[];
   cards: { heading: string; body: string; image?: BreakdownImage }[];
   lineArt?: BreakdownImage;
 };

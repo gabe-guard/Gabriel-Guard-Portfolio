@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
 import { PhotoCarousel } from "@/components/PhotoCarousel";
-import { MouseBlob, HoverDrift, CursorDot } from "@/components/MouseAmbient";
+import { MouseBlob, HoverDrift } from "@/components/MouseAmbient";
 import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills";
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { ConnectSection } from "@/components/ConnectSection";
@@ -48,10 +48,7 @@ function Hero() {
         <MouseBlob strength={-45} className="h-full w-full rounded-full bg-primary/10 blur-3xl" />
       </Parallax>
 
-      <CursorDot className="absolute left-1/2 top-1/2 h-3 w-3 rounded-full bg-accent/70" strength={26} />
-      <CursorDot className="absolute left-1/2 top-1/3 h-1.5 w-1.5 rounded-full bg-primary/60" strength={40} />
-
-      <div className="container-wide relative">
+<div className="container-wide relative">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,11 +64,9 @@ function Hero() {
           transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
           className="mt-6 font-display font-extrabold leading-[0.92] tracking-tight text-[clamp(3rem,10.5vw,9rem)]"
         >
-          <HoverDrift max={5}>
-            Gabriel
-            <br />
-            <span className="italic text-primary">Guard.</span>
-          </HoverDrift>
+          Gabriel
+          <br />
+          <span className="italic text-primary">Guard.</span>
         </motion.h1>
 
         <div className="mt-10 grid gap-10 md:grid-cols-12 items-end">

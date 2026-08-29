@@ -138,8 +138,8 @@ export const projects: Project[] = [
       { src: dp3, caption: "State Championship" },
       { src: dp4, caption: "A volley of 'fuel'" },
     ],
-    cad: [
-      { label: "Isolated", src: dp_fullwire },
+cad: [
+      { label: "Robot", src: dp_fullwire },
       { label: "Powertrain", src: dp_isowire },
     ],
     links: [
@@ -183,8 +183,8 @@ processVideo: vid1,
     gallery: [
       { src: drTitle, caption: "Drizzle — full robot render" },
     ],
-    cad: [
-      { label: "Isolated", src: dpcad },
+cad: [
+      { label: "Shooter", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     links: [
@@ -291,8 +291,8 @@ processVideo: vid1,
     gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
     ],
-    cad: [
-      { label: "Isolated", src: dpcad },
+cad: [
+      { label: "Climber", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     links: [
@@ -332,7 +332,7 @@ gallery: [
       { src: flat6, caption: "Flatline — robot detail" },
     ],
 cad: [
-      { label: "Isolated", src: dpcad },
+      { label: "Shooter", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     processVideo: vid2,

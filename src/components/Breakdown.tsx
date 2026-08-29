@@ -34,8 +34,8 @@ export function Breakdown({ data }: { data: BreakdownData }) {
 {data.stack && data.stack.length > 0 ? (
               /* Vertically stacked captioned images on the right */
               <div className="space-y-6">
-                {data.stack.map((img, i) =>
-                  img.row ? (
+{data.stack.map((img, i) =>
+                  "row" in img ? (
                     <div key={"row" + i} className="grid gap-6 sm:grid-cols-2">
                       {img.row.map((sub) => (
                         <figure

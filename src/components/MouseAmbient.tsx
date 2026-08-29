@@ -27,7 +27,7 @@ export function MouseBlob({
   useEffect(() => {
     if (reduce) return;
     const onMove = (e: MouseEvent) => {
-      const el = ref.current?.parentElement;
+      const el = ref.current?.closest("section") ?? ref.current?.parentElement;
       if (!el) return;
       const r = el.getBoundingClientRect();
       // only respond while the cursor is near the section

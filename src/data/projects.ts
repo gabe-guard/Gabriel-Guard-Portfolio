@@ -177,7 +177,7 @@ export const projects: Project[] = [
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: drTitle, caption: "Drizzle — full robot render" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },
@@ -354,7 +354,6 @@ gallery: [
     ],
     skills: ["Onshape", "Event Production", "Technical Writing", "Livestream Direction", "Sponsor Relations"],
 gallery: [
-      { src: valorImg, caption: "Mock FTC field render" },
       { src: su1, caption: "CAD Challenge submission" },
       { src: su2, caption: "CAD Challenge submission" },
       { src: su3, caption: "CAD Challenge submission" },

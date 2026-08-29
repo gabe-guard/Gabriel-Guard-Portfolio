@@ -139,13 +139,15 @@ export const projects: Project[] = [
       "1× Industrial Design Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
-    gallery: [
+gallery: [
       { src: dp1, caption: "World Finals" },
       { src: dp2, caption: "World Championship" },
       { src: dp3, caption: "State Championship" },
       { src: dp4, caption: "A volley of 'fuel'" },
+      { src: dp_parts, caption: "Aluminum sideplates" },
+      { src: dp_cnc2, caption: "CNC routing of side plates" },
     ],
-cad: [
+    cad: [
 { label: "Robot", src: dp_fullwire },
       { label: "Shooter", src: dp_isowire },
     ],

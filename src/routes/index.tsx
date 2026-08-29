@@ -110,7 +110,7 @@ function Hero() {
 }
 
 function Marquee() {
-  const items = ["Onshape", "Fusion 360", "FRC Team 6800", "CNC", "Figma", "Patent Pending", "Raspberry Pi", "Onshape Pro", "Driver"];
+  const items = ["Mechanical Design", "Competitive Robotics", "CAD & Fabrication", "Rapid Prototyping", "Design for Manufacturing", "Mechanical Systems", "Robotics Engineering", "From CAD to Reality", "Build. Test. Improve.", "Engineering That Competes"];
   return (
     <div className="border-y border-border bg-surface overflow-hidden">
       <motion.div

@@ -138,8 +138,8 @@ export const projects: Project[] = [
       { src: dp3, caption: "State Championship" },
       { src: dp4, caption: "A volley of 'fuel'" },
     ],
-    cad: [
-      { label: "Isolated", src: dp_fullwire },
+cad: [
+      { label: "Robot", src: dp_fullwire },
       { label: "Powertrain", src: dp_isowire },
     ],
     links: [

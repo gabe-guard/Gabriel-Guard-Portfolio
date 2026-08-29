@@ -20,8 +20,8 @@ export function CertificationsSection() {
         <h2 className="mt-3 font-display text-4xl sm:text-5xl font-extrabold tracking-tight">
           On the <span className="italic text-primary">record.</span>
         </h2>
-        <p className="mt-5 max-w-2xl text-base text-muted-foreground leading-relaxed">
-          Certifications I've earned or am actively working toward. I treat these as proof of fluency, not the final word — the work in the projects section is.
+<p className="mt-5 max-w-2xl text-base text-muted-foreground leading-relaxed">
+          Certifications I've earned or am actively working toward.
         </p>
       </FadeUp>
 

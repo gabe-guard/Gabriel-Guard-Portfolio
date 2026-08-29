@@ -34,8 +34,8 @@ function Certifications() {
         <h1 className="mt-3 font-display text-6xl sm:text-7xl font-extrabold tracking-tight">
           On the <span className="italic text-primary">record.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          A short list of certifications I've earned or am actively working toward. I treat these as proof of fluency, not the final word — the work in the projects section is.
+<p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          Certifications I've earned or am actively working toward.
         </p>
       </FadeUp>
 

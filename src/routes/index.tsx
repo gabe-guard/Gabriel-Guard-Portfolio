@@ -76,8 +76,8 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="md:col-span-7 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl"
           >
-            Designer, driver, and founder building precise mechanical things.
-            Currently studying Mechanical Engineering at{" "}
+Designer, maker, and founder who loves turning ideas into reality.
+            Currently studying <span className="text-foreground font-semibold">Mechanical Engineering</span> at{" "}
             <span className="text-foreground font-semibold">The University of Texas at Austin</span>.
           </motion.p>
 
@@ -132,20 +132,20 @@ function Marquee() {
 function About() {
   return (
     <section className="container-wide py-24">
-      <FadeUp>
+<FadeUp>
         <p className="eyebrow">About · 01</p>
         <h2 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold tracking-tight max-w-4xl">
-          I turn ideas into things you can <span className="italic text-primary">hold, drive, and ship.</span>
+          a little about <span className="italic text-primary">the person behind the projects</span>
         </h2>
       </FadeUp>
 
       <div className="mt-12 grid gap-12 md:grid-cols-12 items-start">
         <FadeUp delay={0.05} className="md:col-span-7 space-y-4 text-base leading-relaxed text-muted-foreground">
           <p>
-            Engineering has always been the way I turn ideas into something real. I enjoy solving problems through CAD, machining, and rapid prototyping, then seeing those designs come together into a finished product. As an incoming <span className="text-foreground font-semibold">Mechanical Engineering</span> student with a <span className="text-foreground font-semibold">Robotics minor</span>, I want to continue designing machines that are simple, reliable, and built with purpose.
+            I got into engineering through four years of FRC, where I learned that I enjoy building things most when there is a real problem to solve and something on the line. I have spent those years designing robots, machining parts, and taking mechanisms from CAD to the field. I am now attending UT Austin to study <span className="text-foreground font-semibold">Mechanical Engineering</span> with a <span className="text-foreground font-semibold">Robotics minor</span>, where I hope to keep building on that experience and work on the kinds of systems that first got me excited about engineering.
           </p>
           <p>
-            Outside of robotics, I spend my time designing and printing projects, cooking, and bouldering. I enjoy learning new manufacturing methods and finding better ways to build things. Whether I am leading a robot design, organizing an engineering competition, or developing a product, I enjoy creating work that people can use and improve on.
+            Outside of engineering, I spend a lot of my time outdoors. I enjoy bouldering, climbing, hiking, and finding new places to explore. I also love cooking, especially experimenting with new dishes and learning how to make things from scratch. These are the things I tend to come back to when I am not working on a robot or a project.
           </p>
         </FadeUp>
 

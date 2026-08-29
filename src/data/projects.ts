@@ -18,6 +18,9 @@ import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
 import dp_parts from "@/assets/dp_parts.png";
+import drParts1 from "@/assets/dr_parts1.jpeg";
+import drParts2 from "@/assets/dr_parts2.jpeg";
+import drParts3 from "@/assets/dr_parts3.jpeg";
 
 import swTitle from "@/assets/sw_title.png";
 import swWire from "@/assets/sw_wire.png";

@@ -93,6 +93,8 @@ export type Project = {
   feature?: { title: string; body: string };
 /** Extra process images shown under the interactive CAD toggle. */
   processShots?: { src: string; caption: string }[];
+  /** Single embedded video shown under the interactive CAD toggle (replaces processShots). */
+  processVideo?: string;
   breakdown?: Breakdown;
   /**
    * Bottom media section: embedded video on the left, downloadable PDF on the right.

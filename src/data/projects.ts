@@ -291,8 +291,8 @@ cad: [
     gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
     ],
-    cad: [
-      { label: "Isolated", src: dpcad },
+cad: [
+      { label: "Climber", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     links: [

@@ -3,7 +3,7 @@ import breakdownImg from "@/assets/breakdown-placeholder.png";
 
 import frcImg from "@/assets/downpourmain.jpg";
 
-import valorImg from "@/assets/project-valor.jpg";
+import drTitle from "@/assets/dr_title.png";
 import vccTitle from "@/assets/vcc_title.png";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
@@ -154,7 +154,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2026",
     role: "Subsystem Design Lead · Driver",
-    cover: frcImg,
+    cover: drTitle,
     summary:
       "Drizzle was our first robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot debuted at the FIT Space City District Event winning the competition and earning the Excellence in Engineering Award. The robot later won the FIT Manor District Event and was awarded the Engineering Inspiration Award.",
     details: [
@@ -177,7 +177,7 @@ export const projects: Project[] = [
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
     gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
+      { src: drTitle, caption: "Drizzle — full robot render" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },
@@ -354,7 +354,6 @@ gallery: [
     ],
     skills: ["Onshape", "Event Production", "Technical Writing", "Livestream Direction", "Sponsor Relations"],
 gallery: [
-      { src: valorImg, caption: "Mock FTC field render" },
       { src: su1, caption: "CAD Challenge submission" },
       { src: su2, caption: "CAD Challenge submission" },
       { src: su3, caption: "CAD Challenge submission" },

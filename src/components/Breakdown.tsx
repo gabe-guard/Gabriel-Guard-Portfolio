@@ -30,7 +30,7 @@ export function Breakdown({ data }: { data: BreakdownData }) {
                   <p className="mt-3 text-muted-foreground leading-relaxed">{b.body}</p>
                 </div>
               ))}
-              {data.hero.underText && (
+{data.hero.underText && (
                 <figure className="rounded-lg overflow-hidden border border-border bg-surface">
                   <img
                     src={data.hero.underText.src}
@@ -41,6 +41,18 @@ export function Breakdown({ data }: { data: BreakdownData }) {
                   <figcaption className="p-3 text-sm text-muted-foreground border-t border-border bg-card">
                     {data.hero.underText.caption}
                   </figcaption>
+                </figure>
+              )}
+              {data.hero.video && (
+                <figure className="rounded-lg overflow-hidden border border-border bg-surface">
+                  <video
+                    src={data.hero.video}
+                    controls
+                    loop
+                    muted
+                    playsInline
+                    className="w-full aspect-video object-contain bg-surface"
+                  />
                 </figure>
               )}
             </div>

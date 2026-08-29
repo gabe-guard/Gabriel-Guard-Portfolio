@@ -310,8 +310,12 @@ cover: flTitle,
       "1× Excellence in Engineering Award",
     ],
     skills: ["Onshape", "Jira", "CNC Routing", "Manual Lathe", "Milling", "3D Printing", "Powder Coating", "Modular Assembly"],
-    gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
+gallery: [
+      { src: flat1, caption: "Flatline — CAD render" },
+      { src: flat2, caption: "Flatline — shooter detail" },
+      { src: flat3, caption: "Flatline — mechanism view" },
+      { src: flat5, caption: "Flatline — build photo" },
+      { src: flat6, caption: "Flatline — robot detail" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },

@@ -299,11 +299,28 @@ cad: [
 { label: "Robot", src: dpcad },
       { label: "Climber", src: dpwireframe },
     ],
-    links: [
+links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
       { label: "Technical Write-up", href: "https://onshape.com" },
       { label: "Build Video", href: "https://onshape.com" },
     ],
+    breakdown: {
+      hero: {
+        blocks: [
+          {
+            heading: "Latch Mechanism",
+            body: "The original design used an active latch with powered rollers to pull the cage into the mechanism. After testing, I changed the design to a passive latch with a larger contact surface. This made the mechanism easier to line up with the cage and removed the need to actively control the latch during the climb.",
+          },
+          {
+            heading: "Pivot System",
+            body: "Motor curve and lever arm calculations were used to size the pivot gearbox around the torque required to lift the robot. The pivot location was selected using center of gravity calculations to keep the robot balanced while hanging from the cage.",
+          },
+        ],
+        video: vid3,
+      },
+      stack: [],
+      cards: [],
+    },
   },
   {
     //Flatline

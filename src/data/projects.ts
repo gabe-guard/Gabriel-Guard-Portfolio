@@ -190,8 +190,10 @@ processVideo: vid1,
       "1× Engineering Inspiration Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
-    gallery: [
-      { src: drTitle, caption: "Drizzle — full robot render" },
+gallery: [
+      { src: drParts1, caption: "Drizzle — full robot render" },
+      { src: drParts2, caption: "Drizzle — full robot render" },
+      { src: drParts3, caption: "Drizzle — full robot render" },
     ],
 cad: [
 { label: "Robot", src: dpcad },

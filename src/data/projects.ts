@@ -332,7 +332,7 @@ gallery: [
       { src: flat6, caption: "Flatline — robot detail" },
     ],
 cad: [
-      { label: "Isolated", src: dpcad },
+      { label: "Shooter", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     processVideo: vid2,

@@ -3,7 +3,7 @@ import breakdownImg from "@/assets/breakdown-placeholder.png";
 
 import frcImg from "@/assets/downpourmain.jpg";
 
-import valorImg from "@/assets/project-valor.jpg";
+import drTitle from "@/assets/dr_title.png";
 import vccTitle from "@/assets/vcc_title.png";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";

@@ -183,8 +183,8 @@ processVideo: vid1,
     gallery: [
       { src: drTitle, caption: "Drizzle — full robot render" },
     ],
-    cad: [
-      { label: "Isolated", src: dpcad },
+cad: [
+      { label: "Shooter", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
     links: [

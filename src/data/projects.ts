@@ -55,8 +55,8 @@ export type Breakdown = {
   hero: {
     blocks: { heading: string; body: string }[];
     image?: BreakdownImage;
-    /** Image rendered below the text blocks in the left column (e.g. the suspension gif). */
-    underText?: BreakdownImage;
+/** Image rendered below the text blocks in the left column (e.g. the suspension gif). */
+    underText?: { src: string; alt: string; caption: string };
   };
 /** Optional vertically-stacked captioned images shown on the right of the hero card. */
   stack?: ({ src: string; alt: string; caption: string } | { row: { src: string; alt: string; caption: string }[] })[];

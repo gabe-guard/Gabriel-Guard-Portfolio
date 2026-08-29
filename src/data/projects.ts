@@ -55,9 +55,11 @@ export type Breakdown = {
   hero: {
     blocks: { heading: string; body: string }[];
     image?: BreakdownImage;
+/** Image rendered below the text blocks in the left column (e.g. the suspension gif). */
+    underText?: { src: string; alt: string; caption: string };
   };
 /** Optional vertically-stacked captioned images shown on the right of the hero card. */
-  stack?: ({ src: string; alt: string; caption: string } | { row: { src: string; alt: string; caption: string }[] })[];
+  stack?: { src: string; alt: string; caption: string }[];
   cards: { heading: string; body: string; image?: BreakdownImage }[];
   lineArt?: BreakdownImage;
 };
@@ -243,19 +245,19 @@ export const projects: Project[] = [
             heading: "Upright Design",
             body: "I was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
           },
-        ],
-      },
-stack: [
-        { src: swMaster, alt: "Chassis master sketch", caption: "Placeholder — master sketch overview." },
-        { src: swWide, alt: "Chassis wide view", caption: "Placeholder — wide chassis view." },
-        {
-          row: [
-            { src: swMasterGif.url, alt: "Suspension geometry animation", caption: "Placeholder — dynamic suspension geometry." },
-            { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
-          ],
+],
+          underText: {
+            src: swMasterGif.url,
+            alt: "Suspension geometry animation",
+            caption: "Placeholder — dynamic suspension geometry.",
+          },
         },
-      ],
-      cards: [],
+        stack: [
+          { src: swMaster, alt: "Chassis master sketch", caption: "Placeholder — master sketch overview." },
+          { src: swWide, alt: "Chassis wide view", caption: "Placeholder — wide chassis view." },
+          { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
+        ],
+        cards: [],
     },
   },
   {

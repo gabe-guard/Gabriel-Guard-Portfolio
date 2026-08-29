@@ -12,6 +12,7 @@ import dp2 from "@/assets/dp2.jpg";
 import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
 import dl1 from "@/assets/dl1.jpg";
+import dlTitle2 from "@/assets/dl_title2.png";
 
 import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
@@ -33,6 +34,11 @@ import flat2 from "@/assets/flat2.png";
 import flat3 from "@/assets/flat3.png";
 import flat5 from "@/assets/flat5.jpg";
 import flat6 from "@/assets/flat6.jpg";
+
+import su1 from "@/assets/su1.png";
+import su2 from "@/assets/su2.png";
+import su3 from "@/assets/su3.png";
+import su4 from "@/assets/su4.png";
 
 
 export type RichSegment = string | { text: string; href: string };
@@ -256,7 +262,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2025",
     role: "Subsystem Design Lead · Driver",
-    cover: dl1,
+    cover: dlTitle2,
     summary:
       "Deadlock was our robot for the 2025 FIRST Robotics Competition game REEFSCAPE. The game centered around scoring coral on a reef and ended with robots climbing onto hanging cages. Deadlock won two district events and the Texas District Championship in a clean sweep. The robot also received three Industrial Design Awards and one Autonomous Award. I spent the season designing and fabricating mechanisms for Deadlock and had the opportunity to drive the robot throughout the season.",
     details: [
@@ -347,8 +353,12 @@ gallery: [
       "750-viewer livestream ceremony",
     ],
     skills: ["Onshape", "Event Production", "Technical Writing", "Livestream Direction", "Sponsor Relations"],
-    gallery: [
+gallery: [
       { src: valorImg, caption: "Mock FTC field render" },
+      { src: su1, caption: "CAD Challenge submission" },
+      { src: su2, caption: "CAD Challenge submission" },
+      { src: su3, caption: "CAD Challenge submission" },
+      { src: su4, caption: "CAD Challenge submission" },
     ],
 links: [
       { label: "Onshape CAD", href: "https://onshape.com" },

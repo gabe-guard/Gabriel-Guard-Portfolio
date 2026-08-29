@@ -302,8 +302,10 @@ cad: [
       "Top 3 world climb EPA",
     ],
     skills: ["Onshape", "Motor Curve Analysis", "Lever Arm Calculations", "Center of Gravity Analysis", "Jira", "CNC Machining", "3D Printing", "Manual Assembly"],
-    gallery: [
+gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
+      { src: dl2, caption: "Competition robot — full assembly" },
+      { src: dl3, caption: "Competition robot — full assembly" },
     ],
 cad: [
 { label: "Robot", src: dpcad },

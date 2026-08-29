@@ -155,23 +155,7 @@ processShots: [
       { src: dp_cnc2, caption: "Alumnium shooter parts machined on Laguna IQ CNC" },
       { src: dp_parts, caption: "Post-processed and sandblasted parts prepared for powdercoating" },
     ],
-    breakdown: {
-      hero: {
-        blocks: [
-          {
-            heading: "Shooter Subsystem",
-            body: "The Shooter Subsystem is made up of three sub-assemblies which I designed using Onshape, including a superstructure, variable hood, and \"feeder\". The superstructure housed much of the robot's electronics and packaged the 5 Kraken x60 motors used to power the shooter.",
-          },
-          {
-            heading: "Manufacturing & Assembly",
-            body: "Parts were converted into manufacturing tickets in Jira, designed with tab and slot joints and machining tolerances accounted for. After fabrication, I assembled the subsystem and worked with the electrical and software teams to integrate it into the rest of the robot.",
-          },
-        ],
-        video: vid4,
-      },
-      stack: [],
-      cards: [],
-    },
+    processVideo: vid4,
   },
 
   {
@@ -321,23 +305,7 @@ links: [
       { label: "Technical Write-up", href: "https://onshape.com" },
       { label: "Build Video", href: "https://onshape.com" },
     ],
-    breakdown: {
-      hero: {
-        blocks: [
-          {
-            heading: "Latch Mechanism",
-            body: "The original design used an active latch with powered rollers to pull the cage into the mechanism. After testing, I changed the design to a passive latch with a larger contact surface. This made the mechanism easier to line up with the cage and removed the need to actively control the latch during the climb.",
-          },
-          {
-            heading: "Pivot System",
-            body: "Motor curve and lever arm calculations were used to size the pivot gearbox around the torque required to lift the robot. The pivot location was selected using center of gravity calculations to keep the robot balanced while hanging from the cage.",
-          },
-        ],
-        video: vid3,
-      },
-      stack: [],
-      cards: [],
-    },
+processVideo: vid3,
   },
   {
     //Flatline

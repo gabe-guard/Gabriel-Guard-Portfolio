@@ -184,8 +184,8 @@ processVideo: vid1,
       { src: drTitle, caption: "Drizzle — full robot render" },
     ],
 cad: [
-      { label: "Shooter", src: dpcad },
-      { label: "Powertrain", src: dpwireframe },
+{ label: "Robot", src: dpcad },
+      { label: "Shooter", src: dpwireframe },
     ],
     links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
@@ -292,8 +292,8 @@ cad: [
       { src: dl1, caption: "Competition robot — full assembly" },
     ],
 cad: [
-      { label: "Climber", src: dpcad },
-      { label: "Powertrain", src: dpwireframe },
+{ label: "Robot", src: dpcad },
+      { label: "Climber", src: dpwireframe },
     ],
     links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
@@ -332,8 +332,8 @@ gallery: [
       { src: flat6, caption: "Flatline — robot detail" },
     ],
 cad: [
-      { label: "Shooter", src: dpcad },
-      { label: "Powertrain", src: dpwireframe },
+{ label: "Robot", src: dpcad },
+      { label: "Shooter", src: dpwireframe },
     ],
     processVideo: vid2,
     links: [

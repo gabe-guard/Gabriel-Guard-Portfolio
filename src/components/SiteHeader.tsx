@@ -35,19 +35,20 @@ export function SiteHeader() {
         </Link>
         <nav className="flex items-center gap-0.5 sm:gap-1">
           {nav.map((item) => (
-            <Link
-              key={item.label}
-              to={item.to}
-              hash={item.hash}
-              className="px-2.5 py-1.5 text-[0.82rem] font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
-              activeOptions={{ exact: item.to === "/", includeHash: true }}
-              activeProps={{
-                className:
-                  "px-2.5 py-1.5 text-[0.82rem] font-semibold text-primary-foreground bg-primary rounded-full",
-              }}
-            >
-              {item.label}
-            </Link>
+<HoverDrift key={item.label} max={3} className="inline-flex">
+              <Link
+                to={item.to}
+                hash={item.hash}
+                className="px-2.5 py-1.5 text-[0.82rem] font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
+                activeOptions={{ exact: item.to === "/", includeHash: true }}
+                activeProps={{
+                  className:
+                    "px-2.5 py-1.5 text-[0.82rem] font-semibold text-primary-foreground bg-primary rounded-full",
+                }}
+              >
+                {item.label}
+              </Link>
+            </HoverDrift>
           ))}
         </nav>
       </div>

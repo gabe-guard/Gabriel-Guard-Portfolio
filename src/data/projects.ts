@@ -27,6 +27,13 @@ import swMasterGif from "@/assets/sw_master.gif.asset.json";
 
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
+import flTitle from "@/assets/fl_title.png";
+import flat1 from "@/assets/flat1.png";
+import flat2 from "@/assets/flat2.png";
+import flat3 from "@/assets/flat3.png";
+import flat5 from "@/assets/flat5.jpg";
+import flat6 from "@/assets/flat6.jpg";
+
 
 export type RichSegment = string | { text: string; href: string };
 

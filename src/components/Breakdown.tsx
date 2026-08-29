@@ -31,22 +31,46 @@ export function Breakdown({ data }: { data: BreakdownData }) {
                 </div>
               ))}
             </div>
-            {data.stack && data.stack.length > 0 ? (
+{data.stack && data.stack.length > 0 ? (
               /* Vertically stacked captioned images on the right */
               <div className="space-y-6">
-                {data.stack.map((img, i) => (
-                  <figure key={img.src + i} className="rounded-lg overflow-hidden border border-border bg-surface">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="w-full object-contain"
-                    />
-                    <figcaption className="p-3 text-sm text-muted-foreground border-t border-border bg-card">
-                      {img.caption}
-                    </figcaption>
-                  </figure>
-                ))}
+                {data.stack.map((img, i) =>
+                  img.row ? (
+                    <div key={"row" + i} className="grid gap-6 sm:grid-cols-2">
+                      {img.row.map((sub) => (
+                        <figure
+                          key={sub.src + i}
+                          className="rounded-lg overflow-hidden border border-border bg-surface"
+                        >
+                          <img
+                            src={sub.src}
+                            alt={sub.alt}
+                            loading="lazy"
+                            className="w-full object-contain"
+                          />
+                          <figcaption className="p-3 text-sm text-muted-foreground border-t border-border bg-card">
+                            {sub.caption}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  ) : (
+                    <figure
+                      key={img.src + i}
+                      className="rounded-lg overflow-hidden border border-border bg-surface"
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        loading="lazy"
+                        className="w-full object-contain"
+                      />
+                      <figcaption className="p-3 text-sm text-muted-foreground border-t border-border bg-card">
+                        {img.caption}
+                      </figcaption>
+                    </figure>
+                  )
+                )}
               </div>
             ) : (
               /* spacer for the image column on desktop */

@@ -11,7 +11,6 @@ import dp1 from "@/assets/dp1.jpg";
 import dp2 from "@/assets/dp2.jpg";
 import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
-import dl1 from "@/assets/dl1.jpg";
 import dlTitle2 from "@/assets/dl_title2.png";
 import dl1 from "@/assets/dl_1.jpeg";
 import dl2 from "@/assets/dl_2.jpeg";

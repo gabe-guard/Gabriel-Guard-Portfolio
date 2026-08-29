@@ -139,8 +139,8 @@ export const projects: Project[] = [
       { src: dp4, caption: "A volley of 'fuel'" },
     ],
 cad: [
-      { label: "Robot", src: dp_fullwire },
-      { label: "Powertrain", src: dp_isowire },
+{ label: "Robot", src: dp_fullwire },
+      { label: "Shooter", src: dp_isowire },
     ],
     links: [
       { label: "CAD Release", href: "https://www.chiefdelphi.com/t/frc-6800-valor-2026-robot-cad-release/520715" },

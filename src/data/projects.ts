@@ -37,8 +37,8 @@ import flat6 from "@/assets/flat6.jpg";
 
 import vid1 from "@/assets/vid1.mp4";
 import vid2 from "@/assets/vid2.mp4";
-import vid3 from "@/assets/vid_3.MP4";
-import vid4 from "@/assets/vid_4.MP4";
+import vid3 from "@/assets/vid_3.mp4";
+import vid4 from "@/assets/vid_4.mp4";
 
 import su1 from "@/assets/su1.png";
 import su2 from "@/assets/su2.png";

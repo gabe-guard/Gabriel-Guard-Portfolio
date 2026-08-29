@@ -76,8 +76,8 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="md:col-span-7 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-xl"
           >
-            Designer, driver, and founder building precise mechanical things.
-            Currently studying Mechanical Engineering at{" "}
+Designer, maker, and founder who loves turning ideas into reality.
+            Currently studying <span className="text-foreground font-semibold">Mechanical Engineering</span> at{" "}
             <span className="text-foreground font-semibold">The University of Texas at Austin</span>.
           </motion.p>
 

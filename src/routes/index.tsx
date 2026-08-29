@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
 import { PhotoCarousel } from "@/components/PhotoCarousel";
+import { MouseBlob, HoverDrift } from "@/components/MouseAmbient";
 import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills";
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { ConnectSection } from "@/components/ConnectSection";
@@ -40,8 +41,12 @@ function Hero() {
   return (
     <section className="relative overflow-hidden min-h-[calc(100vh-4.5rem)] flex flex-col justify-center pt-16 pb-28 sm:pt-20 sm:pb-36">
       <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
-      <Parallax offset={50} className="absolute -top-32 -right-40 h-[520px] w-[520px] rounded-full bg-accent/30 blur-3xl pointer-events-none" />
-      <Parallax offset={-40} className="absolute top-1/2 -left-32 h-[420px] w-[420px] rounded-full bg-primary/10 blur-3xl pointer-events-none" />
+      <Parallax offset={50} className="absolute -top-32 -right-40 h-[520px] w-[520px] pointer-events-none">
+        <MouseBlob strength={70} className="h-full w-full rounded-full bg-accent/30 blur-3xl" />
+      </Parallax>
+      <Parallax offset={-40} className="absolute top-1/2 -left-32 h-[420px] w-[420px] pointer-events-none">
+        <MouseBlob strength={-45} className="h-full w-full rounded-full bg-primary/10 blur-3xl" />
+      </Parallax>
 
       <div className="container-wide relative">
         <motion.p
@@ -172,6 +177,7 @@ function FeaturedProjects() {
       <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {featured.map((p, i) => (
           <FadeUp key={p.slug} delay={i * 0.08}>
+            <HoverDrift>
             <Link
               to="/projects/$slug"
               params={{ slug: p.slug }}
@@ -191,6 +197,7 @@ function FeaturedProjects() {
                 <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{p.tagline}</p>
               </div>
             </Link>
+            </HoverDrift>
           </FadeUp>
         ))}
       </div>

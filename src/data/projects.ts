@@ -11,8 +11,10 @@ import dp1 from "@/assets/dp1.jpg";
 import dp2 from "@/assets/dp2.jpg";
 import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
-import dl1 from "@/assets/dl1.jpg";
 import dlTitle2 from "@/assets/dl_title2.png";
+import dl1 from "@/assets/dl_1.jpeg";
+import dl2 from "@/assets/dl_2.jpeg";
+import dl3 from "@/assets/dl_3.jpeg";
 
 import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
@@ -300,8 +302,10 @@ cad: [
       "Top 3 world climb EPA",
     ],
     skills: ["Onshape", "Motor Curve Analysis", "Lever Arm Calculations", "Center of Gravity Analysis", "Jira", "CNC Machining", "3D Printing", "Manual Assembly"],
-    gallery: [
+gallery: [
       { src: dl1, caption: "Competition robot — full assembly" },
+      { src: dl2, caption: "Competition robot — full assembly" },
+      { src: dl3, caption: "Competition robot — full assembly" },
     ],
 cad: [
 { label: "Robot", src: dpcad },

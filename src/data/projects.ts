@@ -331,10 +331,11 @@ gallery: [
       { src: flat5, caption: "Flatline — build photo" },
       { src: flat6, caption: "Flatline — robot detail" },
     ],
-    cad: [
+cad: [
       { label: "Isolated", src: dpcad },
       { label: "Powertrain", src: dpwireframe },
     ],
+    processVideo: vid2,
     links: [
       { label: "Onshape CAD", href: "https://onshape.com" },
       { label: "Technical Write-up", href: "https://onshape.com" },

@@ -175,8 +175,20 @@ function ProjectDetail() {
                 ))}
             </FadeUp>
             <div className="md:col-span-7 space-y-8">
-              <CadToggle views={project.cad} />
-              {project.processShots && project.processShots.length > 0 && (
+<CadToggle views={project.cad} />
+              {project.processVideo && (
+                <div className="overflow-hidden rounded-xl border border-border bg-card">
+                  <video
+                    src={project.processVideo}
+                    controls
+                    loop
+                    muted
+                    playsInline
+                    className="w-full aspect-video object-contain bg-surface"
+                  />
+                </div>
+              )}
+              {!project.processVideo && project.processShots && project.processShots.length > 0 && (
                 <div className="grid gap-6 sm:grid-cols-2">
                   {project.processShots.map((s, i) => (
                     <figure key={s.src + i} className="rounded-lg overflow-hidden border border-border bg-card">

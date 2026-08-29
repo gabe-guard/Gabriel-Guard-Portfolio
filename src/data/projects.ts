@@ -245,11 +245,15 @@ export const projects: Project[] = [
           },
         ],
       },
-      stack: [
+stack: [
         { src: swMaster, alt: "Chassis master sketch", caption: "Placeholder — master sketch overview." },
         { src: swWide, alt: "Chassis wide view", caption: "Placeholder — wide chassis view." },
-        { src: swMasterGif.url, alt: "Suspension geometry animation", caption: "Placeholder — dynamic suspension geometry." },
-        { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
+        {
+          row: [
+            { src: swMasterGif.url, alt: "Suspension geometry animation", caption: "Placeholder — dynamic suspension geometry." },
+            { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
+          ],
+        },
       ],
       cards: [],
     },

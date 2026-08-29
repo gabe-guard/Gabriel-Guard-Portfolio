@@ -27,6 +27,13 @@ import swMasterGif from "@/assets/sw_master.gif.asset.json";
 
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
+import flTitle from "@/assets/fl_title.png";
+import flat1 from "@/assets/flat1.png";
+import flat2 from "@/assets/flat2.png";
+import flat3 from "@/assets/flat3.png";
+import flat5 from "@/assets/flat5.jpg";
+import flat6 from "@/assets/flat6.jpg";
+
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -288,7 +295,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2024",
     role: "Subsystem Design Lead",
-    cover: frcImg,
+cover: flTitle,
     summary:
       "Flatline was our robot for the 2024 FIRST Robotics Competition game CRESCENDO. The game centered around collecting foam disks called “notes” and scoring them in the Speaker and Amp before climbing the Stage at the end of the match. Flatline received two Industrial Design Awards and an Excellence in Engineering Award during the season. I was a rookie on the team and worked as the sole designer of the shooter in Onshape before overseeing its fabrication and assembly.",
     details: [
@@ -303,8 +310,12 @@ export const projects: Project[] = [
       "1× Excellence in Engineering Award",
     ],
     skills: ["Onshape", "Jira", "CNC Routing", "Manual Lathe", "Milling", "3D Printing", "Powder Coating", "Modular Assembly"],
-    gallery: [
-      { src: frcImg, caption: "Competition robot — full assembly" },
+gallery: [
+      { src: flat1, caption: "Flatline — CAD render" },
+      { src: flat2, caption: "Flatline — shooter detail" },
+      { src: flat3, caption: "Flatline — mechanism view" },
+      { src: flat5, caption: "Flatline — build photo" },
+      { src: flat6, caption: "Flatline — robot detail" },
     ],
     cad: [
       { label: "Isolated", src: dpcad },

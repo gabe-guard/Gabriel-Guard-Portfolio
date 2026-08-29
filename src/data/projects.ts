@@ -151,10 +151,27 @@ cad: [
       { label: "Behind the Bumpers", href: "https://www.youtube.com/watch?v=mPNj9xn-3dk" },
       { label: "Worlds Finals", href: "https://www.youtube.com/watch?v=8blsQjuCjso" },
     ],
-    processShots: [
+processShots: [
       { src: dp_cnc2, caption: "Alumnium shooter parts machined on Laguna IQ CNC" },
       { src: dp_parts, caption: "Post-processed and sandblasted parts prepared for powdercoating" },
     ],
+    breakdown: {
+      hero: {
+        blocks: [
+          {
+            heading: "Shooter Subsystem",
+            body: "The Shooter Subsystem is made up of three sub-assemblies which I designed using Onshape, including a superstructure, variable hood, and \"feeder\". The superstructure housed much of the robot's electronics and packaged the 5 Kraken x60 motors used to power the shooter.",
+          },
+          {
+            heading: "Manufacturing & Assembly",
+            body: "Parts were converted into manufacturing tickets in Jira, designed with tab and slot joints and machining tolerances accounted for. After fabrication, I assembled the subsystem and worked with the electrical and software teams to integrate it into the rest of the robot.",
+          },
+        ],
+        video: vid4,
+      },
+      stack: [],
+      cards: [],
+    },
   },
 
   {

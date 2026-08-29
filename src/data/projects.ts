@@ -18,6 +18,9 @@ import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
 import dp_parts from "@/assets/dp_parts.png";
+import drParts1 from "@/assets/dr_parts1.jpeg";
+import drParts2 from "@/assets/dr_parts2.jpeg";
+import drParts3 from "@/assets/dr_parts3.jpeg";
 
 import swTitle from "@/assets/sw_title.png";
 import swWire from "@/assets/sw_wire.png";
@@ -136,13 +139,15 @@ export const projects: Project[] = [
       "1× Industrial Design Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
-    gallery: [
+gallery: [
       { src: dp1, caption: "World Finals" },
       { src: dp2, caption: "World Championship" },
       { src: dp3, caption: "State Championship" },
       { src: dp4, caption: "A volley of 'fuel'" },
+      { src: dp_parts, caption: "Aluminum sideplates" },
+      { src: dp_cnc2, caption: "CNC routing of side plates" },
     ],
-cad: [
+    cad: [
 { label: "Robot", src: dp_fullwire },
       { label: "Shooter", src: dp_isowire },
     ],
@@ -185,8 +190,10 @@ processVideo: vid1,
       "1× Engineering Inspiration Award",
     ],
     skills: ["Onshape", "Fusion 360", "VCarve CAM", "Jira", "CNC Router", "Manual Lathe", "Root Cause Analysis"],
-    gallery: [
-      { src: drTitle, caption: "Drizzle — full robot render" },
+gallery: [
+      { src: drParts1, caption: "Drizzle — full robot render" },
+      { src: drParts2, caption: "Drizzle — full robot render" },
+      { src: drParts3, caption: "Drizzle — full robot render" },
     ],
 cad: [
 { label: "Robot", src: dpcad },

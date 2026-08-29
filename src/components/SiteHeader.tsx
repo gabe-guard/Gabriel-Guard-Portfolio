@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { HoverDrift } from "@/components/MouseAmbient";
 
 const nav = [
   { to: "/", label: "Home" },

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Parallax, FadeUp } from "@/components/Parallax";
 import { PhotoCarousel } from "@/components/PhotoCarousel";
-import { MouseBlob, HoverDrift } from "@/components/MouseAmbient";
+import { MouseBlob, HoverDrift, CursorDot } from "@/components/MouseAmbient";
 import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills";
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { ConnectSection } from "@/components/ConnectSection";

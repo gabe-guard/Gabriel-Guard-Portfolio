@@ -171,10 +171,7 @@ export const projects: Project[] = [
       title: "Turret Design",
       body: "The Turret Subsystem was made up of a rotating turret, compact shooter, and adjustable hood which I designed using Onshape. The turret was limited to roughly 400 degrees of rotation and used bi-directional cable chain to route wiring between the rotating and stationary sections. The turret rings were designed around a 7 inch diameter bearing and required precise machining, tapping, and heat shrinking to assemble the components together. The compact packaging of the turret and shooter mechanism allowed the shooter to rotate without taking up unnecessary space on the robot. The hood used a cycloidal drive to provide torque and precision required to adjust the launch angle.\n\nPackaging was the main constraint throughout the design. The turret has to fit the bearing, drive system, shooter, hood, motors, and cable chain within a limited footprint while maintaining enough clearance for the full range of motion. I designed the turret rings and mounting interfaces around the manufacturing process, accounting for machining tolerances and the fit between the bearing and surrounding components so the turret could be assembled and serviced without removing the entire mechanism.\n\nOnce the design was complete, I worked with the manufacturing team to machine and assemble the turret components. The rings required precision machining and tapping, while the bearing interfaces used heat fitting to achieve the required fit. After fabrication, I assembled the turret and shooter and worked with the electrical and software teams to integrate the rotating mechanism, including routing the wiring through the cable chain and providing the mechanical details needed to control the turret and hood.",
     },
-    processShots: [
-      { src: breakdownImg, caption: "Placeholder — turret ring machining." },
-      { src: breakdownImg, caption: "Placeholder — cycloidal hood drive." },
-    ],
+processVideo: vid1,
 
 
     highlights: [

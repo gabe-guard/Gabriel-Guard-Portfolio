@@ -295,7 +295,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2024",
     role: "Subsystem Design Lead",
-    cover: frcImg,
+cover: flTitle,
     summary:
       "Flatline was our robot for the 2024 FIRST Robotics Competition game CRESCENDO. The game centered around collecting foam disks called “notes” and scoring them in the Speaker and Amp before climbing the Stage at the end of the match. Flatline received two Industrial Design Awards and an Excellence in Engineering Award during the season. I was a rookie on the team and worked as the sole designer of the shooter in Onshape before overseeing its fabrication and assembly.",
     details: [

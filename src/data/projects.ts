@@ -227,21 +227,21 @@ export const projects: Project[] = [
     breakdown: {
       hero: {
         blocks: [
-          {
+{
             heading: "Master Sketch",
-            body: "I began the chassis with a master sketch and driver model to establish the ergonomics of the car, then added cross sections and braces to build out a simple, rigid frame layout.",
+            body: "To begin the chassis, I created a master sketch with a driver model to establish the overall ergonomics of the car. Once the side profile had the proportions I wanted, I added cross sections at the locations where the outer edges of the frame would run. I then added braces between the main tubes to improve the structure while keeping the frame layout simple.",
           },
           {
             heading: "Weldments",
-            body: "Using a custom weldment profile and SolidWorks Weldments, I turned 3D sketches into structural tubes, trimming joints with corner treatments so the frame could actually be fabricated.",
+            body: "I created a custom weldment profile and used SolidWorks Weldments to turn the 3D sketches into structural tubes. The tubes had to be trimmed using weldment corner treatment and trim tools so that they did not interfere with each other and could be manufactured. I tried to avoid difficult geometries such as four way tube intersections and instead designed the frame around simpler joints that would be easier to fabricate.",
           },
           {
             heading: "Suspension Geometry",
-            body: "I used the suspension to learn how variables like camber affect handling, developing a geometry intended to keep the car level while changing camber through a turn.",
+            body: "After establishing the chassis hardpoints, I began working on the suspension geometry. I used this part of the project to learn the major components of a suspension system and how variables such as camber affect handling and cornering. From there, I developed a geometry intended to keep the car level relative to the ground while naturally changing camber as the suspension moved through a turn.",
           },
           {
             heading: "Upright Design",
-            body: "I practiced part modeling and design for manufacturing on a simple upright, considering how it would be machined and assembled rather than only the CAD geometry.",
+            body: "I was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
           },
         ],
       },

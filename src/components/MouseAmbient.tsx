@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   motion,
   useMotionValue,
@@ -24,26 +24,30 @@ export function MouseBlob({
   const sx = useSpring(x, { stiffness: 40, damping: 18, mass: 0.9 });
   const sy = useSpring(y, { stiffness: 40, damping: 18, mass: 0.9 });
 
-  const onMove = (e: React.MouseEvent) => {
+  useEffect(() => {
     if (reduce) return;
-    const el = ref.current?.parentElement;
-    if (!el) return;
-    const r = el.getBoundingClientRect();
-    const nx = (e.clientX - r.left) / r.width - 0.5;
-    const ny = (e.clientY - r.top) / r.height - 0.5;
-    x.set(nx * strength);
-    y.set(ny * strength);
-  };
+    const onMove = (e: MouseEvent) => {
+      const el = ref.current?.parentElement;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      // only respond while the cursor is near the section
+      if (e.clientY < r.top - 200 || e.clientY > r.bottom + 200) return;
+      const nx = (e.clientX - r.left) / r.width - 0.5;
+      const ny = (e.clientY - r.top) / r.height - 0.5;
+      x.set(nx * strength);
+      y.set(ny * strength);
+    };
+    window.addEventListener("mousemove", onMove);
+    return () => window.removeEventListener("mousemove", onMove);
+  }, [reduce, strength, x, y]);
 
   return (
-    <div
-      onMouseMove={onMove}
-      className="absolute inset-0 pointer-events-none"
-      // capture moves at the section level without blocking content
-      style={{ pointerEvents: "none" }}
-    >
-      <motion.div ref={ref} style={{ x: sx, y: sy }} className={className} />
-    </div>
+    <motion.div
+      ref={ref}
+      aria-hidden
+      style={{ x: sx, y: sy }}
+      className={`pointer-events-none ${className}`}
+    />
   );
 }
 

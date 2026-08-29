@@ -44,9 +44,12 @@ function Hero() {
       <Parallax offset={50} className="absolute -top-32 -right-40 h-[520px] w-[520px] pointer-events-none">
         <MouseBlob strength={70} className="h-full w-full rounded-full bg-accent/30 blur-3xl" />
       </Parallax>
-      <Parallax offset={-40} className="absolute top-1/2 -left-32 h-[420px] w-[420px] pointer-events-none">
+<Parallax offset={-40} className="absolute top-1/2 -left-32 h-[420px] w-[420px] pointer-events-none">
         <MouseBlob strength={-45} className="h-full w-full rounded-full bg-primary/10 blur-3xl" />
       </Parallax>
+
+      <CursorDot className="absolute left-1/2 top-1/2 h-3 w-3 rounded-full bg-accent/70" strength={26} />
+      <CursorDot className="absolute left-1/2 top-1/3 h-1.5 w-1.5 rounded-full bg-primary/60" strength={40} />
 
       <div className="container-wide relative">
         <motion.p

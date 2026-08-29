@@ -250,13 +250,13 @@ export const projects: Project[] = [
 stack: [
         { src: swMaster, alt: "Chassis master sketch", caption: "Placeholder — master sketch overview." },
         { src: swWide, alt: "Chassis wide view", caption: "Placeholder — wide chassis view." },
-        {
-          row: [
-            { src: swMasterGif.url, alt: "Suspension geometry animation", caption: "Placeholder — dynamic suspension geometry." },
-            { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
-          ],
-        },
+        { src: swUpright, alt: "Upright design", caption: "Placeholder — upright part design." },
       ],
+      underText: {
+        src: swMasterGif.url,
+        alt: "Suspension geometry animation",
+        caption: "Placeholder — dynamic suspension geometry.",
+      },
       cards: [],
     },
   },

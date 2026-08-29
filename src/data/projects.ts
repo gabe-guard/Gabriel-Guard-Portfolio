@@ -56,8 +56,8 @@ export type Breakdown = {
     blocks: { heading: string; body: string }[];
     image?: BreakdownImage;
   };
-  /** Optional vertically-stacked captioned images shown on the right of the hero card. */
-  stack?: { src: string; alt: string; caption: string }[];
+/** Optional vertically-stacked captioned images shown on the right of the hero card. */
+  stack?: ({ src: string; alt: string; caption: string } | { row: { src: string; alt: string; caption: string }[] })[];
   cards: { heading: string; body: string; image?: BreakdownImage }[];
   lineArt?: BreakdownImage;
 };

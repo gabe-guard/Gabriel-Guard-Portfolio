@@ -13,6 +13,9 @@ import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
 import dl1 from "@/assets/dl1.jpg";
 import dlTitle2 from "@/assets/dl_title2.png";
+import dl1 from "@/assets/dl_1.jpeg";
+import dl2 from "@/assets/dl_2.jpeg";
+import dl3 from "@/assets/dl_3.jpeg";
 
 import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";

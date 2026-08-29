@@ -135,7 +135,7 @@ function About() {
 <FadeUp>
         <p className="eyebrow">About · 01</p>
         <h2 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold tracking-tight max-w-4xl">
-          a little about <span className="italic text-primary">the person behind the projects</span>
+          A little about <span className="italic text-primary">the person behind the projects</span>
         </h2>
       </FadeUp>
 

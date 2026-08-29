@@ -12,6 +12,7 @@ import dp2 from "@/assets/dp2.jpg";
 import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
 import dl1 from "@/assets/dl1.jpg";
+import dlTitle2 from "@/assets/dl_title2.png";
 
 import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
@@ -33,6 +34,11 @@ import flat2 from "@/assets/flat2.png";
 import flat3 from "@/assets/flat3.png";
 import flat5 from "@/assets/flat5.jpg";
 import flat6 from "@/assets/flat6.jpg";
+
+import su1 from "@/assets/su1.png";
+import su2 from "@/assets/su2.png";
+import su3 from "@/assets/su3.png";
+import su4 from "@/assets/su4.png";
 
 
 export type RichSegment = string | { text: string; href: string };

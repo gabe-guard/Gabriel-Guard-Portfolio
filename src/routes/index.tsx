@@ -61,15 +61,17 @@ function Hero() {
           Portfolio · Vol. 01 · 2026
         </motion.p>
 
-        <motion.h1
+<motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.2, 0.8, 0.2, 1] }}
           className="mt-6 font-display font-extrabold leading-[0.92] tracking-tight text-[clamp(3rem,10.5vw,9rem)]"
         >
-          Gabriel
-          <br />
-          <span className="italic text-primary">Guard.</span>
+          <HoverDrift max={5}>
+            Gabriel
+            <br />
+            <span className="italic text-primary">Guard.</span>
+          </HoverDrift>
         </motion.h1>
 
         <div className="mt-10 grid gap-10 md:grid-cols-12 items-end">

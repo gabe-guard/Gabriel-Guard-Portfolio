@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FadeUp } from "@/components/Parallax";
+import { HoverDrift } from "@/components/MouseAmbient";
 import { projects } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 
@@ -35,6 +36,7 @@ const pattern = ["md:col-span-4", "md:col-span-2", "md:col-span-2", "md:col-span
           const span = pattern[i % pattern.length];
           return (
             <FadeUp key={p.slug} delay={i * 0.06} className={span}>
+              <HoverDrift className="h-full">
               <Link
                 to="/projects/$slug"
                 params={{ slug: p.slug }}
@@ -59,6 +61,7 @@ const pattern = ["md:col-span-4", "md:col-span-2", "md:col-span-2", "md:col-span
                   <ArrowUpRight className="h-5 w-5 text-primary mt-1 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
               </Link>
+              </HoverDrift>
             </FadeUp>
           );
         })}

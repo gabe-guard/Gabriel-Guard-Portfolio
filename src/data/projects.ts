@@ -154,7 +154,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2026",
     role: "Subsystem Design Lead · Driver",
-    cover: frcImg,
+    cover: drTitle,
     summary:
       "Drizzle was our first robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot debuted at the FIT Space City District Event winning the competition and earning the Excellence in Engineering Award. The robot later won the FIT Manor District Event and was awarded the Engineering Inspiration Award.",
     details: [

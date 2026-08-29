@@ -241,10 +241,6 @@ cad: [
       { src: swTitle, caption: "Full chassis assembly." },
       { src: swWire, caption: "Chassis sketches." },
     ],
-    links: [
-      { label: "Portfolio Folder", href: "https://onshape.com" },
-      { label: "Practice Log", href: "https://onshape.com" },
-    ],
     processShots: [
       { src: breakdownImg, caption: "Placeholder — part studio screenshot" },
       { src: breakdownImg, caption: "Placeholder — assembly mate study" },

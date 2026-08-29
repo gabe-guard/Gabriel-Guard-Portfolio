@@ -31,6 +31,13 @@ import swWide from "@/assets/sw_wide.png";
 import swUpright from "@/assets/sw_upright.png";
 import swMasterGif from "@/assets/sw_master.gif.asset.json";
 
+import drRobot from "@/assets/dr_robot.png";
+import drShooter from "@/assets/dr_shooter.png";
+import dlRobot from "@/assets/dl_robot.png";
+import dlClimber from "@/assets/dl_climber.png";
+import flRobot from "@/assets/fl_robot.png";
+import flShooter from "@/assets/fl_shooter.png";
+
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
 import flTitle from "@/assets/fl_title.png";

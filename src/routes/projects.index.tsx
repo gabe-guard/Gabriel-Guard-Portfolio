@@ -32,7 +32,7 @@ function ProjectsIndex() {
 
       <div className="mt-16 grid gap-8 md:grid-cols-6">
         {projects.map((p, i) => {
-const pattern = ["md:col-span-4", "md:col-span-2", "md:col-span-2", "md:col-span-4", "md:col-span-4", "md:col-span-2"];
+const pattern = ["md:col-span-4", "md:col-span-2", "md:col-span-2", "md:col-span-4", "md:col-span-4", "md:col-span-2", "md:col-span-4", "md:col-span-2"];
           const span = pattern[i % pattern.length];
           return (
             <FadeUp key={p.slug} delay={i * 0.06} className={span}>

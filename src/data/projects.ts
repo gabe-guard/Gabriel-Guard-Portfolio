@@ -38,6 +38,12 @@ import dlClimber from "@/assets/dl_climber.png";
 import flRobot from "@/assets/fl_robot.png";
 import flShooter from "@/assets/fl_shooter.png";
 
+import tgTitle from "@/assets/tg_title.png";
+import tgCrown from "@/assets/tg_crown.png";
+import tgLantern from "@/assets/tg_lantern.png";
+import tgMesh from "@/assets/tg_mesh.png";
+import tgMath from "@/assets/tg_math.png";
+
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
 import flTitle from "@/assets/fl_title.png";
@@ -277,6 +283,69 @@ cad: [
           { src: swUpright, alt: "Upright design", caption: "Upright part design." },
         ],
         cards: [],
+    },
+  },
+  {
+    slug: "trochoidal-gears-2026",
+    title: "Trochoidal Crown & Lantern Gear Generator.",
+    tagline: "A parametric, zero-backlash gear profile generator built for a future differential.",
+    category: "Design",
+    year: "2026",
+    role: "Independent Project",
+    cover: tgTitle,
+    summary:
+      "I started this project after coming across a paper on trochoidal roller pinion rack transmissions and realized the same tooth profile could be wrapped into a circle instead of a straight rack. I built a Python generator that takes in parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. The end goal is to use a pair of these crown and lantern profiles machined as bevel gears to build a working differential.",
+    details: [
+      "What makes the trochoidal profile interesting is that, unlike a standard involute tooth, it is generated directly by the rolling contact between the pin and the rack, so the tooth and the pin stay in contact along the same curve with no clearance built in. That geometry is what gives trochoidal drives their signature zero-backlash behavior in both directions, instead of the small gap a normal gear pair needs to mesh smoothly. I wanted to see if that same no-backlash property could carry over into a bevel-style differential.",
+    ],
+    feature: {
+      title: "Trochoidal Gear Generation",
+      body: "This project started after watching Mishin Machine's zero-backlash wave gear video and reading the academic paper linked in its description. Rather than approximating the tooth geometry, the paper derives the trochoidal rack tooth profile mathematically from the roller-pinion rolling contact condition, which gave me an exact starting point to implement in my own generator.\n\nThe trochoidal rack profile is derived directly from the rolling contact between the pin and the rack. As the pin rolls along the rack, its contact point traces a trochoid, and the tooth flank is built as the envelope of the pin's positions. I implemented that derivation in Python, then wrapped the resulting straight rack profile around a circle to produce a crown gear that meshes with a lantern pin wheel at zero backlash.\n\nThe generator takes parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. Because both profiles come from the same rolling-contact math, the pair stays in contact along the same curve with no clearance built in.\n\nThe current output is a validated, watertight, 3D-printable crown and lantern pair. The next step is cutting the profiles as bevel gears so a pair of them can form the basis of a working zero-backlash differential.",
+    },
+    highlights: [
+      "Parametric crown & lantern gear generator",
+      "Zero-backlash trochoidal tooth profile",
+      "Differential concept using bevel gears",
+    ],
+    skills: ["Python", "Parametric Design", "Gear Theory", "Mechanism Design"],
+    gallery: [
+      { src: tgTitle, caption: "Generated crown gear with mating lantern pin wheel." },
+      { src: tgMesh, caption: "Rolling pin contact at the trochoidal tooth flank." },
+      { src: tgCrown, caption: "Crown gear ready for 3D printing." },
+      { src: tgLantern, caption: "Lantern pin wheel." },
+    ],
+    breakdown: {
+      hero: {
+        blocks: [
+          {
+            heading: "The Inspiration",
+            body: "This project started after watching Mishin Machine's zero-backlash wave gear video and reading the academic paper linked in its description. Rather than approximating the tooth geometry, the paper derives the trochoidal rack tooth profile mathematically from the roller-pinion rolling contact condition, which gave me an exact starting point to implement in my own generator.",
+          },
+          {
+            heading: "The Math",
+            body: "The trochoidal rack profile is derived directly from the rolling contact between the pin and the rack. As the pin rolls along the rack, its contact point traces a trochoid, and the tooth flank is built as the envelope of the pin's positions. I implemented that derivation in Python, then wrapped the resulting straight rack profile around a circle to produce a crown gear that meshes with a lantern pin wheel at zero backlash.",
+          },
+          {
+            heading: "Crown & Lantern Generation",
+            body: "The generator takes parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. Because both profiles come from the same rolling-contact math, the pair stays in contact along the same curve with no clearance built in.",
+          },
+          {
+            heading: "The Result",
+            body: "The current output is a validated, watertight, 3D-printable crown and lantern pair. The next step is cutting the profiles as bevel gears so a pair of them can form the basis of a working zero-backlash differential.",
+          },
+        ],
+        underText: {
+          src: tgMath,
+          alt: "Trochoidal tooth profile construction",
+          caption: "Trochoidal tooth profile derived from rolling pin contact.",
+        },
+      },
+      stack: [
+        { src: tgCrown, alt: "Trochoidal crown gear", caption: "Crown gear." },
+        { src: tgLantern, alt: "Lantern pin wheel", caption: "Lantern pin wheel." },
+        { src: tgMesh, alt: "Meshed crown and lantern pair", caption: "Meshed pair." },
+      ],
+      cards: [],
     },
   },
   {

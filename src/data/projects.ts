@@ -38,6 +38,12 @@ import dlClimber from "@/assets/dl_climber.png";
 import flRobot from "@/assets/fl_robot.png";
 import flShooter from "@/assets/fl_shooter.png";
 
+import tgTitle from "@/assets/tg_title.png";
+import tgCrown from "@/assets/tg_crown.png";
+import tgLantern from "@/assets/tg_lantern.png";
+import tgMesh from "@/assets/tg_mesh.png";
+import tgMath from "@/assets/tg_math.png";
+
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
 import flTitle from "@/assets/fl_title.png";

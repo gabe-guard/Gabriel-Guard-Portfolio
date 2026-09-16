@@ -284,6 +284,7 @@ cad: [
         ],
         cards: [],
     },
+  },
   {
     slug: "trochoidal-gears-2026",
     title: "Trochoidal Crown & Lantern Gear Generator.",

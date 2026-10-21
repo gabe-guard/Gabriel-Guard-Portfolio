@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Projects — Gabriel Guard</title>
+  <meta name="description" content="Robotics and engineering projects by Gabriel Guard, including competition robot design, fabrication, and leadership." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/instrument-sans/instrument-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+
+  <!-- Three.js importmap (required by GLTFLoader/DRACOLoader bare "three" imports) -->
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"}}
+  </script>
+
+  <script src="js/scramble.js" defer></script>
+  <script src="js/ui-icons.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/viewer.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</head>
+<body class="projects-page">
+  <a class="skip-link" href="#project-viewer">Skip to projects</a>
+
+  <!-- ── NAV ──────────────────────────────────────────────── -->
+  <nav id="site-nav" aria-label="Main navigation">
+    <a class="nav-logo" href="index.html" aria-label="Gabriel Guard home">GG<span>Gabriel Guard</span></a>
+    <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+    <ul class="nav-links" id="primary-navigation">
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── PAGE SHELL ───────────────────────────────────────── -->
+  <div class="page-shell">
+
+    <div class="page-header">
+      <span class="page-header-label meta">Engineering Projects</span>
+      <span class="page-header-count meta" id="project-count">— projects</span>
+    </div>
+
+    <!-- 3-Pane Viewer -->
+    <div class="project-viewer" id="project-viewer">
+
+      <!-- ── LEFT PANE — Project List ─────────────────────── -->
+      <div id="left-pane">
+        <div class="left-pane-header">
+          <span class="meta">Index</span>
+        </div>
+        <ul class="project-list" id="project-list"><!-- rendered by JS --></ul>
+      </div>
+
+      <!-- ── CENTER PANE — Specifications ─────────────────── -->
+      <div id="center-pane">
+        <div class="center-header">
+          <span class="meta">Specifications</span>
+          <button class="close-btn" id="close-specs" type="button" aria-label="Close specifications">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+        <div class="center-content" id="center-content"><!-- populated by selectProject() --></div>
+      </div>
+
+      <!-- ── RIGHT PANE — The Stage ────────────────────────── -->
+      <div id="right-pane">
+
+        <div class="stage-header">
+          <span class="stage-project-name meta" id="stage-project-name">Select a project</span>
+          <span class="stage-slide-counter meta" id="stage-slide-counter">—</span>
+        </div>
+
+        <div class="carousel-wrap" id="carousel-wrap">
+
+          <button class="carousel-side-btn left" id="carousel-side-prev" type="button" aria-label="Previous">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button class="carousel-side-btn right" id="carousel-side-next" type="button" aria-label="Next">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+
+          <!-- Slide 0 — 3D Stage (always present) -->
+          <div class="carousel-slide" id="slide-0">
+            <div class="slide-stage" id="slide-stage">
+
+              <div class="preview-placeholder" id="preview-placeholder">
+                <svg class="preview-placeholder-icon icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"/>
+                </svg>
+                <span class="preview-placeholder-label meta">Select a project</span>
+              </div>
+
+              <img class="preview-img" id="preview-img" src="" alt="" style="display:none;" />
+
+              <div class="model-spinner" id="model-spinner"><div class="spinner-ring"></div></div>
+
+              <div class="load-3d-overlay" id="load-3d-overlay">
+                <button class="load-3d-btn" id="load-3d-btn" type="button">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 12v9M12 12l8-4.5M12 12l-8-4.5"/></svg>
+                  <span id="load-3d-btn-label">Load Interactive 3D</span>
+                </button>
+              </div>
+
+              <canvas id="three-stage" aria-label="Interactive project model. Drag to rotate, scroll or pinch to zoom."></canvas>
+
+            </div>
+          </div>
+
+          <!-- Gallery slides (cloned by JS per project) -->
+
+          <div class="idle-message" id="idle-message">
+            <span class="idle-label meta">Select a project</span>
+          </div>
+
+        </div><!-- /carousel-wrap -->
+
+        <div class="carousel-controls">
+          <div class="carousel-dots" id="carousel-dots"></div>
+          <span class="carousel-slide-label meta" id="carousel-slide-label">—</span>
+        </div>
+
+      </div><!-- /right-pane -->
+
+    </div><!-- /project-viewer -->
+
+    <!-- ── MOBILE DETAIL OVERLAY ─────────────────────────── -->
+    <div id="mobile-detail" aria-hidden="true">
+      <div class="mobile-detail-bar">
+        <button class="mobile-back-btn" id="mobile-back-btn" type="button"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>Back</button>
+        <span class="mobile-detail-title meta" id="mobile-detail-title"></span>
+        <span class="mobile-detail-counter meta" id="mobile-detail-counter">—</span>
+      </div>
+      <div class="mobile-carousel-zone" id="mobile-carousel-zone"></div>
+      <div class="mobile-specs-zone" id="mobile-specs-zone"></div>
+    </div>
+
+  </div><!-- /page-shell -->
+
+  <p class="projects-status meta" id="projects-status" role="status" hidden>Loading engineering projects…</p>
+  <noscript><p class="projects-status meta">JavaScript is needed to browse these interactive case studies. <a href="mailto:gcguard1@gmail.com">Email Gabriel</a> to learn more.</p></noscript>
+
+  <!-- ── IMAGE LIGHTBOX ────────────────────────────────── -->
+  <dialog class="image-lightbox" id="image-lightbox" aria-label="Expanded project image">
+    <div class="lightbox-toolbar"><p class="meta" id="lightbox-caption"></p><button type="button" id="close-lightbox" aria-label="Close expanded image">Close ×</button></div>
+    <img id="lightbox-image" src="" alt="" />
+    <div class="lightbox-navigation"><button type="button" id="lightbox-prev" aria-label="Previous image"><svg class="ui-icon ui-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Previous</button><span class="meta" id="lightbox-count"></span><button type="button" id="lightbox-next" aria-label="Next image">Next <svg class="ui-icon ui-icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  </dialog>
+</body>
+</html>

@@ -9,9 +9,10 @@
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
   const { upRight } = window.SiteIcons;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const desktop = window.matchMedia('(min-width: 768px) and (hover: hover) and (pointer: fine)');
   const pad = n => String(n).padStart(2, '0');
   const projectUrl = id => `projects.html?project=${encodeURIComponent(id)}`;
+  const PLACEHOLDER_MODEL = { src: '/models/stl/placeholder-cube.stl', label: 'Placeholder cube · STL' };
+  const modelsFor = project => project.models && project.models.length ? project.models : [PLACEHOLDER_MODEL];
 
   let PROJECTS = [];
   let IMAGES = {};
@@ -204,10 +205,10 @@
 
   function buildCarousel(project) {
     clearGallerySlides();
-    const models = project.models || [];
-    const modelCount = Math.max(models.length, 1);
+    const models = modelsFor(project);
+    const modelCount = models.length;
 
-    const galleryImages = models.length ? state.imageList : state.imageList.slice(1);
+    const galleryImages = state.imageList;
     galleryImages.forEach((img, i) => {
       const slide = document.createElement('div');
       slide.className = 'carousel-slide';
@@ -216,7 +217,7 @@
       image.className = 'gallery-img';
       image.loading = 'lazy';
       applyImg(image, img.src, `${project.title} — ${img.label}`);
-      const lightboxIndex = models.length ? i : i + 1;
+      const lightboxIndex = i;
       image.addEventListener('click', () => openLightbox(lightboxIndex));
       const enlarge = document.createElement('button');
       enlarge.type = 'button';
@@ -229,8 +230,8 @@
 
     /* Dots */
     $dots.innerHTML = '';
-    const modelLabels = models.length ? models.map(m => m.label) : [project.preview ? 'Render' : 'Project preview'];
-    const galleryLabels = models.length ? state.imageList.map(s => s.label) : state.imageList.slice(1).map(s => s.label);
+    const modelLabels = models.map(m => m.label);
+    const galleryLabels = state.imageList.map(s => s.label);
     const labels = [...modelLabels, ...galleryLabels];
     labels.forEach((label, i) => {
       const dot = document.createElement('button');
@@ -245,9 +246,9 @@
   }
 
   function slideMeta(project) {
-    const models = project.models || [];
-    const modelCount = Math.max(models.length, 1);
-    const imageCount = models.length ? state.imageList.length : Math.max(state.imageList.length - 1, 0);
+    const models = modelsFor(project);
+    const modelCount = models.length;
+    const imageCount = state.imageList.length;
     const total = modelCount + imageCount;
     return { models, modelCount, total };
   }
@@ -279,17 +280,13 @@
           ModelViewer.setVisible(true);
         } else {
           ModelViewer.setVisible(false);
-          if (desktop.matches) {
-            $load3dOverlay.classList.remove('visible');
-            const run = () => loadModel().catch(e => console.error('Auto-load failed:', e));
-            if (opts.deferLoad && !reducedMotion.matches) {
-              $modelSpinner.classList.add('visible'); /* immediate feedback while text animates */
-              state.autoloadTimer = setTimeout(run, 720);
-            } else {
-              run();
-            }
+          $load3dOverlay.classList.remove('visible');
+          const run = () => loadModel().catch(e => console.error('Auto-load failed:', e));
+          if (opts.deferLoad && !reducedMotion.matches) {
+            $modelSpinner.classList.add('visible'); /* immediate feedback while text animates */
+            state.autoloadTimer = setTimeout(run, 720);
           } else {
-            $load3dOverlay.classList.add('visible');
+            run();
           }
         }
         $placeholder.style.display = 'none';
@@ -314,8 +311,8 @@
 
     $dots.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === index));
 
-    const modelLabels = models.length ? models.map(m => m.label) : [proj.preview ? 'Render' : 'Project preview'];
-    const galleryLabels = models.length ? state.imageList.map(s => s.label) : state.imageList.slice(1).map(s => s.label);
+    const modelLabels = models.map(m => m.label);
+    const galleryLabels = state.imageList.map(s => s.label);
     const labels = [...modelLabels, ...galleryLabels];
     updateControls(index, total, labels);
   }
@@ -335,7 +332,7 @@
     const project = PROJECTS.find(p => p.id === state.activeId);
     if (!project) return;
     const { models, modelCount } = slideMeta(project);
-    if (!models.length || state.slideIndex >= modelCount) return;
+    if (state.slideIndex >= modelCount) return;
 
     const target = models[state.slideIndex];
     if (state.modelLoaded && state.modelSrc === target.src) return;

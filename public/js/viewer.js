@@ -1,5 +1,5 @@
 /* ──────────────────────────────────────────────────────────
-   viewer.js — Shared Three.js GLB viewer
+   viewer.js — Shared Three.js STL / GLB viewer
    Exposes window.ModelViewer as a classic-script IIFE.
    Handles Draco-compressed models via DRACOLoader.
 ────────────────────────────────────────────────────────── */
@@ -9,24 +9,19 @@
   var CDN = 'https://cdn.jsdelivr.net/npm/three@0.163.0';
   var DRACO_PATH = CDN + '/examples/jsm/libs/draco/';
 
-  var THREE, GLTFLoader, DRACOLoader, OrbitControls;
+  var THREE, GLTFLoader, DRACOLoader, OrbitControls, STLLoader;
   var renderer, scene, camera, controls, modelGroup, rafId;
   var _canvas = null;
   var _src = null;
   var _loaded = false;
-  var _autoSpin = true;
-  var _userInteracted = false;
   var _resetBtn = null;
   var _defaultCamPos = null;
   var _defaultTarget = null;
-  var _fitDistance = 1.2; /* updated per model on load */
   var _loadSeq = 0; /* generation counter — guards against overlapping load() calls */
-  var _lastFrameTime = null;
   var _initPromise = null;
   var _visible = false;
   var _inViewport = true;
   var _reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var SPIN_RATE = 0.09; /* radians/sec — frame-rate independent auto-spin speed */
 
   async function importDeps() {
     if (THREE) return;
@@ -35,11 +30,13 @@
       import(CDN + '/examples/jsm/loaders/GLTFLoader.js'),
       import(CDN + '/examples/jsm/loaders/DRACOLoader.js'),
       import(CDN + '/examples/jsm/controls/OrbitControls.js'),
+      import(CDN + '/examples/jsm/loaders/STLLoader.js'),
     ]);
     THREE = results[0];
     GLTFLoader = results[1].GLTFLoader;
     DRACOLoader = results[2].DRACOLoader;
     OrbitControls = results[3].OrbitControls;
+    STLLoader = results[4].STLLoader;
   }
 
   function createResetButton() {
@@ -89,25 +86,16 @@
       if (t < 1) {
         requestAnimationFrame(tick);
       } else {
-        _autoSpin = true;
-        _userInteracted = false;
         hideResetButton();
       }
     }
     requestAnimationFrame(tick);
   }
 
-  function onControlsChange() {
-    if (!controls || !camera) return;
-    var dist = camera.position.distanceTo(controls.target);
-
-    /* Stop spin when zoomed in past 60% of the fit distance */
-    _autoSpin = dist >= _fitDistance * 0.6;
+  function onControlsStart() {
+    if (!controls) return;
 
     /* Show reset button when user has moved the view */
-    if (!_userInteracted) {
-      _userInteracted = true;
-    }
     showResetButton();
   }
 
@@ -126,7 +114,7 @@
     await importDeps();
 
     renderer = new THREE.WebGLRenderer({ canvas: _canvas, antialias: true, alpha: false });
-    renderer.setClearColor(0x000000);
+    renderer.setClearColor(0xffffff);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     scene = new THREE.Scene();
@@ -140,7 +128,7 @@
     controls.dampingFactor = 0.08;
     controls.enabled = false;
 
-    controls.addEventListener('change', onControlsChange);
+    controls.addEventListener('start', onControlsStart);
 
     scene.add(new THREE.AmbientLight(0xffffff, 0.6));
     var dir = new THREE.DirectionalLight(0xffffff, 0.8);
@@ -166,16 +154,10 @@
     camera.updateProjectionMatrix();
   }
 
-  function animate(now) {
+  function animate() {
     rafId = null;
     if (!_visible || !_inViewport || document.hidden) return;
     rafId = requestAnimationFrame(animate);
-    if (typeof now !== 'number') now = performance.now();
-    if (_lastFrameTime === null) _lastFrameTime = now;
-    /* Clamp dt so a backgrounded/throttled tab doesn't jump the model on return */
-    var dt = Math.min((now - _lastFrameTime) / 1000, 0.1);
-    _lastFrameTime = now;
-    if (modelGroup && _autoSpin && !_reducedMotion.matches) modelGroup.rotation.y += SPIN_RATE * dt;
     if (controls) controls.update();
     if (renderer && scene && camera) renderer.render(scene, camera);
   }
@@ -183,7 +165,6 @@
   function syncAnimation() {
     if (_visible && _inViewport && !document.hidden) {
       if (!rafId) {
-        _lastFrameTime = null;
         rafId = requestAnimationFrame(animate);
       }
     } else if (rafId) {
@@ -206,8 +187,6 @@
     }
     _loaded = false;
     _src = null;
-    _autoSpin = true;
-    _userInteracted = false;
     hideResetButton();
   }
 
@@ -221,6 +200,60 @@
          in the scene when loads overlap (e.g. rapid project switching). */
       var mySeq = ++_loadSeq;
       disposeModel();
+
+      var isStl = /\.stl(?:$|[?#])/i.test(url);
+      if (isStl) {
+        var stlLoader = new STLLoader();
+        stlLoader.load(url, function (geometry) {
+          if (mySeq !== _loadSeq) { geometry.dispose(); resolve(); return; }
+          geometry.computeVertexNormals();
+          var group = new THREE.Group();
+          var surface = new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+            color: 0xffffff, transparent: true, opacity: 0, colorWrite: false,
+          }));
+          group.add(surface);
+
+          /* Crisp silhouette plus finer triangulation, matching the reference CAD linework. */
+          group.add(new THREE.LineSegments(
+            new THREE.EdgesGeometry(geometry, 1),
+            new THREE.LineBasicMaterial({ color: 0x171a15, opacity: 0.92, transparent: true })
+          ));
+          group.add(new THREE.LineSegments(
+            new THREE.WireframeGeometry(geometry),
+            new THREE.LineBasicMaterial({ color: 0x171a15, opacity: 0.28, transparent: true })
+          ));
+
+          var box = new THREE.Box3().setFromObject(group);
+          var center = box.getCenter(new THREE.Vector3());
+          var size = box.getSize(new THREE.Vector3());
+          var maxDim = Math.max(size.x, size.y, size.z) || 1;
+          var scale = 0.8 / maxDim;
+          group.scale.setScalar(scale);
+          group.position.sub(center.multiplyScalar(scale));
+          scene.add(group);
+          modelGroup = group;
+          _loaded = true;
+          _src = url;
+
+          var sphere = new THREE.Box3().setFromObject(group).getBoundingSphere(new THREE.Sphere());
+          var fov = camera.fov * (Math.PI / 180);
+          var fitDist = sphere.radius / Math.sin(fov / 2) * 1.15;
+          camera.position.set(0, sphere.center.y, fitDist);
+          controls.target.copy(sphere.center);
+          controls.minDistance = fitDist * 0.25;
+          controls.maxDistance = fitDist * 3;
+          _defaultCamPos = camera.position.clone();
+          _defaultTarget = controls.target.clone();
+          controls.enabled = true;
+          resize();
+          hideResetButton();
+          resolve();
+        }, undefined, function (err) {
+          if (mySeq !== _loadSeq) { resolve(); return; }
+          reject(err);
+        });
+        return;
+      }
 
       var dracoLoader = new DRACOLoader();
       dracoLoader.setDecoderPath(DRACO_PATH);
@@ -343,8 +376,6 @@
           modelGroup = group;
           _loaded = true;
           _src = url;
-          _autoSpin = true;
-          _userInteracted = false;
 
           /* Zoom-to-fit: position camera so model fills the view */
           var sphere = new THREE.Box3().setFromObject(group).getBoundingSphere(new THREE.Sphere());
@@ -352,7 +383,6 @@
           var dist = sphere.radius / Math.sin(fov / 2);
           var fitDist = dist * 1.15; /* slight padding */
 
-          _fitDistance = fitDist;
           camera.position.set(0, sphere.center.y, fitDist);
           controls.target.copy(sphere.center);
           controls.minDistance = fitDist * 0.25;

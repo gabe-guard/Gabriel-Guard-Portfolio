@@ -16,6 +16,8 @@ import dp_fullwire from "@/assets/dp_fullwire.png";
 import dp_isowire from "@/assets/dp_isowire.png";
 import dp_cnc2 from "@/assets/dp_cnc2.jpg";
 import dp_parts from "@/assets/dp_parts.png";
+import pedalFace from "@/assets/pedalbox-carbon-fiber.png";
+import pedalAnsys from "@/assets/pedalbox-ansys-deformation.png";
 
 
 export type RichSegment = string | { text: string; href: string };
@@ -162,38 +164,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "solidworks-practice",
-    title: "SolidWorks Practice.",
-    tagline: "Transitioning from Onshape to SolidWorks",
-    category: "Design",
-    year: "2025",
-    role: "Self Development",
-    cover: breakdownImg,
-    summary:
-      "  After four years of working primarily in Onshape, I started learning SolidWorks to prepare for future engineering opportunities where it is commonly used. To make the transition more practical, I decided to design an SAE style race car assembly consisting of a chassis and suspension. This gave me a project to work through SolidWorks' workflow while applying mechanical design concepts I already understood from robotics.",
+    slug: "longhorn-racing-pedal-box",
+    title: "Pedal Box.",
+    tagline: "Ongoing brake and accelerator pedal design for Longhorn Racing.",
+    category: "Longhorn Racing",
+    year: "Ongoing",
+    role: "Pedal Box Design",
+    cover: pedalFace,
+    summary: "Ongoing brake and accelerator pedal development for Longhorn Racing.",
     details: [
-      "  I used the chassis and suspension as a way to learn SolidWorks while designing a complete vehicle assembly. I gained experience with SolidWorks' weldments, custom weldment profiles, and 3D sketches while also learning more about suspension geometry and variables such as camber. The project helped me understand how SolidWorks approaches assemblies and design workflows differently from the Onshape workflow I was used to.",
+      "Executed ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins",
+      "Applied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling",
+      "Designed carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication",
     ],
-    feature: {
-      title: "Parametric Modeling",
-      body: " To begin the chassis, I created a master sketch with a driver model to establish the overall ergonomics of the car. Once the side profile had the proportions I wanted, I added cross sections at the locations where the outer edges of the frame would run. I then added braces between the main tubes to improve the structure while keeping the frame layout simple. \n\nI created a custom weldment profile and used SolidWorks Weldments to turn the 3D sketches into structural tubes. The tubes had to be trimmed using weldment corner treatment and trim tools so that they did not interfere with each other and could be manufactured. I tried to avoid difficult geometries such as four way tube intersections and instead designed the frame around simpler joints that would be easier to fabricate. \n\nAfter establishing the chassis hardpoints, I began working on the suspension geometry. I used this part of the project to learn the major components of a suspension system and how variables such as camber affect handling and cornering. From there, I developed a geometry intended to keep the car level relative to the ground while naturally changing camber as the suspension moved through a turn. \n\nI was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
-    },
-    highlights: [
-      "Independent modeling practice",
-      "Learned custom weldmetns profiles",
-      "Practiced 3D sketching",
-    ],
-    skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates"],
+    highlights: [],
+    skills: ["ANSYS", "Topology Optimization", "Statics", "Finite Element Analysis", "CNC Milling", "Carbon Fiber Composites"],
     gallery: [
-      { src: breakdownImg, caption: "Placeholder — SolidWorks practice render" },
-    ],
-    links: [
-      { label: "Portfolio Folder", href: "https://onshape.com" },
-      { label: "Practice Log", href: "https://onshape.com" },
-    ],
-    processShots: [
-      { src: breakdownImg, caption: "Placeholder — part studio screenshot" },
-      { src: breakdownImg, caption: "Placeholder — assembly mate study" },
+      { src: pedalAnsys, caption: "Brake pedal total deformation results in ANSYS" },
     ],
   },
   {

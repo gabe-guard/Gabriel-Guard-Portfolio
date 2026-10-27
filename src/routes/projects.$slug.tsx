@@ -20,6 +20,7 @@ export const Route = createFileRoute("/projects/$slug")({
       { property: "og:title", content: loaderData?.project.title ?? "" },
       { property: "og:description", content: loaderData?.project.tagline ?? "" },
       { property: "og:type", content: "article" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ProjectDetail,

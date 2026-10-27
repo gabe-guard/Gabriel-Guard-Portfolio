@@ -17,6 +17,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "UT Austin mechanical engineering student. FRC design lead, founder, and competition driver." },
       { property: "og:title", content: "Gabriel Guard — Portfolio" },
       { property: "og:description", content: "Designer, driver, founder. Living, interactive portfolio." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),

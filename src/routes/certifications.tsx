@@ -10,6 +10,8 @@ export const Route = createFileRoute("/certifications")({
       { name: "description", content: "Professional certifications held and in progress." },
       { property: "og:title", content: "Certifications — Gabriel Guard" },
       { property: "og:description", content: "Autodesk Inventor, OSHA 10, Microsoft Office, Onshape, SolidWorks." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/certifications" }],
   }),

@@ -7,7 +7,12 @@ const root = process.cwd();
 const sourcePath = path.join(root, 'src/data/projects.ts');
 let source = fs.readFileSync(sourcePath, 'utf8');
 const imports = [...source.matchAll(/import\s+(\w+)\s+from\s+"@\/assets\/([^"]+)";?/g)];
-const declarations = imports.map(([, name, file]) => `const ${name} = ${JSON.stringify(`/images/gabriel/${path.basename(file)}`)};`).join('\n');
+const declarations = imports.map(([, name, file]) => {
+  const value = file.endsWith('.asset.json')
+    ? JSON.parse(fs.readFileSync(path.join(root, 'src/assets', file), 'utf8'))
+    : `/images/gabriel/${path.basename(file)}`;
+  return `const ${name} = ${JSON.stringify(value)};`;
+}).join('\n');
 source = source.replace(/import\s+type\s+React[^\n]*\n/, '');
 source = source.replace(/import\s+[^\n]*\n/g, '');
 source = source.replace(/export const projects: Project\[\] =/, 'const projects =');

@@ -10,6 +10,8 @@ export const Route = createFileRoute("/connect")({
       { name: "description", content: "Reach Gabriel Guard via email, LinkedIn, or GitHub." },
       { property: "og:title", content: "Connect — Gabriel Guard" },
       { property: "og:description", content: "Email, LinkedIn, GitHub, and more." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/connect" }],
   }),

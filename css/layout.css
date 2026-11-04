@@ -135,7 +135,7 @@
 /* Closing: large type, direct contact routes, no oversized button chrome. */
 .contact-section { padding-bottom: 100px; }
 .contact-heading { font-size: clamp(5rem,16vw,22rem); line-height: .88; font-weight: 500; letter-spacing: -.065em; }
-.contact-heading .gold { color: var(--text); }
+.contact-heading .gold { color: var(--accent); }
 .contact-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 8.333%; margin-top: 70px; }
 .contact-sub { font-size: 1.2rem; color: var(--muted); max-width: 31rem; margin-bottom: 28px; }
 .contact-link { display: grid; grid-template-columns: 70px 1fr 20px; gap: 20px; align-items: center; border-top: 1px solid var(--rule); padding: 24px 0; }

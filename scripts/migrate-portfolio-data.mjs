@@ -20,7 +20,7 @@ source = source.replace(/export const getProject[^\n]+\n?/, '');
 const js = ts.transpile(source + '\nconsole.log(JSON.stringify(projects));', { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None });
 let output;
 vm.runInNewContext(`${declarations}\n${js}`, { exports: {}, console: { log: (value) => { output = value; } } });
-const projects = JSON.parse(output).map((p) => {
+const projects = JSON.parse(output).filter((p) => p.slug !== 'trochoidal-gears-2026').map((p) => {
   const body = [p.summary, ...(p.details || []).map((x) => typeof x === 'string' ? x : x.text), p.feature?.body]
     .filter(Boolean).join('\n\n');
   const media = [...(p.gallery || []).map((x) => x.src), ...(p.processShots || []).map((x) => x.src), ...(p.cad || []).map((x) => x.src)];
@@ -31,6 +31,7 @@ const projects = JSON.parse(output).map((p) => {
     title: p.title.replace(/\.$/, ''),
     subtitle: `${p.year} · ${p.role}`,
     description: body,
+    bullets: p.bullets || [],
     specs: [{ key: 'Role', val: p.role }, { key: 'Year', val: p.year }, ...awards],
     software: p.skills || [],
     tags: [p.category, ...(p.skills || [])],

@@ -6,44 +6,101 @@
     },
     "thumbs": [
       {
+        "id": "longhorn-racing-pedal-box",
+        "img": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
+        "alt": "Pedal Box"
+      },
+      {
         "id": "downpour-2026",
         "img": "/images/gabriel/downpourmain.jpg",
         "alt": "Downpour"
       },
       {
         "id": "drizzle-2026",
-        "img": "/images/gabriel/downpourmain.jpg",
+        "img": "/images/gabriel/dr_title.png",
         "alt": "Drizzle"
       },
       {
-        "id": "longhorn-racing-pedal-box",
-        "img": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
-        "alt": "Pedal Box"
-      },
-      {
         "id": "deadlock-2025",
-        "img": "/images/gabriel/dl1.jpg",
+        "img": "/images/gabriel/dl_title2.png",
         "alt": "Deadlock"
       },
       {
         "id": "flatline-2024",
-        "img": "/images/gabriel/downpourmain.jpg",
+        "img": "/images/gabriel/fl_title.png",
         "alt": "Flatline"
       },
       {
         "id": "valor-cad-challenge",
-        "img": "/images/gabriel/project-valor.jpg",
+        "img": "/images/gabriel/vcc_title.png",
         "alt": "Valor CAD Challenge"
       }
     ]
   },
   "projects": [
     {
+      "id": "longhorn-racing-pedal-box",
+      "org": "Longhorn Racing",
+      "title": "Pedal Box",
+      "subtitle": "Ongoing · Pedal Box Design",
+      "description": "Ongoing brake and accelerator pedal development for Longhorn Racing.\n\nExecuted ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins\n\nApplied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling\n\nDesigned carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication",
+      "bullets": [
+        "Cut brake pedal mass 52% (0.62 → 0.30 lb) with ANSYS topology optimization",
+        "Validated the design under a 450 lbf pedal-face load",
+        "Verified <1 mm deflection under off-axis loading",
+        "Iterated statics and FEA for strength and manufacturability",
+        "Designed for in-house 3-axis CNC milling",
+        "Designed carbon fiber accelerator pedal faces, molds, and laminate layups"
+      ],
+      "specs": [
+        {
+          "key": "Role",
+          "val": "Pedal Box Design"
+        },
+        {
+          "key": "Year",
+          "val": "Ongoing"
+        }
+      ],
+      "software": [
+        "ANSYS",
+        "Topology Optimization",
+        "Statics",
+        "Finite Element Analysis",
+        "CNC Milling",
+        "Carbon Fiber Composites"
+      ],
+      "tags": [
+        "Longhorn Racing",
+        "ANSYS",
+        "Topology Optimization",
+        "Statics",
+        "Finite Element Analysis",
+        "CNC Milling",
+        "Carbon Fiber Composites"
+      ],
+      "preview": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
+      "models": [],
+      "gallery": [
+        "/__l5e/assets-v1/174bba39-a91b-4195-978e-0f18e881d77e/pedalbox-ansys-deformation.png"
+      ],
+      "wireframeThumbnail": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
+      "links": []
+    },
+    {
       "id": "downpour-2026",
       "org": "FRC Team 6800 Valor",
       "title": "Downpour",
       "subtitle": "2026 · Subsystem Design Lead · Driver",
       "description": "Downpour was our robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot marked a milestone in our team's history, winning the Curie Division at the World Championship and competing in playoff matches on the Einsteins field. Downpour also featured at the Texas District Championship winning runner-up on its debut. The robot earned the Excellence in Engineering Award and Industrial Design Award.\n\nDownpour was designed for a fast paced 3v3 game where robots collect foam balls, called \"fuel\", and score them in a hexagonal goal or \"hub\". As a mechanical design lead, I designed the Shooter Subsystem to launch the fuel into the goal. Iterating off of my previous turreted design, that shot a single stream of fuel, Downpour's shooter was designed to launch volleys of fuel using a full-width drum shooter.\n\nThe Shooter Subsystem is made up of three sub-assemblies which I designed using Onshape, including a superstructure, variable hood, and \"feeder\". The superstructure, constructed from a rigid tab-and-slot aluminum assembly, housed much of the robot's electronics including the power switch, radio, and cameras. Additionally, the structure packaged the 5 Kraken x60 motors used to power the shooter. One of the motors, linked to the hood via belts, controlled the pitch of the hood, allowing the robot to adjust its shot angle according to the distance between the robot and the goal. Three more motors powered the aluminum drum flywheel and polycarbonate back-rollers. Coated in rubber grip tape, these rollers minimized slip while maximizing moment of inertia. This helped maintain consistent wheel speed and reduced motor strain as the system worked to reach and maintain its PID targets during fuel launches. The remaining 2 motors were used to feed fuel from the robot's hopper into the shooter, agitating fuel and pulling it through the system.\n\nOnce the design was complete, parts were converted into manufacturing tickets in Jira to be claimed by members of the manufacturing team. All parts were designed with manufacturing in mind, using features such as tab and slot joints with machining and powder coating tolerances accounted for. Modular subsections also allowed us to add more motors or flywheel mass without redesigning the entire assembly. Using Jira, I ordered COTS parts and verified critical dimensions of parts manufactured in-house. Additionally, I oversaw the powdercoating of parts ensuring that each part was painted the correct color to remain true to the original design.\n\nOnce all parts were fabricated, labeled, and verified, I began assembly. Once the subsystem was constructed I worked with the electrical and software teams to integrate the shooter into the rest of the robot. This included providing wiring diagrams and gear ratios to convert motor rotations to mechanical output in code.",
+      "bullets": [
+        "Led shooter subsystem design for the 2026 robot that won the Curie Division at the FIRST World Championship",
+        "Designed a full-width drum shooter, variable hood, and feeder in Onshape",
+        "Coordinated fabrication of 80+ parts across CNC milling, turning, routing, and powder coat",
+        "Tracked manufacturing in Jira and verified parts against design tolerances",
+        "Earned Excellence in Engineering and Industrial Design Awards",
+        "Drove in playoff matches on the Einstein field"
+      ],
       "specs": [
         {
           "key": "Role",
@@ -96,6 +153,8 @@
         "/images/gabriel/dp2.jpg",
         "/images/gabriel/dp3.jpg",
         "/images/gabriel/dp4.jpg",
+        "/images/gabriel/dp_parts.png",
+        "/images/gabriel/dp_cnc2.jpg",
         "/images/gabriel/dp_cnc2.jpg",
         "/images/gabriel/dp_parts.png",
         "/images/gabriel/dp_fullwire.png",
@@ -123,6 +182,13 @@
       "title": "Drizzle",
       "subtitle": "2026 · Subsystem Design Lead · Driver",
       "description": "Drizzle was our first robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot debuted at the FIT Space City District Event winning the competition and earning the Excellence in Engineering Award. The robot later won the FIT Manor District Event and was awarded the Engineering Inspiration Award.\n\nSimilar to our second robot Downpour, Drizzle was designed for a fast paced 3v3 game where robots collect foam balls, called \"fuel\", and score them in a hexagonal goal or \"hub\". As a mechanical design lead, I designed the Turret and Shooter Subsystems to launch the fuel into the goal from anywhere on the field. Using a turret and adjustable hood, I was able to design a ball launcher that could shoot from any distance both stationary and while moving.\n\nThe Turret Subsystem was made up of a rotating turret, compact shooter, and adjustable hood which I designed using Onshape. The turret was limited to roughly 400 degrees of rotation and used bi-directional cable chain to route wiring between the rotating and stationary sections. The turret rings were designed around a 7 inch diameter bearing and required precise machining, tapping, and heat shrinking to assemble the components together. The compact packaging of the turret and shooter mechanism allowed the shooter to rotate without taking up unnecessary space on the robot. The hood used a cycloidal drive to provide torque and precision required to adjust the launch angle.\n\nPackaging was the main constraint throughout the design. The turret has to fit the bearing, drive system, shooter, hood, motors, and cable chain within a limited footprint while maintaining enough clearance for the full range of motion. I designed the turret rings and mounting interfaces around the manufacturing process, accounting for machining tolerances and the fit between the bearing and surrounding components so the turret could be assembled and serviced without removing the entire mechanism.\n\nOnce the design was complete, I worked with the manufacturing team to machine and assemble the turret components. The rings required precision machining and tapping, while the bearing interfaces used heat fitting to achieve the required fit. After fabrication, I assembled the turret and shooter and worked with the electrical and software teams to integrate the rotating mechanism, including routing the wiring through the cable chain and providing the mechanical details needed to control the turret and hood.",
+      "bullets": [
+        "Designed the turret shooter for the team's first 2026 robot",
+        "Won 2 district events: FIT Space City and FIT Manor",
+        "Machined aluminum turret rings, a billet turret plate, and side plates",
+        "Earned 2× Excellence in Engineering and 1× Engineering Inspiration Award",
+        "Served as primary competition driver"
+      ],
       "specs": [
         {
           "key": "Role",
@@ -164,58 +230,30 @@
         "Manual Lathe",
         "Root Cause Analysis"
       ],
-      "preview": "/images/gabriel/downpourmain.jpg",
+      "preview": "/images/gabriel/dr_title.png",
       "models": [],
       "gallery": [
-        "/images/gabriel/downpourmain.jpg",
-        "/images/gabriel/breakdown-placeholder.png",
-        "/images/gabriel/breakdown-placeholder.png",
-        "/images/gabriel/downpourcad.png",
-        "/images/gabriel/downpourwireframe.png"
+        "/images/gabriel/dr_parts1.jpeg",
+        "/images/gabriel/dr_parts2.jpeg",
+        "/images/gabriel/dr_parts3.jpeg",
+        "/images/gabriel/dr_robot.png",
+        "/images/gabriel/dr_shooter.png"
       ],
-      "wireframeThumbnail": "/images/gabriel/downpourmain.jpg",
-      "links": []
-    },
-    {
-      "id": "longhorn-racing-pedal-box",
-      "org": "Longhorn Racing",
-      "title": "Pedal Box",
-      "subtitle": "Ongoing · Pedal Box Design",
-      "description": "Ongoing brake and accelerator pedal development for Longhorn Racing.\n\nExecuted ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins\n\nApplied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling\n\nDesigned carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication",
-      "specs": [
+      "wireframeThumbnail": "/images/gabriel/dr_title.png",
+      "links": [
         {
-          "key": "Role",
-          "val": "Pedal Box Design"
+          "label": "CAD Release",
+          "href": "https://www.chiefdelphi.com/t/frc-6800-valor-2026-robot-cad-release/520715"
         },
         {
-          "key": "Year",
-          "val": "Ongoing"
+          "label": "Competition Recap",
+          "href": "https://www.youtube.com/watch?v=RchRocvoG1o"
+        },
+        {
+          "label": "Match Footage",
+          "href": "https://www.youtube.com/watch?v=hm_5HpkTdnI"
         }
-      ],
-      "software": [
-        "ANSYS",
-        "Topology Optimization",
-        "Statics",
-        "Finite Element Analysis",
-        "CNC Milling",
-        "Carbon Fiber Composites"
-      ],
-      "tags": [
-        "Longhorn Racing",
-        "ANSYS",
-        "Topology Optimization",
-        "Statics",
-        "Finite Element Analysis",
-        "CNC Milling",
-        "Carbon Fiber Composites"
-      ],
-      "preview": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
-      "models": [],
-      "gallery": [
-        "/__l5e/assets-v1/174bba39-a91b-4195-978e-0f18e881d77e/pedalbox-ansys-deformation.png"
-      ],
-      "wireframeThumbnail": "/__l5e/assets-v1/5f9654bc-b51a-47c5-b841-c1be4fde1eb1/pedalbox-carbon-fiber.png",
-      "links": []
+      ]
     },
     {
       "id": "deadlock-2025",
@@ -223,6 +261,14 @@
       "title": "Deadlock",
       "subtitle": "2025 · Subsystem Design Lead · Driver",
       "description": "Deadlock was our robot for the 2025 FIRST Robotics Competition game REEFSCAPE. The game centered around scoring coral on a reef and ended with robots climbing onto hanging cages. Deadlock won two district events and the Texas District Championship in a clean sweep. The robot also received three Industrial Design Awards and one Autonomous Award. I spent the season designing and fabricating mechanisms for Deadlock and had the opportunity to drive the robot throughout the season.\n\nI worked on the climber, which was designed to grapple onto a cage hanging from a chain and lift the entire robot off the ground. I designed the latch mechanism and pivot system around the forces generated during the climb, using motor curves and lever arm calculations to determine the required torque. I also calculated the robot's center of gravity during the climb to make sure the robot would remain balanced once it was hanging from the cage. The final design helped Deadlock rank in the top three robots in the world for climb EPA (Estimated Points Added, a measure of how much a robot's climbing performance contributed to its overall match performance).\n\nThe climber went through several prototypes as we tested different ways to reliably engage the cage. The original design used an active latch with powered rollers to pull the cage into the mechanism. After testing, I changed the design to a passive latch with a larger contact surface. This made the mechanism easier to line up with the cage and removed the need to actively control the latch during the climb. Motor curve and lever arm calculations were used to size the pivot gearbox around the torque required to lift the robot.\n\nThe pivot location was selected using center of gravity calculations to keep the robot balanced while hanging from the cage. I first 3D printed the mechanism to test the geometry and mounting points before moving to machined aluminum for the final design. The final assembly was designed in Onshape and manufactured through our shop. I oversaw the manufacturing process, managed the BOM, and tracked parts through Jira before assembling the entire climber subsystem myself.",
+      "bullets": [
+        "Designed and fabricated the climber latch and pivot system",
+        "Sized the mechanism with motor curves, lever-arm math, and CG analysis",
+        "Prototyped in 3D print before the final aluminum build",
+        "Ranked top 3 in the world for climb EPA",
+        "Swept 2 district events and the Texas District Championship",
+        "Earned 3× Industrial Design and 1× Autonomous Award"
+      ],
       "specs": [
         {
           "key": "Role",
@@ -274,15 +320,30 @@
         "3D Printing",
         "Manual Assembly"
       ],
-      "preview": "/images/gabriel/dl1.jpg",
+      "preview": "/images/gabriel/dl_title2.png",
       "models": [],
       "gallery": [
-        "/images/gabriel/dl1.jpg",
-        "/images/gabriel/downpourcad.png",
-        "/images/gabriel/downpourwireframe.png"
+        "/images/gabriel/dl_1.jpeg",
+        "/images/gabriel/dl_2.jpeg",
+        "/images/gabriel/dl_3.jpeg",
+        "/images/gabriel/dl_robot.png",
+        "/images/gabriel/dl_climber.png"
       ],
-      "wireframeThumbnail": "/images/gabriel/dl1.jpg",
-      "links": []
+      "wireframeThumbnail": "/images/gabriel/dl_title2.png",
+      "links": [
+        {
+          "label": "CAD Release",
+          "href": "https://www.chiefdelphi.com/t/frc-6800-valor-2025-robot-deadlock-cad-release/508432"
+        },
+        {
+          "label": "Behind The Bumpers",
+          "href": "https://www.youtube.com/watch?v=-xSD9j92NOI"
+        },
+        {
+          "label": "Worlds Finals",
+          "href": "https://www.youtube.com/watch?v=2N2O7YF4prM&time_continue=1&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.thebluealliance.com%2F"
+        }
+      ]
     },
     {
       "id": "flatline-2024",
@@ -290,6 +351,13 @@
       "title": "Flatline",
       "subtitle": "2024 · Subsystem Design Lead",
       "description": "Flatline was our robot for the 2024 FIRST Robotics Competition game CRESCENDO. The game centered around collecting foam disks called “notes” and scoring them in the Speaker and Amp before climbing the Stage at the end of the match. Flatline received two Industrial Design Awards and an Excellence in Engineering Award during the season. I was a rookie on the team and worked as the sole designer of the shooter in Onshape before overseeing its fabrication and assembly.\n\nI designed the shooter as a two sided system that could launch notes from either end of the robot. The design went through two major iterations, starting with a low pivot and four independently driven flywheels before moving to a lighter high pivot design with a split axle. The final shooter could rotate to shoot in any direction while maintaining a compact package and minimal spin up time. The shooter also integrated directly with our intake, allowing the robot to collect and shoot notes from either side.\n\nThe first shooter used four independently driven flywheels to launch the note, with a pair of motors powering the roller that pushed the note into the wheels. Running the flywheels at independent velocities allowed us to control the amount of spin applied to the note and improve its stability in flight. A rack and pinion mechanism controlled the pitch of the shooter, allowing it to pivot while keeping the flywheel assembly compact.\n\nThe second iteration moved to a higher pivot and a split axle design that allowed the shooter to rotate from above the assembly. A gearbox connected to the pivot through a chain controlled the rotation, while a built in chain tensioner allowed the chain to be tightened between matches without disassembling the mechanism. The shooter superstructure also housed the climber and other mechanisms while mounting directly to the intake on either side of the robot. The final design could take shots from anywhere in the close zone with minimal flywheel spin up time.\n\nI designed both iterations in Onshape and used Jira to oversee fabrication and track the parts inventory after completing the CAD. The final shooter was manufactured using a combination of powder coating, CNC routing, lathe work, milling, and 3D printing. I worked with four other students during assembly to build the shooter and mount it to the robot. The mounting system was designed as a modular interface so the completed shooter could be installed on the robot without rebuilding the surrounding structure.",
+      "bullets": [
+        "Designed a two-sided pivoting shooter in Onshape",
+        "Oversaw fabrication and assembly of the shooter",
+        "Integrated the shooter with the intake and climber",
+        "Earned 2× Industrial Design and 1× Excellence in Engineering Award",
+        "First full FRC mechanism designed and built"
+      ],
       "specs": [
         {
           "key": "Role",
@@ -329,15 +397,32 @@
         "Powder Coating",
         "Modular Assembly"
       ],
-      "preview": "/images/gabriel/downpourmain.jpg",
+      "preview": "/images/gabriel/fl_title.png",
       "models": [],
       "gallery": [
-        "/images/gabriel/downpourmain.jpg",
-        "/images/gabriel/downpourcad.png",
-        "/images/gabriel/downpourwireframe.png"
+        "/images/gabriel/flat1.png",
+        "/images/gabriel/flat2.png",
+        "/images/gabriel/flat3.png",
+        "/images/gabriel/flat5.jpg",
+        "/images/gabriel/flat6.jpg",
+        "/images/gabriel/fl_robot.png",
+        "/images/gabriel/fl_shooter.png"
       ],
-      "wireframeThumbnail": "/images/gabriel/downpourmain.jpg",
-      "links": []
+      "wireframeThumbnail": "/images/gabriel/fl_title.png",
+      "links": [
+        {
+          "label": "CAD Release",
+          "href": "https://www.chiefdelphi.com/t/frc-6800-valor-2024-robot-flatline-cad-release/477631"
+        },
+        {
+          "label": "Competition Recap",
+          "href": "https://www.youtube.com/watch?v=6y90XuAoIDo"
+        },
+        {
+          "label": "Match Footage",
+          "href": "https://www.youtube.com/watch?v=cn-iiBR3G8k"
+        }
+      ]
     },
     {
       "id": "valor-cad-challenge",
@@ -345,6 +430,13 @@
       "title": "Valor CAD Challenge",
       "subtitle": "2024 — Present · Lead Organizer",
       "description": "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.\n\nOver roughly fifty hours I helped create nearly every part of the competition. I designed the full field and game elements in Onshape, wrote the game manual and rules, created the branding in Figma, built presentation material in Canva, managed communication through Discord, secured three hundred dollars in sponsorships from Studica and goBILDA, coordinated judging with students from teams across the country, and helped run the final livestream. The challenge received twenty eight submissions from more than sixty students who collectively spent over one thousand hours designing their robots, and the awards livestream reached more than seventeen hundred viewers while distributing three hundred dollars in sponsored prizes.",
+      "bullets": [
+        "Organized an FTC design challenge with 117 participants worldwide",
+        "Modeled a full mock FTC field and game elements",
+        "Wrote a 15-page game manual",
+        "Judged 28 submissions for practicality and feasibility",
+        "Livestreamed a sponsored awards ceremony to 750+ viewers"
+      ],
       "specs": [
         {
           "key": "Role",
@@ -386,13 +478,29 @@
         "Livestream Direction",
         "Sponsor Relations"
       ],
-      "preview": "/images/gabriel/project-valor.jpg",
+      "preview": "/images/gabriel/vcc_title.png",
       "models": [],
       "gallery": [
-        "/images/gabriel/project-valor.jpg"
+        "/images/gabriel/su1.png",
+        "/images/gabriel/su2.png",
+        "/images/gabriel/su3.png",
+        "/images/gabriel/su4.png"
       ],
-      "wireframeThumbnail": "/images/gabriel/project-valor.jpg",
-      "links": []
+      "wireframeThumbnail": "/images/gabriel/vcc_title.png",
+      "links": [
+        {
+          "label": "Livestream",
+          "href": "https://www.youtube.com/watch?v=qjLuDLwSYGI&time_continue=1&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fwww.chiefdelphi.com%2F"
+        },
+        {
+          "label": "Chief Delphi Thread",
+          "href": "https://www.chiefdelphi.com/t/valor-cad-challenge-2025/503656"
+        },
+        {
+          "label": "Discord Server",
+          "href": "https://discord.com/invite/tNkAa9uqwM"
+        }
+      ]
     }
   ]
 }

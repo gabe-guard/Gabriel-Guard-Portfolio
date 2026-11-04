@@ -52,11 +52,11 @@
   --popover-foreground: oklch(0.18 0.02 160);
 
   /* Dark forest green – primary brand */
-  --primary: oklch(0.78 0.22 130);
+  --primary: #86d000;
   --primary-foreground: oklch(0.985 0.005 130);
 
   /* Bright lime green – accent */
-  --accent: oklch(0.88 0.22 130);
+  --accent: #86d000;
   --accent-foreground: oklch(0.22 0.05 150);
 
   --secondary: oklch(0.95 0.012 140);
@@ -67,7 +67,7 @@
 
   --border: oklch(0.9 0.01 140);
   --input: oklch(0.92 0.01 140);
-  --ring: oklch(0.88 0.22 130);
+  --ring: #86d000;
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.985 0.005 130);

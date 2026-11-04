@@ -132,7 +132,7 @@
   function renderSpecs(project) {
     const toolsHtml = project.software.map(tool => `<li class="spec-tool">${tool}</li>`).join('');
     const tagsHtml = project.tags.map(t => `<li class="spec-tag">${t}</li>`).join('');
-    const bulletsHtml = descToBullets(project.description).map(s => `<li>${s}</li>`).join('');
+    const bulletsHtml = (project.bullets?.length ? project.bullets : descToBullets(project.description)).map(s => `<li>${s}</li>`).join('');
     const linksHtml = (project.links || []).map(link => `<a class="spec-link" href="${esc(link.href)}" target="_blank" rel="noopener noreferrer">${esc(link.label)} ${upRight()}</a>`).join('');
 
     $centerContent.innerHTML = `

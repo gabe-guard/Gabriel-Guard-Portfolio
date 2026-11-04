@@ -105,6 +105,8 @@ export type Project = {
    * Strings are concatenated as-is — include leading/trailing spaces yourself.
    */
   details?: RichSegment[];
+  /** Short, stat-driven bullets shown on the project page. */
+  bullets?: string[];
   highlights: string[];
   skills: string[];
   gallery: { src: string; caption: string }[];
@@ -125,8 +127,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "longhorn-racing-pedal-box",
+    bullets: ["Cut brake pedal mass 52% (0.62 → 0.30 lb) with ANSYS topology optimization", "Validated the design under a 450 lbf pedal-face load", "Verified <1 mm deflection under off-axis loading", "Iterated statics and FEA for strength and manufacturability", "Designed for in-house 3-axis CNC milling", "Designed carbon fiber accelerator pedal faces, molds, and laminate layups"],
+    title: "Pedal Box.",
+    tagline: "Ongoing brake and accelerator pedal design for Longhorn Racing.",
+    category: "Longhorn Racing",
+    year: "Ongoing",
+    role: "Pedal Box Design",
+    cover: pedalFace.url,
+    summary: "Ongoing brake and accelerator pedal development for Longhorn Racing.",
+    details: [
+      "Executed ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins",
+      "Applied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling",
+      "Designed carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication",
+    ],
+    highlights: [],
+    skills: ["ANSYS", "Topology Optimization", "Statics", "Finite Element Analysis", "CNC Milling", "Carbon Fiber Composites"],
+    gallery: [
+      { src: pedalAnsys.url, caption: "Brake pedal total deformation results in ANSYS" },
+    ],
+  },
+  {
     // Downpour
     slug: "downpour-2026",
+    bullets: ["Led shooter subsystem design for the 2026 robot that won the Curie Division at the FIRST World Championship", "Designed a full-width drum shooter, variable hood, and feeder in Onshape", "Coordinated fabrication of 80+ parts across CNC milling, turning, routing, and powder coat", "Tracked manufacturing in Jira and verified parts against design tolerances", "Earned Excellence in Engineering and Industrial Design Awards", "Drove in playoff matches on the Einstein field"],
     title: "Downpour.",
     tagline: "Design lead for a world-championship competitive robot.",
     category: "Robotics",
@@ -176,6 +200,7 @@ processShots: [
   {
     //Drizzle
     slug: "drizzle-2026",
+    bullets: ["Designed the turret shooter for the team's first 2026 robot", "Won 2 district events: FIT Space City and FIT Manor", "Machined aluminum turret rings, a billet turret plate, and side plates", "Earned 2× Excellence in Engineering and 1× Engineering Inspiration Award", "Served as primary competition driver"],
     title: "Drizzle.",
     tagline: "Design lead for 400 degree turreted ball launcher.",
     category: "Robotics",
@@ -216,27 +241,8 @@ cad: [
     ],
   },
   {
-    slug: "longhorn-racing-pedal-box",
-    title: "Pedal Box.",
-    tagline: "Ongoing brake and accelerator pedal design for Longhorn Racing.",
-    category: "Longhorn Racing",
-    year: "Ongoing",
-    role: "Pedal Box Design",
-    cover: pedalFace.url,
-    summary: "Ongoing brake and accelerator pedal development for Longhorn Racing.",
-    details: [
-      "Executed ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins",
-      "Applied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling",
-      "Designed carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication",
-    ],
-    highlights: [],
-    skills: ["ANSYS", "Topology Optimization", "Statics", "Finite Element Analysis", "CNC Milling", "Carbon Fiber Composites"],
-    gallery: [
-      { src: pedalAnsys.url, caption: "Brake pedal total deformation results in ANSYS" },
-    ],
-  },
-  {
     slug: "trochoidal-gears-2026",
+    bullets: ["Built a Python generator for matched crown and lantern gears", "Drives geometry from tooth count, module, and pin diameter", "Zero-backlash trochoidal profile derived from rolling pin contact", "Exports watertight, 3D-printable STL pairs", "Next: cut as bevel gears for a working differential"],
     title: "Trochoidal Crown & Lantern Gear Generator.",
     tagline: "A parametric, zero-backlash gear profile generator built for a future differential.",
     category: "Design",
@@ -301,6 +307,7 @@ cad: [
   {
     //Deadlock
     slug: "deadlock-2025",
+    bullets: ["Designed and fabricated the climber latch and pivot system", "Sized the mechanism with motor curves, lever-arm math, and CG analysis", "Prototyped in 3D print before the final aluminum build", "Ranked top 3 in the world for climb EPA", "Swept 2 district events and the Texas District Championship", "Earned 3× Industrial Design and 1× Autonomous Award"],
     title: "Deadlock.",
     tagline: "Climber and pivot design for a championship climbing robot.",
     category: "Robotics",
@@ -343,6 +350,7 @@ processVideo: vid3,
   {
     //Flatline
     slug: "flatline-2024",
+    bullets: ["Designed a two-sided pivoting shooter in Onshape", "Oversaw fabrication and assembly of the shooter", "Integrated the shooter with the intake and climber", "Earned 2× Industrial Design and 1× Excellence in Engineering Award", "First full FRC mechanism designed and built"],
     title: "Flatline.",
     tagline: "Two-sided pivoting shooter for a rookie-season robot.",
     category: "Robotics",
@@ -383,6 +391,7 @@ cad: [
   },
   {
     slug: "valor-cad-challenge",
+    bullets: ["Organized an FTC design challenge with 117 participants worldwide", "Modeled a full mock FTC field and game elements", "Wrote a 15-page game manual", "Judged 28 submissions for practicality and feasibility", "Livestreamed a sponsored awards ceremony to 750+ viewers"],
     title: "Valor CAD Challenge.",
     tagline: "An online FTC design challenge built from the ground up.",
     category: "Event · Design",

@@ -16,49 +16,57 @@
       }
     ],
     "photos": [
-      { "src": "images/gabriel/downpourmain.jpg", "alt": "Downpour competition robot" },
-      { "src": "images/gabriel/dp1.jpg", "alt": "Downpour at the World Championship" },
-      { "src": "images/gabriel/dl1.jpg", "alt": "Deadlock competition robot" },
-      { "src": "images/gabriel/project-valor.jpg", "alt": "Valor CAD Challenge project" }
+      {
+        "src": "images/gabriel/downpourmain.jpg",
+        "alt": "Downpour competition robot"
+      },
+      {
+        "src": "images/gabriel/dp1.jpg",
+        "alt": "Downpour at the World Championship"
+      },
+      {
+        "src": "images/gabriel/dl1.jpg",
+        "alt": "Deadlock competition robot"
+      },
+      {
+        "src": "images/gabriel/project-valor.jpg",
+        "alt": "Valor CAD Challenge project"
+      }
     ]
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "Robotics & Leadership",
+    "title": "Engineering Experience",
     "items": [
       {
-        "company": "FRC Team 6800 Valor",
-        "period": "2026",
-        "role": "Subsystem Design Lead · Driver",
+        "company": "Longhorn Racing Electric",
+        "period": "Aug 2023 – May 2026",
+        "role": "Dynamics Mechanical Design Engineer",
         "bullets": [
-          "Led the Downpour shooter subsystem for the 2026 FIRST Robotics Competition robot, which won the Curie Division at the World Championship and earned Excellence in Engineering and Industrial Design Awards.",
-          "Designed the full-width drum shooter, variable hood, and feeder; planned manufacturing in Jira, verified components, assembled the subsystem, and supported integration with electrical and software."
+          "Cut brake pedal mass 52% (0.62 → 0.30 lb) with ANSYS topology optimization under a 450 lbf load",
+          "Verified &lt;1 mm deflection under off-axis loading while holding safety margins",
+          "Designed carbon fiber accelerator pedal faces, molds, and laminate layups"
+        ]
+      },
+      {
+        "company": "Throne Science",
+        "period": "Aug 2023 – May 2026",
+        "role": "R&amp;D Engineering Intern",
+        "bullets": [
+          "Designing a 4-DOF nozzle test rig with dual gantries, pivots, fluid routing, and motion control",
+          "Owning mechanical and electrical development: sourcing, custom CAD, fluid delivery, and enclosures",
+          "Building for manufacturability, assembly, and shipment to an external test facility"
         ]
       },
       {
         "company": "FRC Team 6800 Valor",
-        "period": "2025",
-        "role": "Subsystem Design Lead · Driver",
+        "period": "Aug 2023 – May 2026",
+        "role": "Mechanical Design Lead · Driver · 1,020 hours",
         "bullets": [
-          "Designed and fabricated Deadlock's climber latch and pivot system, using motor curves, lever-arm calculations, and center-of-gravity analysis to size and balance the mechanism.",
-          "Prototyped the mechanism in 3D print, then manufactured and assembled the final subsystem; the robot won the Texas District Championship and earned three Industrial Design Awards."
-        ]
-      },
-      {
-        "company": "FRC Team 6800 Valor",
-        "period": "2024",
-        "role": "Shooter Subsystem Designer · Driver",
-        "bullets": [
-          "Designed Flatline's two-sided pivoting shooter in Onshape and oversaw fabrication and assembly, integrating the shooter with the robot's intake and climber."
-        ]
-      },
-      {
-        "company": "Valor CAD Challenge",
-        "period": "2024 – Present",
-        "role": "Lead Organizer",
-        "bullets": [
-          "Co-organized an online FTC design challenge, creating the field and game elements, writing rules, coordinating sponsors and judges, and helping run the final livestream.",
-          "The challenge brought together 117 participants, received 28 submissions, and reached more than 750 viewers at the awards livestream."
+          "Designed 4 complete robot subsystems with top-down parametric CAD in Onshape",
+          "Led fabrication and inspection of 80+ parts across CNC milling, turning, routing, and powder coat",
+          "Programmed CNC toolpaths in VCarve and Fusion 360",
+          "Primary driver: World Championship Division Winner and Texas District Champion"
         ]
       }
     ],
@@ -69,34 +77,75 @@
     "eyebrow": "Academics",
     "title": "Coursework & Projects",
     "courses": [
-      { "code": "ME 302", "name": "Introduction to Engineering Design & Graphics" },
-      { "code": "PHY 303L", "name": "Engineering Physics II" },
-      { "code": "PHY 303K", "name": "Engineering Physics I" },
-      { "code": "M 408D", "name": "Sequences, Series & Multivariable Calculus" },
-      { "code": "M 408C", "name": "Differential and Integral Calculus" },
-      { "code": "CH 301", "name": "Principles of Chemistry I" },
-      { "code": "HS", "name": "Practicum in STEM: Engineering" },
-      { "code": "HS", "name": "Engineering Design Process" },
-      { "code": "HS", "name": "Aerospace" }
+      {
+        "code": "ME 302",
+        "name": "Introduction to Engineering Design & Graphics"
+      },
+      {
+        "code": "PHY 303L",
+        "name": "Engineering Physics II"
+      },
+      {
+        "code": "PHY 303K",
+        "name": "Engineering Physics I"
+      },
+      {
+        "code": "M 408D",
+        "name": "Sequences, Series & Multivariable Calculus"
+      },
+      {
+        "code": "M 408C",
+        "name": "Differential and Integral Calculus"
+      },
+      {
+        "code": "CH 301",
+        "name": "Principles of Chemistry I"
+      },
+      {
+        "code": "HS",
+        "name": "Practicum in STEM: Engineering"
+      },
+      {
+        "code": "HS",
+        "name": "Engineering Design Process"
+      },
+      {
+        "code": "HS",
+        "name": "Aerospace"
+      }
     ],
     "academicProjects": [
       {
         "label": "Independent design practice",
         "name": "SolidWorks Race Car",
         "desc": "Learning SolidWorks by designing a race-car chassis and suspension. Practiced weldments, custom profiles, 3D sketches, assemblies, and design for manufacturing.",
-        "tags": ["SolidWorks", "Weldments", "3D Sketching", "Vehicle Design"]
+        "tags": [
+          "SolidWorks",
+          "Weldments",
+          "3D Sketching",
+          "Vehicle Design"
+        ]
       },
       {
         "label": "Recognition",
         "name": "FRC Awards",
         "desc": "World Championship Curie Division Winner; District Championship Finalist; Excellence in Engineering, Industrial Design, and Engineering Inspiration awards across team projects.",
-        "tags": ["FRC", "Mechanical Design", "Competition Robotics"]
+        "tags": [
+          "FRC",
+          "Mechanical Design",
+          "Competition Robotics"
+        ]
       },
       {
         "label": "Certification",
         "name": "Design & Safety Credentials",
         "desc": "Earned Onshape Associate, Autodesk Inventor, OSHA 10 General Industry, and Microsoft Office Associate certifications. Working toward Onshape Professional and SolidWorks Professional.",
-        "tags": ["Onshape Associate", "Autodesk Inventor", "OSHA 10", "Microsoft Office"]
+        "tags": [
+          "Onshape Associate",
+          "Autodesk Inventor",
+          "OSHA 10",
+          "Microsoft Office"
+        ]
       }
     ]
   },
@@ -107,15 +156,39 @@
     "groups": [
       {
         "label": "Design & Analysis",
-        "tags": ["Onshape", "Fusion 360", "Autodesk Inventor", "Technical Drawings", "Suspension Geometry", "Root Cause Analysis"]
+        "tags": [
+          "ANSYS",
+          "Onshape",
+          "Fusion 360",
+          "Autodesk Inventor",
+          "Technical Drawings",
+          "Suspension Geometry",
+          "Root Cause Analysis"
+        ]
       },
       {
         "label": "Software & Data",
-        "tags": ["Python", "Excel / Sheets", "Java", "Git & GitHub", "Jira", "Figma"]
+        "tags": [
+          "Python",
+          "Excel / Sheets",
+          "Java",
+          "Git & GitHub",
+          "Jira",
+          "Figma"
+        ]
       },
       {
         "label": "Manufacturing",
-        "tags": ["3-Axis CNC Milling", "CNC Router", "Manual Lathe", "FDM Printing", "Laser Cutting", "Band Saw / Drill Press", "Riveting & Tapping", "Wiring & Soldering"]
+        "tags": [
+          "3-Axis CNC Milling",
+          "CNC Router",
+          "Manual Lathe",
+          "FDM Printing",
+          "Laser Cutting",
+          "Band Saw / Drill Press",
+          "Riveting & Tapping",
+          "Wiring & Soldering"
+        ]
       }
     ]
   },
@@ -124,10 +197,34 @@
     "heading": "Let's <br><span class=\"gold\">Build.</span>",
     "sub": "I'm open to engineering opportunities, design collaborations, and conversations about robotics and making things. Email is the fastest way to reach me.",
     "links": [
-      { "label": "Email", "value": "gcguard1@gmail.com", "href": "mailto:gcguard1@gmail.com" },
-      { "label": "LinkedIn", "value": "linkedin.com/in/gabriel-guard", "href": "https://www.linkedin.com/in/gabriel-guard", "external": true },
-      { "label": "GitHub", "value": "github.com/gabe-guard", "href": "https://github.com/gabe-guard", "external": true },
-      { "label": "Location", "value": "Austin, Texas · UT Austin", "static": true }
+      {
+        "label": "Email",
+        "value": "gcguard1@gmail.com",
+        "href": "mailto:gcguard1@gmail.com"
+      },
+      {
+        "label": "Resume",
+        "value": "View resume (PDF)",
+        "href": "/GabrielGuardResume.pdf",
+        "external": true
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/gabriel-guard",
+        "href": "https://www.linkedin.com/in/gabriel-guard",
+        "external": true
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/gabe-guard",
+        "href": "https://github.com/gabe-guard",
+        "external": true
+      },
+      {
+        "label": "Location",
+        "value": "Austin, Texas · UT Austin",
+        "static": true
+      }
     ]
   },
   "footer": {

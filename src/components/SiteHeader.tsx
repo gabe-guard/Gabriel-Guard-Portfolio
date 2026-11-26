@@ -21,8 +21,8 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-background/80 border-b border-border" : "bg-transparent"
+      className={`sticky top-0 z-50 border-b border-border transition-all duration-300 ${
+        scrolled ? "backdrop-blur-md bg-background/95" : "bg-background"
       }`}
     >
       <div className="container-wide flex items-center justify-between py-5">
@@ -38,11 +38,11 @@ export function SiteHeader() {
               key={item.label}
               to={item.to}
               hash={item.hash}
-              className="px-2.5 py-1.5 text-[0.82rem] font-medium text-muted-foreground hover:text-primary transition-colors rounded-full"
+              className="border-b border-transparent px-2.5 py-1.5 font-interface text-[0.62rem] uppercase tracking-[0.04em] text-muted-foreground hover:border-primary hover:text-primary transition-colors"
               activeOptions={{ exact: item.to === "/", includeHash: true }}
               activeProps={{
                 className:
-                  "px-2.5 py-1.5 text-[0.82rem] font-semibold text-primary-foreground bg-primary rounded-full",
+                  "border-b border-primary px-2.5 py-1.5 font-interface text-[0.62rem] uppercase tracking-[0.04em] font-medium text-primary",
               }}
             >
               {item.label}

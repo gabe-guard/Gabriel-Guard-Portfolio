@@ -2,11 +2,27 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/instrument-sans/instrument-sans-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Azeret Mono";
+  src: url("/fonts/azeret-mono/azeret-mono-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-interface: "Azeret Mono", ui-monospace, monospace;
 
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -39,35 +55,35 @@
 }
 
 :root {
-  --radius: 0.65rem;
+  --radius: 0.15rem;
 
-  /* Crisp paper-white canvas with subtle warm tone */
-  --background: oklch(0.992 0.003 100);
-  --surface: oklch(0.975 0.006 130);
-  --foreground: oklch(0.18 0.02 160);
+  /* White paper and a restrained green engineering palette */
+  --background: oklch(0.99 0.004 140);
+  --surface: oklch(0.96 0.012 140);
+  --foreground: oklch(0.19 0.035 155);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 160);
+  --card-foreground: oklch(0.19 0.035 155);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.02 160);
 
   /* Dark forest green – primary brand */
-  --primary: oklch(0.78 0.22 130);
-  --primary-foreground: oklch(0.985 0.005 130);
+  --primary: oklch(0.43 0.12 150);
+  --primary-foreground: oklch(0.99 0.004 140);
 
   /* Bright lime green – accent */
-  --accent: oklch(0.88 0.22 130);
-  --accent-foreground: oklch(0.22 0.05 150);
+  --accent: oklch(0.68 0.17 145);
+  --accent-foreground: oklch(0.18 0.045 155);
 
-  --secondary: oklch(0.95 0.012 140);
-  --secondary-foreground: oklch(0.25 0.04 160);
+  --secondary: oklch(0.94 0.018 145);
+  --secondary-foreground: oklch(0.25 0.06 155);
 
-  --muted: oklch(0.95 0.008 130);
-  --muted-foreground: oklch(0.45 0.015 160);
+  --muted: oklch(0.95 0.01 140);
+  --muted-foreground: oklch(0.45 0.025 155);
 
-  --border: oklch(0.9 0.01 140);
-  --input: oklch(0.92 0.01 140);
-  --ring: oklch(0.88 0.22 130);
+  --border: oklch(0.84 0.025 145);
+  --input: oklch(0.88 0.02 145);
+  --ring: oklch(0.68 0.17 145);
 
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.985 0.005 130);
@@ -85,11 +101,12 @@
     color: var(--color-foreground);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.005em;
+    letter-spacing: -0.015em;
   }
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
-    letter-spacing: -0.035em;
+    letter-spacing: -0.045em;
+    font-weight: 500;
     color: var(--color-foreground);
   }
 }
@@ -99,13 +116,15 @@
   .font-body { font-family: var(--font-body); }
 
   .eyebrow {
-    font-family: var(--font-display);
-    font-weight: 600;
+    font-family: var(--font-interface);
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
-    font-size: 0.72rem;
+    letter-spacing: 0.065em;
+    font-size: 0.66rem;
     color: var(--color-primary);
   }
+
+  .meta, .eyebrow { font-family: var(--font-interface); font-variant-numeric: tabular-nums; }
 
   .container-wide {
     max-width: 1280px;
@@ -124,7 +143,22 @@
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
   }
   .hover-lift:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 30px 60px -30px oklch(0.38 0.09 155 / 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 22px 42px -34px oklch(0.32 0.08 150 / 0.3);
+  }
+
+  /* Alex Diaz reference typography, motion, and quiet ruled surfaces. */
+  .font-display { font-weight: 500; }
+  h1.font-display, h2.font-display, h3.font-display, h4.font-display { font-weight: 500; }
+  .font-interface { font-family: var(--font-interface); }
+  .grain { background-image: none; }
+  h1 em, h2 em, h3 em, h4 em, h1 .italic, h2 .italic, h3 .italic, h4 .italic { font-style: normal; }
+  .rounded-full { border-radius: 0.15rem; }
+  .rounded-2xl { border-radius: 0.2rem; }
+  .rounded-xl, .rounded-lg { border-radius: 0.15rem; }
+  ::selection { color: var(--color-background); background: var(--color-primary); }
+  :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 4px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   }
 }

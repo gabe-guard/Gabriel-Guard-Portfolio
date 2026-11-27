@@ -27,7 +27,7 @@ export function ConnectSection() {
             href="mailto:gcguard1@gmail.com"
             className="group block h-full rounded-2xl bg-primary p-9 sm:p-12 text-primary-foreground hover-lift relative overflow-hidden"
           >
-            <Mail className="h-7 w-7 text-accent" />
+            <Mail className="h-7 w-7 text-primary-foreground" />
             <h3 className="mt-6 font-display text-3xl sm:text-4xl font-extrabold tracking-tight">
               gcguard1@gmail.com
             </h3>

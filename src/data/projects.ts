@@ -4,6 +4,7 @@ import frcImg from "@/assets/downpourmain.jpg";
 
 import drTitle from "@/assets/dr_title.png";
 import vccTitle from "@/assets/vcc_title.png";
+import vccField from "@/assets/models/valor-cad-challenge-wireframe.glb.asset.json";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 import dp1 from "@/assets/dp1.jpg";
@@ -325,6 +326,10 @@ cad: [
     year: "2024 — Present",
     role: "Lead Organizer",
     cover: vccTitle,
+    galleryModel: {
+      src: vccField.url,
+      caption: "Valor CAD Challenge field · Drag to rotate, scroll or pinch to zoom",
+    },
     summary:
       "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.",
     details: [

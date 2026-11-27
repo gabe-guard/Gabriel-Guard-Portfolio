@@ -1,6 +1,7 @@
 [
   {
     "company": "Longhorn Racing Electric",
+    "logo": "longhorn-racing",
     "period": "Aug 2026 - Current",
     "role": "Dynamics Mechanical Design Engineer",
     "bullets": [
@@ -11,6 +12,7 @@
   },
   {
     "company": "Throne Science",
+    "logo": "throne",
     "period": "Oct 2026 - Current",
     "role": "R&D Engineering Intern",
     "bullets": [
@@ -20,7 +22,8 @@
     ]
   },
   {
-    "company": "Competitive Robotics (FIRST FRC), Team 6800 | 1,020 hours",
+    "company": "Competitive Robotics (FIRST FRC), Team 6800",
+    "logo": "valor",
     "period": "Aug 2023 - May 2026",
     "role": "Mechanical Design Lead",
     "bullets": [

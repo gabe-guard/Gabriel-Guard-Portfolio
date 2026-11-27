@@ -1,5 +1,4 @@
 import type React from "react";
-import breakdownImg from "@/assets/breakdown-placeholder.png";
 
 import frcImg from "@/assets/downpourmain.jpg";
 
@@ -24,25 +23,12 @@ import drParts1 from "@/assets/dr_parts1.jpeg";
 import drParts2 from "@/assets/dr_parts2.jpeg";
 import drParts3 from "@/assets/dr_parts3.jpeg";
 
-import swTitle from "@/assets/sw_title.png";
-import swWire from "@/assets/sw_wire.png";
-import swMaster from "@/assets/sw_master.png";
-import swWide from "@/assets/sw_wide.png";
-import swUpright from "@/assets/sw_upright.png";
-import swMasterGif from "@/assets/sw_master.gif.asset.json";
-
 import drRobot from "@/assets/dr_robot.png";
 import drShooter from "@/assets/dr_shooter.png";
 import dlRobot from "@/assets/dl_robot.png";
 import dlClimber from "@/assets/dl_climber.png";
 import flRobot from "@/assets/fl_robot.png";
 import flShooter from "@/assets/fl_shooter.png";
-
-import tgTitle from "@/assets/tg_title.png";
-import tgCrown from "@/assets/tg_crown.png";
-import tgLantern from "@/assets/tg_lantern.png";
-import tgMesh from "@/assets/tg_mesh.png";
-import tgMath from "@/assets/tg_math.png";
 
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
@@ -62,7 +48,6 @@ import su1 from "@/assets/su1.png";
 import su2 from "@/assets/su2.png";
 import su3 from "@/assets/su3.png";
 import su4 from "@/assets/su4.png";
-
 
 export type RichSegment = string | { text: string; href: string };
 
@@ -89,6 +74,11 @@ export type Breakdown = {
   lineArt?: BreakdownImage;
 };
 
+export type CadIsolation = {
+  label: string;
+  node: string;
+  alternate?: { node: string; label: string; defaultLabel: string };
+};
 
 export type Project = {
   slug: string;
@@ -113,6 +103,7 @@ export type Project = {
   highlights: string[];
   skills: string[];
   gallery: { src: string; caption: string }[];
+  galleryModel?: { src: string; caption: string; isolation?: CadIsolation };
   cad?: { label: string; src: string }[];
   links?: { label: string; href: string }[];
   feature?: { title: string; body: string };
@@ -138,6 +129,11 @@ export const projects: Project[] = [
     year: "2026",
     role: "Subsystem Design Lead · Driver",
     cover: frcImg,
+    galleryModel: {
+      src: "/models/downpour-wireframe.glb",
+      caption: "Downpour CAD · Drag to rotate, scroll or pinch to zoom",
+      isolation: { label: "shooter", node: "Closed", alternate: { node: "Open", label: "Open", defaultLabel: "Closed" } },
+    },
     summary:
       "Downpour was our robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot marked a milestone in our team's history, winning the Curie Division at the World Championship and competing in playoff matches on the Einsteins field. Downpour also featured at the Texas District Championship winning runner-up on its debut. The robot earned the Excellence in Engineering Award and Industrial Design Award.",
     details: [
@@ -187,6 +183,11 @@ processShots: [
     year: "2026",
     role: "Subsystem Design Lead · Driver",
     cover: drTitle,
+    galleryModel: {
+      src: "/models/drizzle-wireframe.glb",
+      caption: "Drizzle CAD · Drag to rotate, scroll or pinch to zoom",
+      isolation: { label: "shooter", node: "Shooter" },
+    },
     summary:
       "Drizzle was our first robot for the 2026 FIRST Robotics Competition game Rebuilt. The robot debuted at the FIT Space City District Event winning the competition and earning the Excellence in Engineering Award. The robot later won the FIT Manor District Event and was awarded the Engineering Inspiration Award.",
     details: [
@@ -197,7 +198,6 @@ processShots: [
       body: "The Turret Subsystem was made up of a rotating turret, compact shooter, and adjustable hood which I designed using Onshape. The turret was limited to roughly 400 degrees of rotation and used bi-directional cable chain to route wiring between the rotating and stationary sections. The turret rings were designed around a 7 inch diameter bearing and required precise machining, tapping, and heat shrinking to assemble the components together. The compact packaging of the turret and shooter mechanism allowed the shooter to rotate without taking up unnecessary space on the robot. The hood used a cycloidal drive to provide torque and precision required to adjust the launch angle.\n\nPackaging was the main constraint throughout the design. The turret has to fit the bearing, drive system, shooter, hood, motors, and cable chain within a limited footprint while maintaining enough clearance for the full range of motion. I designed the turret rings and mounting interfaces around the manufacturing process, accounting for machining tolerances and the fit between the bearing and surrounding components so the turret could be assembled and serviced without removing the entire mechanism.\n\nOnce the design was complete, I worked with the manufacturing team to machine and assemble the turret components. The rings required precision machining and tapping, while the bearing interfaces used heat fitting to achieve the required fit. After fabrication, I assembled the turret and shooter and worked with the electrical and software teams to integrate the rotating mechanism, including routing the wiring through the cable chain and providing the mechanical details needed to control the turret and hood.",
     },
 processVideo: vid1,
-
 
     highlights: [
       "2× District Event Winner",
@@ -221,134 +221,6 @@ cad: [
     ],
   },
   {
-    slug: "solidworks-practice",
-    title: "SolidWorks Practice.",
-    tagline: "Transitioning from Onshape to SolidWorks",
-    category: "Design",
-    year: "2025",
-    role: "Self Development",
-    cover: swTitle,
-    summary:
-      "  After four years of working primarily in Onshape, I started learning SolidWorks to prepare for future engineering opportunities where it is commonly used. To make the transition more practical, I decided to design an SAE style race car assembly consisting of a chassis and suspension. This gave me a project to work through SolidWorks' workflow while applying mechanical design concepts I already understood from robotics.",
-    details: [
-      "  I used the chassis and suspension as a way to learn SolidWorks while designing a complete vehicle assembly. I gained experience with SolidWorks' weldments, custom weldment profiles, and 3D sketches while also learning more about suspension geometry and variables such as camber. The project helped me understand how SolidWorks approaches assemblies and design workflows differently from the Onshape workflow I was used to.",
-    ],
-    feature: {
-      title: "Parametric Modeling",
-      body: " To begin the chassis, I created a master sketch with a driver model to establish the overall ergonomics of the car. Once the side profile had the proportions I wanted, I added cross sections at the locations where the outer edges of the frame would run. I then added braces between the main tubes to improve the structure while keeping the frame layout simple. \n\nI created a custom weldment profile and used SolidWorks Weldments to turn the 3D sketches into structural tubes. The tubes had to be trimmed using weldment corner treatment and trim tools so that they did not interfere with each other and could be manufactured. I tried to avoid difficult geometries such as four way tube intersections and instead designed the frame around simpler joints that would be easier to fabricate. \n\nAfter establishing the chassis hardpoints, I began working on the suspension geometry. I used this part of the project to learn the major components of a suspension system and how variables such as camber affect handling and cornering. From there, I developed a geometry intended to keep the car level relative to the ground while naturally changing camber as the suspension moved through a turn. \n\nI was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
-    },
-    highlights: [
-      "Independent modeling practice",
-      "Learned custom weldmetns profiles",
-      "Practiced 3D sketching",
-    ],
-    skills: ["SolidWorks", "Parametric Modeling", "Assembly Mates"],
-    gallery: [
-      { src: swTitle, caption: "Full chassis assembly." },
-      { src: swWire, caption: "Chassis sketches." },
-    ],
-    processShots: [
-      { src: breakdownImg, caption: "Placeholder — part studio screenshot" },
-      { src: breakdownImg, caption: "Placeholder — assembly mate study" },
-    ],
-    breakdown: {
-      hero: {
-        blocks: [
-{
-            heading: "Master Sketch",
-            body: "To begin the chassis, I created a master sketch with a driver model to establish the overall ergonomics of the car. Once the side profile had the proportions I wanted, I added cross sections at the locations where the outer edges of the frame would run. I then added braces between the main tubes to improve the structure while keeping the frame layout simple.",
-          },
-          {
-            heading: "Weldments",
-            body: "I created a custom weldment profile and used SolidWorks Weldments to turn the 3D sketches into structural tubes. The tubes had to be trimmed using weldment corner treatment and trim tools so that they did not interfere with each other and could be manufactured. I tried to avoid difficult geometries such as four way tube intersections and instead designed the frame around simpler joints that would be easier to fabricate.",
-          },
-          {
-            heading: "Suspension Geometry",
-            body: "After establishing the chassis hardpoints, I began working on the suspension geometry. I used this part of the project to learn the major components of a suspension system and how variables such as camber affect handling and cornering. From there, I developed a geometry intended to keep the car level relative to the ground while naturally changing camber as the suspension moved through a turn.",
-          },
-          {
-            heading: "Upright Design",
-            body: "I was not able to finish the suspension master sketch, but I completed a rough version of the geometry and began designing a simple upright. I used the upright to practice SolidWorks part modeling and design for manufacturing, applying the same approach I use in robotics by considering how the part would actually be machined and assembled rather than only focusing on the CAD geometry.",
-          },
-],
-          underText: {
-            src: swMasterGif.url,
-            alt: "Suspension geometry animation",
-            caption: "Placeholder — dynamic suspension geometry.",
-          },
-        },
-        stack: [
-          { src: swMaster, alt: "Chassis master sketch", caption: "Master sketch." },
-          { src: swWide, alt: "Chassis wide view", caption: "Wide chassis view." },
-          { src: swUpright, alt: "Upright design", caption: "Upright part design." },
-        ],
-        cards: [],
-    },
-  },
-  {
-    slug: "trochoidal-gears-2026",
-    title: "Trochoidal Crown & Lantern Gear Generator.",
-    tagline: "A parametric, zero-backlash gear profile generator built for a future differential.",
-    category: "Design",
-    year: "2026",
-    role: "Independent Project",
-    cover: tgTitle,
-    summary:
-      "I started this project after coming across a paper on trochoidal roller pinion rack transmissions and realized the same tooth profile could be wrapped into a circle instead of a straight rack. I built a Python generator that takes in parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. The end goal is to use a pair of these crown and lantern profiles machined as bevel gears to build a working differential.",
-    details: [
-      "What makes the trochoidal profile interesting is that, unlike a standard involute tooth, it is generated directly by the rolling contact between the pin and the rack, so the tooth and the pin stay in contact along the same curve with no clearance built in. That geometry is what gives trochoidal drives their signature zero-backlash behavior in both directions, instead of the small gap a normal gear pair needs to mesh smoothly. I wanted to see if that same no-backlash property could carry over into a bevel-style differential.",
-    ],
-    feature: {
-      title: "Trochoidal Gear Generation",
-      body: "This project started after watching Mishin Machine's zero-backlash wave gear video and reading the academic paper linked in its description. Rather than approximating the tooth geometry, the paper derives the trochoidal rack tooth profile mathematically from the roller-pinion rolling contact condition, which gave me an exact starting point to implement in my own generator.\n\nThe trochoidal rack profile is derived directly from the rolling contact between the pin and the rack. As the pin rolls along the rack, its contact point traces a trochoid, and the tooth flank is built as the envelope of the pin's positions. I implemented that derivation in Python, then wrapped the resulting straight rack profile around a circle to produce a crown gear that meshes with a lantern pin wheel at zero backlash.\n\nThe generator takes parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. Because both profiles come from the same rolling-contact math, the pair stays in contact along the same curve with no clearance built in.\n\nThe current output is a validated, watertight, 3D-printable crown and lantern pair. The next step is cutting the profiles as bevel gears so a pair of them can form the basis of a working zero-backlash differential.",
-    },
-    highlights: [
-      "Parametric crown & lantern gear generator",
-      "Zero-backlash trochoidal tooth profile",
-      "Differential concept using bevel gears",
-    ],
-    skills: ["Python", "Parametric Design", "Gear Theory", "Mechanism Design"],
-    gallery: [
-      { src: tgTitle, caption: "Generated crown gear with mating lantern pin wheel." },
-      { src: tgMesh, caption: "Rolling pin contact at the trochoidal tooth flank." },
-      { src: tgCrown, caption: "Crown gear ready for 3D printing." },
-      { src: tgLantern, caption: "Lantern pin wheel." },
-    ],
-    breakdown: {
-      hero: {
-        blocks: [
-          {
-            heading: "The Inspiration",
-            body: "This project started after watching Mishin Machine's zero-backlash wave gear video and reading the academic paper linked in its description. Rather than approximating the tooth geometry, the paper derives the trochoidal rack tooth profile mathematically from the roller-pinion rolling contact condition, which gave me an exact starting point to implement in my own generator.",
-          },
-          {
-            heading: "The Math",
-            body: "The trochoidal rack profile is derived directly from the rolling contact between the pin and the rack. As the pin rolls along the rack, its contact point traces a trochoid, and the tooth flank is built as the envelope of the pin's positions. I implemented that derivation in Python, then wrapped the resulting straight rack profile around a circle to produce a crown gear that meshes with a lantern pin wheel at zero backlash.",
-          },
-          {
-            heading: "Crown & Lantern Generation",
-            body: "The generator takes parameters like tooth count, module, and pin diameter and outputs a fully meshed, 3D-printable crown gear along with its mating lantern pin wheel. Because both profiles come from the same rolling-contact math, the pair stays in contact along the same curve with no clearance built in.",
-          },
-          {
-            heading: "The Result",
-            body: "The current output is a validated, watertight, 3D-printable crown and lantern pair. The next step is cutting the profiles as bevel gears so a pair of them can form the basis of a working zero-backlash differential.",
-          },
-        ],
-        underText: {
-          src: tgMath,
-          alt: "Trochoidal tooth profile construction",
-          caption: "Trochoidal tooth profile derived from rolling pin contact.",
-        },
-      },
-      stack: [
-        { src: tgCrown, alt: "Trochoidal crown gear", caption: "Crown gear." },
-        { src: tgLantern, alt: "Lantern pin wheel", caption: "Lantern pin wheel." },
-        { src: tgMesh, alt: "Meshed crown and lantern pair", caption: "Meshed pair." },
-      ],
-      cards: [],
-    },
-  },
-  {
     //Deadlock
     slug: "deadlock-2025",
     title: "Deadlock.",
@@ -357,6 +229,11 @@ cad: [
     year: "2025",
     role: "Subsystem Design Lead · Driver",
     cover: dlTitle2,
+    galleryModel: {
+      src: "/models/deadlock-wireframe.glb",
+      caption: "Deadlock CAD · Drag to rotate, scroll or pinch to zoom",
+      isolation: { label: "climber", node: "Climber" },
+    },
     summary:
       "Deadlock was our robot for the 2025 FIRST Robotics Competition game REEFSCAPE. The game centered around scoring coral on a reef and ended with robots climbing onto hanging cages. Deadlock won two district events and the Texas District Championship in a clean sweep. The robot also received three Industrial Design Awards and one Autonomous Award. I spent the season designing and fabricating mechanisms for Deadlock and had the opportunity to drive the robot throughout the season.",
     details: [
@@ -399,6 +276,15 @@ processVideo: vid3,
     year: "2024",
     role: "Subsystem Design Lead",
 cover: flTitle,
+    galleryModel: {
+      src: "/models/flatline-wireframe.glb",
+      caption: "Flatline CAD · Drag to rotate, scroll or pinch to zoom",
+      isolation: {
+        label: "shooter",
+        node: "Lowered",
+        alternate: { node: "Raised", label: "Raised", defaultLabel: "Lowered" },
+      },
+    },
     summary:
       "Flatline was our robot for the 2024 FIRST Robotics Competition game CRESCENDO. The game centered around collecting foam disks called “notes” and scoring them in the Speaker and Amp before climbing the Stage at the end of the match. Flatline received two Industrial Design Awards and an Excellence in Engineering Award during the season. I was a rookie on the team and worked as the sole designer of the shooter in Onshape before overseeing its fabrication and assembly.",
     details: [

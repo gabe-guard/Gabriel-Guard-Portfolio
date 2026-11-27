@@ -1,0 +1,41 @@
+[
+  {
+    "company": "Longhorn Racing Electric",
+    "period": "Aug 2026 - Current",
+    "role": "Dynamics Mechanical Design Engineer",
+    "bullets": [
+      "Executed ANSYS-validated topology optimization of brake pedal, reducing mass 52% (0.62 to 0.30 lb) under a 450 lbf pedal-face load; verified <1 mm deflection under off-axis loading and maintained structural safety margins",
+      "Applied first-principles statics and iterative FEA to optimize pedal geometry for structural performance and manufacturability; designed for in-house 3-axis CNC milling",
+      "Designed carbon fiber accelerator pedal faces from scratch, developing component geometry, mold designs, and laminate layups for composite fabrication"
+    ]
+  },
+  {
+    "company": "Throne Science",
+    "period": "Oct 2026 - Current",
+    "role": "R&D Engineering Intern",
+    "bullets": [
+      "Designing a 4-DOF test rig integrating dual gantries, pivot mechanisms, fluid routing, motion control, and electronics to enable repeatable, position-controlled nozzle testing for AI audio prediction",
+      "Owning mechanical and electrical system development, including component sourcing, custom CAD, fluid delivery, motion systems, and electronic enclosures to improve test fidelity and usability over a prior iteration",
+      "Developing the rig for manufacturability, assembly, and shipment to an external testing facility, with emphasis on packaging constraints and repeatable test positioning"
+    ]
+  },
+  {
+    "company": "Competitive Robotics (FIRST FRC), Team 6800 | 1,020 hours",
+    "period": "Aug 2023 - May 2026",
+    "role": "Mechanical Design Lead",
+    "bullets": [
+      "Designed four complete robot subsystems using top-down parametric CAD in Onshape; produced tolerance-driven engineering drawings and optimized assemblies for manufacturability, integration, and performance.",
+      "Led end-to-end manufacturing and assembly of a robot subsystem, coordinating fabrication and inspection of 80+ parts across CNC milling, turning, routing, and powder coating; managed sourcing, inventory, BOMs, and dimensional verification against design tolerances while managing development in Jira",
+      "Programmed CNC toolpaths in VCarve and Fusion 360, selecting tooling, feeds, speeds, and machining strategies to fabricate custom components using CNC routers, mills, manual lathes, and 3D printers",
+      "Selected as primary competition driver, leading match strategy, coordinating alliance partners, and communicating under pressure to adapt strategy and execute coordinated match plans on the world stage"
+    ]
+  },
+  {
+    "company": "Umbra Design LLC",
+    "period": "Aug 2023 - May 2026",
+    "role": "Lead Mechanical Design Engineer",
+    "bullets": [
+      "Founded an LLC to develop and commercialize proprietary translucent automotive sun visors, leading product design, prototyping, manufacturing, and assembly using 3D printing and laser cutting"
+    ]
+  }
+]

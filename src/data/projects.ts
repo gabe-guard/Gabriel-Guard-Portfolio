@@ -325,6 +325,10 @@ cad: [
     year: "2024 — Present",
     role: "Lead Organizer",
     cover: vccTitle,
+    galleryModel: {
+      src: "/models/valor-cad-challenge-wireframe.glb",
+      caption: "Valor CAD Challenge field · Drag to rotate, scroll or pinch to zoom",
+    },
     summary:
       "The Valor CAD Challenge was an online engineering competition that I co organized to give students around the world a realistic robotics design experience outside of the normal competition season. Participants completed engineering work under deadlines and presented their solutions to a panel of experienced judges.",
     details: [

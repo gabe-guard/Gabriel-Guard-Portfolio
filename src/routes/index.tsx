@@ -5,6 +5,7 @@ import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills"
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { projects } from "@/data/projects";
 import experience from "@/data/experience.json";
+import { ExperienceLogo, type ExperienceLogoName } from "@/components/ExperienceLogo";
 import { startHeroCloud } from "@/lib/hero-cloud.js";
 import photoOne from "@/assets/intro1.jpg";
 import photoTwo from "@/assets/intro2.jpg";
@@ -120,7 +121,11 @@ function Home() {
         <div className="exp-list">
           {experience.map((item) => (
             <article className="exp-item" key={item.company + item.role}>
-              <div><p className="meta exp-period">{item.period}</p><h3 className="exp-company">{item.company}</h3></div>
+              <div className="exp-identity">
+                <p className="meta exp-period">{item.period}</p>
+                <h3 className="exp-company">{item.company}</h3>
+                {item.logo && <ExperienceLogo name={item.logo as ExperienceLogoName} />}
+              </div>
               <div><h4 className="exp-role">{item.role}</h4><ul className="exp-bullets">
                 {item.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
               </ul></div>

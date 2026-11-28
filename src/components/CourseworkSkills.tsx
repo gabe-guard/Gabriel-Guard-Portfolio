@@ -17,7 +17,7 @@ const courses: Course[] = [
 const skillGroups: SkillGroup[] = [
   {
     title: "Design & Analysis",
-    items: ["Onshape", "Fusion 360", "Autodesk Inventor", "Technical Drawings", "Fusion CAM"],
+    items: ["Onshape", "Fusion 360", "Autodesk Inventor", "Technical Drawings", "Fusion CAM", "ANSYS", "GD&T"],
   },
   {
     title: "Software & Data",

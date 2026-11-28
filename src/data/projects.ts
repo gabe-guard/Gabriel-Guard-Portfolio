@@ -5,6 +5,12 @@ import drizzleCover from "@/assets/cad-covers/drizzle.webp";
 import deadlockCover from "@/assets/cad-covers/deadlock.webp";
 import flatlineCover from "@/assets/cad-covers/flatline.webp";
 import valorChallengeCover from "@/assets/cad-covers/valor-cad-challenge.webp";
+import pedalBoxCover from "@/assets/cad-covers/pedal-box.webp";
+import pedalBoxAssembly from "@/assets/pedal-box-assembly.png";
+import pedalBoxCad from "@/assets/pedal-box-cad.png";
+import pedalBoxCarbonFiber from "@/assets/pedal-box-carbon-fiber.png";
+import pedalBoxTopology from "@/assets/pedal-box-topology.png";
+import pedalBoxBaseDrawing from "@/assets/pedal-box-base-drawing.png";
 
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
@@ -78,6 +84,7 @@ export type CadIsolation = {
   label: string;
   node: string;
   alternate?: { node: string; label: string; defaultLabel: string };
+  showAlternateInFullView?: boolean;
 };
 
 export type Project = {
@@ -120,6 +127,38 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "longhorn-racing-pedal-box",
+    title: "Pedal Box.",
+    tagline: "Lightweight brake and accelerator pedal design for Longhorn Racing Electric.",
+    category: "Formula SAE",
+    year: "2027 season",
+    role: "Dynamics Mechanical Design Engineer",
+    cover: pedalBoxCover,
+    galleryModel: {
+      src: "/models/pedal-box-wireframe.glb",
+      caption: "Pedal Box CAD · Drag to rotate, scroll or pinch to zoom",
+      isolation: {
+        label: "pedals",
+        node: "Pedals_Resting",
+        alternate: { node: "Pedals_Pressed", defaultLabel: "Resting", label: "Pressed" },
+        showAlternateInFullView: true,
+      },
+    },
+    summary: "I worked on the brake and accelerator pedals for the 2027 Longhorn Racing Electric pedal box.",
+    details: [
+      "I reduced brake pedal mass from 0.62 to 0.30 lb using ANSYS-validated topology optimization under a 450 lbf pedal-face load. I verified less than 1 mm of deflection under off-axis loading and iterated the design for in-house 3-axis CNC milling. I also designed the carbon fiber accelerator pedal faces, including the geometry, molds, and laminate layups.",
+    ],
+    highlights: ["52% brake pedal mass reduction", "450 lbf pedal-face load", "Less than 1 mm off-axis deflection"],
+    skills: ["SolidWorks", "ANSYS", "Topology optimization", "3-axis CNC milling", "Carbon fiber composites"],
+    gallery: [
+      { src: pedalBoxAssembly, caption: "Pedal box assembly with heel rest in SolidWorks" },
+      { src: pedalBoxCad, caption: "Brake and accelerator pedal assembly in SolidWorks" },
+      { src: pedalBoxCarbonFiber, caption: "Carbon fiber pedal face" },
+      { src: pedalBoxTopology, caption: "Brake pedal topology study and convergence plot" },
+      { src: pedalBoxBaseDrawing, caption: "Machining drawing for the pedal box base" },
+    ],
+  },
   {
     // Downpour
     slug: "downpour-2026",

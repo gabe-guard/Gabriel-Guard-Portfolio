@@ -350,14 +350,14 @@ export function CadGalleryModel({ src, label, isolation }: { src: string; label:
     <div ref={viewport} className="relative h-full w-full bg-white" role="group" aria-label={label}>
       <canvas ref={canvas} className="block h-full w-full cursor-grab active:cursor-grabbing" aria-hidden="true" />
       {status && <span role="status" className="absolute inset-0 grid place-items-center text-sm text-neutral-600">{status}</span>}
-      {isolation && canIsolate && !status && (
+      {isolation && !status && (canIsolate || (hasAlternate && isolation.showAlternateInFullView)) && (
         <div className="absolute left-3 top-3 flex flex-wrap gap-1 bg-background/95 p-1 text-xs"
           role="group" aria-label="CAD assembly controls">
-          <button type="button" className="border border-border px-3 py-2 hover:bg-surface"
+          {canIsolate && <button type="button" className="border border-border px-3 py-2 hover:bg-surface"
             aria-pressed={isolated} onClick={() => selectPart(!isolated)}>
             {isolated ? "Show full robot" : `Isolate ${isolation.label}`}
-          </button>
-          {isolated && hasAlternate && isolation.alternate && [isolation.alternate.defaultLabel, isolation.alternate.label].map((value, index) => (
+          </button>}
+          {(isolated || isolation.showAlternateInFullView) && hasAlternate && isolation.alternate && [isolation.alternate.defaultLabel, isolation.alternate.label].map((value, index) => (
             <button key={value} type="button" aria-pressed={alternateSelected === Boolean(index)}
               className="border border-border px-3 py-2 hover:bg-surface aria-pressed:border-primary aria-pressed:bg-primary aria-pressed:text-primary-foreground"
               onClick={() => changePose(Boolean(index))}>

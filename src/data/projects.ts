@@ -1,16 +1,17 @@
 import type React from "react";
 
-import frcImg from "@/assets/downpourmain.jpg";
+import downpourCover from "@/assets/cad-covers/downpour.webp";
+import drizzleCover from "@/assets/cad-covers/drizzle.webp";
+import deadlockCover from "@/assets/cad-covers/deadlock.webp";
+import flatlineCover from "@/assets/cad-covers/flatline.webp";
+import valorChallengeCover from "@/assets/cad-covers/valor-cad-challenge.webp";
 
-import drTitle from "@/assets/dr_title.png";
-import vccTitle from "@/assets/vcc_title.png";
 import dpcad from "@/assets/downpourcad.png";
 import dpwireframe from "@/assets/downpourwireframe.png";
 import dp1 from "@/assets/dp1.jpg";
 import dp2 from "@/assets/dp2.jpg";
 import dp3 from "@/assets/dp3.jpg";
 import dp4 from "@/assets/dp4.jpg";
-import dlTitle2 from "@/assets/dl_title2.png";
 import dl1 from "@/assets/dl_1.jpeg";
 import dl2 from "@/assets/dl_2.jpeg";
 import dl3 from "@/assets/dl_3.jpeg";
@@ -32,7 +33,6 @@ import flShooter from "@/assets/fl_shooter.png";
 
 import vccStackUp from "@/assets/VCC 2025 STACK UP.pdf";
 
-import flTitle from "@/assets/fl_title.png";
 import flat1 from "@/assets/flat1.png";
 import flat2 from "@/assets/flat2.png";
 import flat3 from "@/assets/flat3.png";
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     category: "Robotics",
     year: "2026",
     role: "Subsystem Design Lead · Driver",
-    cover: frcImg,
+    cover: downpourCover,
     galleryModel: {
       src: "/models/downpour-wireframe.glb",
       caption: "Downpour CAD · Drag to rotate, scroll or pinch to zoom",
@@ -182,7 +182,7 @@ processShots: [
     category: "Robotics",
     year: "2026",
     role: "Subsystem Design Lead · Driver",
-    cover: drTitle,
+    cover: drizzleCover,
     galleryModel: {
       src: "/models/drizzle-wireframe.glb",
       caption: "Drizzle CAD · Drag to rotate, scroll or pinch to zoom",
@@ -228,7 +228,7 @@ cad: [
     category: "Robotics",
     year: "2025",
     role: "Subsystem Design Lead · Driver",
-    cover: dlTitle2,
+    cover: deadlockCover,
     galleryModel: {
       src: "/models/deadlock-wireframe.glb",
       caption: "Deadlock CAD · Drag to rotate, scroll or pinch to zoom",
@@ -275,7 +275,7 @@ processVideo: vid3,
     category: "Robotics",
     year: "2024",
     role: "Subsystem Design Lead",
-cover: flTitle,
+    cover: flatlineCover,
     galleryModel: {
       src: "/models/flatline-wireframe.glb",
       caption: "Flatline CAD · Drag to rotate, scroll or pinch to zoom",
@@ -324,7 +324,7 @@ cad: [
     category: "Event · Design",
     year: "2024 — Present",
     role: "Lead Organizer",
-    cover: vccTitle,
+    cover: valorChallengeCover,
     galleryModel: {
       src: "/models/valor-cad-challenge-wireframe.glb",
       caption: "Valor CAD Challenge field · Drag to rotate, scroll or pinch to zoom",

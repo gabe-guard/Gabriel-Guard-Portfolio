@@ -1,5 +1,4 @@
 # Current update
 
-- [x] Import latest pre-alex-design experience logos and Valor CAD field changes.
-- [x] Verify the updated experience section and interactive field on desktop and mobile.
-- [x] Apply required package security update and confirm the preview builds.
+- [x] Center and assign the five uploaded images as Home-only project covers.
+- [x] Verify Home covers on desktop and mobile and unchanged project-page media.

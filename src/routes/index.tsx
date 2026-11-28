@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { CourseworkSection, SkillsSection } from "@/components/CourseworkSkills";
 import { CertificationsSection } from "@/components/CertificationsSection";
 import { projects } from "@/data/projects";
+import { homeProjectCovers } from "@/data/home-project-covers";
 import experience from "@/data/experience.json";
 import { ExperienceLogo } from "@/components/ExperienceLogo";
 import { startHeroCloud } from "@/lib/hero-cloud.js";
@@ -92,7 +93,7 @@ function Work() {
           {projects.map((project, index) => (
             <li className="work-card" key={project.slug}>
               <Link to="/projects/$slug" params={{ slug: project.slug }}>
-                <figure className="work-card-media"><img src={project.cover} alt={project.title} loading="lazy" /></figure>
+                <figure className={`work-card-media${homeProjectCovers[project.slug] ? " work-card-media--drawing" : ""}`}><img src={homeProjectCovers[project.slug] ?? project.cover} alt={project.title} loading="lazy" /></figure>
                 <div className="work-card-body">
                   <p className="meta work-card-meta">{String(index + 1).padStart(2, "0")} / {project.category}</p>
                   <div className="work-card-heading"><h3>{project.title}</h3><ArrowUpRight className="ui-icon" /></div>

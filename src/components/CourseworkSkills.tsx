@@ -1,43 +1,17 @@
 import { FadeUp } from "@/components/Parallax";
 
 type Course = { code: string; name: string };
-type ClassProject = { code: string; course: string; title: string; description: string };
 type SkillGroup = { title: string; items: string[] };
 
 const courses: Course[] = [
   { code: "ME 302", name: "Introduction to Engineering Design & Graphics" },
-  { code: "PHY 303L", name: "Engineering Physics II" },
-  { code: "PHY 303K", name: "Engineering Physics I" },
   { code: "M 408D", name: "Sequences, Series & Multivariable Calculus" },
-  { code: "M 408C", name: "Differential and Integral Calculus" },
-  { code: "CH 301", name: "Principles of Chemistry I" },
-  { code: "HS", name: "Practicum in STEM: Engineering" },
-  { code: "HS", name: "Engineering Design Process" },
-  { code: "HS", name: "Aerospace" },
-];
-
-const classProjects: ClassProject[] = [
-  {
-    code: "ME 302",
-    course: "Engineering Design & Graphics",
-    title: "Project 1",
-    description:
-      "Coming soon",
-  },
-  {
-    code: "ME 302",
-    course: "Engineering Design & Graphics",
-    title: "Project 2",
-    description:
-      "Coming soon",
-  },
-  {
-    code: "ME 302",
-    course: "Engineering Design & Graphics",
-    title: "Project 3",
-    description:
-      "Coming soon",
-  },
+  { code: "PHY 303K", name: "Engineering Physics I" },
+  { code: "M 427J", name: "Differential Equations with Linear Algebra" },
+  { code: "PHY 303L", name: "Engineering Physics II" },
+  { code: "E M 306", name: "Statics" },
+  { code: "ME 316T", name: "Thermodynamics" },
+  { code: "M 427L", name: "Advanced Calculus for Applications II" },
 ];
 
 const skillGroups: SkillGroup[] = [
@@ -65,13 +39,13 @@ export function CourseworkSection() {
         </h2>
       </FadeUp>
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        <FadeUp delay={0.05} className="lg:col-span-1">
+      <div className="mt-12">
+        <FadeUp delay={0.05}>
           <div className="h-full rounded-2xl border border-border bg-card p-7">
             <p className="eyebrow">Relevant coursework</p>
             <div className="mt-5 grid grid-cols-2 gap-x-4">
               {courses.map((c) => (
-                <div key={c.code} className="border-b border-border py-3">
+                <div key={c.code} className="min-w-0 border-b border-border py-3">
                   <p className="font-display text-sm font-bold tracking-tight">{c.code}</p>
                   <p className="text-[0.82rem] leading-snug text-muted-foreground">{c.name}</p>
                 </div>
@@ -79,22 +53,6 @@ export function CourseworkSection() {
             </div>
           </div>
         </FadeUp>
-
-        <div className="lg:col-span-1 grid gap-6">
-          {classProjects.map((p, i) => (
-            <FadeUp key={p.title} delay={0.08 + i * 0.06}>
-              <article className="rounded-2xl border border-border bg-surface p-7 hover-lift">
-                <p className="text-[0.68rem] uppercase tracking-[0.2em] text-accent font-semibold">
-                  {p.code} · {p.course}
-                </p>
-                <h3 className="mt-2 font-display text-xl font-bold tracking-tight">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground max-w-2xl">
-                  {p.description}
-                </p>
-              </article>
-            </FadeUp>
-          ))}
-        </div>
       </div>
     </section>
   );
